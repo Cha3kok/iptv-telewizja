@@ -2,24 +2,23 @@ import Link from "next/link";
 import { Tv, Mail } from "lucide-react";
 
 const links: Record<string, { label: string; href: string }[]> = {
-  Product: [
-    { label: "Product Overview", href: "/product" },
-    { label: "Features", href: "/#features" },
-    { label: "Channels", href: "#channels" },
-    { label: "Pricing", href: "/#pricing" },
+  Produkt: [
+    { label: "Przegląd oferty", href: "/product" },
+    { label: "Funkcje", href: "/#features" },
+    { label: "Cennik", href: "/#pricing" },
     { label: "Blog", href: "/blog" },
-    { label: "Setup Guide", href: "/setup" },
-    { label: "Free Trial", href: "/#pricing" },
+    { label: "Instrukcja instalacji", href: "/setup" },
+    { label: "Darmowy test", href: "/#pricing" },
   ],
-  Company: [
-    { label: "About Us", href: "/about" },
-    { label: "Contact Us", href: "/contact" },
+  Firma: [
+    { label: "O nas", href: "/about" },
+    { label: "Kontakt", href: "/contact" },
     { label: "FAQ", href: "/#faq" },
   ],
-  Legal: [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
-    { label: "Refund Policy", href: "/refund-policy" },
+  Prawne: [
+    { label: "Polityka prywatności", href: "/privacy-policy" },
+    { label: "Regulamin", href: "/terms-of-service" },
+    { label: "Polityka zwrotów", href: "/refund-policy" },
   ],
 };
 
@@ -35,19 +34,19 @@ export default function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg mb-4">
               <Tv className="text-amber-400" size={20} />
-              British<span className="text-amber-400">IPTV</span>
+              IPTV<span className="text-amber-400">Telewizja</span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-              The UK&apos;s most reliable IPTV service. 50,000+ channels, 4K quality, zero buffering.
+              Najbardziej niezawodna usługa IPTV w Polsce. 50 000+ kanałów, jakość 4K, zero zacięć.
             </p>
             <div className="flex flex-col gap-2">
               <a
-                href="https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial"
+                href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex w-fit bg-amber-500 hover:bg-amber-400 text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors"
               >
-                Free Trial
+                Darmowy test
               </a>
               <a
                 href={WHATSAPP}
@@ -90,10 +89,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-zinc-500 text-xs">
-            &copy; {new Date().getFullYear()} BritishIPTV. All rights reserved.
+            &copy; {new Date().getFullYear()} IPTVTelewizja. Wszelkie prawa zastrzeżone.
           </p>
           <p className="text-zinc-600 text-xs">
-            For entertainment purposes. Please comply with local laws.
+            Wyłącznie do celów rozrywkowych. Prosimy o przestrzeganie lokalnych przepisów prawa.
           </p>
         </div>
       </div>

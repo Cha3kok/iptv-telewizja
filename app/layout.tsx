@@ -12,56 +12,58 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const BASE_URL = "https://iptv-british.com";
+const BASE_URL = "https://iptvtelewizja.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "BritishIPTV — 50,000+ Channels in 4K",
-    template: "%s — BritishIPTV",
+    default: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
+    template: "%s — IPTVTelewizja",
   },
   description:
-    "Stream 50,000+ live UK and international channels in 4K Ultra HD. No buffering, 7-day catch-up, works on any device. Free 3-hour trial.",
+    "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
   keywords: [
-    "British IPTV",
-    "UK IPTV",
-    "IPTV service UK",
-    "watch UK channels online",
-    "best IPTV 2025",
-    "Firestick IPTV",
-    "Sky Sports IPTV",
-    "4K IPTV",
+    "iptv telewizja",
+    "polska telewizja iptv",
+    "iptv polska",
+    "polskie kanały przez internet",
+    "najlepsza iptv 2025",
+    "iptv firestick polska",
+    "polsat sport iptv",
+    "tvp iptv",
+    "4k iptv polska",
+    "telewizja internetowa",
   ],
-  authors: [{ name: "BritishIPTV" }],
-  creator: "BritishIPTV",
+  authors: [{ name: "IPTVTelewizja" }],
+  creator: "IPTVTelewizja",
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg",
   },
   openGraph: {
     type: "website",
-    locale: "en_GB",
+    locale: "pl_PL",
     url: BASE_URL,
-    siteName: "BritishIPTV",
-    title: "BritishIPTV — 50,000+ Channels in 4K",
+    siteName: "IPTV Telewizja",
+    title: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
     description:
-      "Stream 50,000+ live UK and international channels in 4K Ultra HD. No buffering, 7-day catch-up, works on any device. Free 3-hour trial.",
+      "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "BritishIPTV — Stream 50,000+ Channels in 4K",
+        alt: "IPTV Telewizja — 50 000+ Kanałów w 4K",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BritishIPTV — 50,000+ Channels in 4K",
+    title: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
     description:
-      "Stream 50,000+ live UK and international channels in 4K Ultra HD. Free 3-hour trial.",
+      "Oglądaj 50 000+ polskich i zagranicznych kanałów w 4K Ultra HD od €15. Darmowy test 3h — bez karty kredytowej.",
     images: ["/og-image.svg"],
-    creator: "@iptvbritish",
+    creator: "@iptvtelewizja",
   },
   robots: {
     index: true,
@@ -76,6 +78,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    languages: {
+      "pl": BASE_URL,
+      "pl-PL": BASE_URL,
+      "x-default": BASE_URL,
+    },
   },
 };
 
@@ -86,7 +93,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pl"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

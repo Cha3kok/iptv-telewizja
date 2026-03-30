@@ -9,13 +9,13 @@ import WhatsAppButton from "../components/WhatsAppButton";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "IPTV guides, tips, troubleshooting and comparisons. Learn how to get the most from your British IPTV subscription.",
+    "Przewodniki IPTV, porady, rozwiązywanie problemów i porównania. Dowiedz się, jak w pełni wykorzystać swoją subskrypcję IPTV Telewizja.",
   openGraph: {
-    title: "Blog — BritishIPTV",
-    description: "IPTV guides, tips, troubleshooting and comparisons.",
-    url: "https://iptv-british.com/blog",
+    title: "Blog — IPTV Telewizja",
+    description: "Przewodniki IPTV, porady, rozwiązywanie problemów i porównania.",
+    url: "https://iptvtelewizja.com/blog",
   },
-  alternates: { canonical: "https://iptv-british.com/blog" },
+  alternates: { canonical: "https://iptvtelewizja.com/blog" },
 };
 
 const categoryColors: Record<string, string> = {
@@ -27,7 +27,7 @@ const categoryColors: Record<string, string> = {
 };
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", {
+  return new Date(iso).toLocaleDateString("pl-PL", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -49,10 +49,10 @@ export default function BlogPage() {
             Blog
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3">
-            IPTV Guides & Tips
+            Przewodniki i porady IPTV
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Everything you need to get the most from your IPTV service — setup guides, troubleshooting, app reviews, and more.
+            Wszystko, czego potrzebujesz, aby w pełni korzystać z usługi IPTV — przewodniki instalacji, rozwiązywanie problemów, recenzje aplikacji i więcej.
           </p>
         </div>
       </div>
@@ -67,7 +67,7 @@ export default function BlogPage() {
             <span className={`inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full border ${categoryColors[featured.category] ?? "bg-[#1a1a1a] text-zinc-400 border-white/10"}`}>
               <Tag size={11} /> {featured.category}
             </span>
-            <span className="text-zinc-500 text-xs">Featured</span>
+            <span className="text-zinc-500 text-xs">Wyróżniony</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
             {featured.title}
@@ -81,7 +81,7 @@ export default function BlogPage() {
               </span>
             </div>
             <span className="flex items-center gap-1 text-amber-400 text-sm font-medium group-hover:gap-2 transition-all">
-              Read More <ArrowRight size={14} />
+              Czytaj więcej <ArrowRight size={14} />
             </span>
           </div>
         </Link>

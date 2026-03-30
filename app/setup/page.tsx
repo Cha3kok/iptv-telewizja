@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import SetupClient from "./SetupClient";
 
 export const metadata: Metadata = {
-  title: "Setup Guide — BritishIPTV",
+  title: "Instrukcja instalacji — IPTV Telewizja",
   description:
-    "Step-by-step IPTV setup guides for Amazon Firestick, Smart TV, Android, iPhone, MAG Box, Windows and Mac. Get started in under 5 minutes.",
+    "Przewodniki krok po kroku dotyczące instalacji IPTV na Amazon Firestick, Smart TV, Android, iPhone, dekoderze MAG, Windows i Mac. Zacznij w mniej niż 5 minut.",
   openGraph: {
-    title: "Setup Guide — BritishIPTV",
-    description: "Get your IPTV running in minutes on any device.",
-    url: "https://iptv-british.com/setup",
+    title: "Instrukcja instalacji — IPTV Telewizja",
+    description: "Uruchom IPTV w kilka minut na każdym urządzeniu.",
+    url: "https://iptvtelewizja.com/setup",
   },
 };
 

@@ -7,26 +7,26 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import JsonLd from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "O nas",
   description:
-    "Learn about BritishIPTV — who we are, our mission, and why thousands of UK households trust us for their IPTV service.",
-  alternates: { canonical: "https://iptv-british.com/about" },
+    "Poznaj IPTVTelewizja — kim jesteśmy, nasza misja i dlaczego tysiące użytkowników nam ufa jako swojemu dostawcy IPTV.",
+  alternates: { canonical: "https://iptvtelewizja.com/about" },
 };
 
 const stats = [
-  { icon: Users, value: "25,000+", label: "Active Subscribers" },
-  { icon: Tv, value: "50,000+", label: "Live Channels" },
-  { icon: Globe, value: "Worldwide", label: "Available In" },
-  { icon: Shield, value: "99.9%", label: "Uptime" },
+  { icon: Users, value: "25 000+", label: "Aktywnych subskrybentów" },
+  { icon: Tv, value: "50 000+", label: "Kanałów na żywo" },
+  { icon: Globe, value: "Na całym świecie", label: "Dostępność" },
+  { icon: Shield, value: "99,9%", label: "Dostępność usługi" },
 ];
 
 const aboutSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  name: "About BritishIPTV",
-  url: "https://iptv-british.com/about",
+  name: "O nas — IPTVTelewizja",
+  url: "https://iptvtelewizja.com/about",
   description:
-    "BritishIPTV is a premium IPTV provider offering 50,000+ live channels in 4K quality.",
+    "IPTVTelewizja to usługa IPTV oferująca 50 000+ kanałów na żywo w jakości 4K.",
 };
 
 export default function AboutPage() {
@@ -41,14 +41,14 @@ export default function AboutPage() {
             href="/"
             className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
           >
-            <ChevronLeft size={14} /> Back to Home
+            <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">About Us</p>
+          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">O nas</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Britain&apos;s most trusted IPTV provider
+            Najbardziej zaufana polska IPTV Telewizja
           </h1>
           <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
-            We started BritishIPTV to give UK viewers a better, more affordable alternative to expensive satellite TV — and we&apos;ve been growing ever since.
+            Stworzyliśmy IPTVTelewizja, aby dać polskim widzom lepszą i bardziej przystępną alternatywę dla drogiej telewizji kablowej i satelitarnej — i od tamtej pory stale się rozwijamy.
           </p>
         </div>
       </div>
@@ -67,35 +67,35 @@ export default function AboutPage() {
 
         {/* Story */}
         <div className="space-y-6">
-          <h2 className="text-2xl font-bold text-white">Our Story</h2>
+          <h2 className="text-2xl font-bold text-white">Nasza historia</h2>
           <p className="text-zinc-300 leading-8">
-            BritishIPTV was founded with a simple mission: make great TV accessible and affordable for everyone. We watched as satellite TV prices climbed year after year while the value offered to viewers stayed flat. Long contracts, expensive hardware, and a limited channel selection — that wasn&apos;t good enough.
+            IPTVTelewizja powstała z prostą misją: uczynić doskonałą telewizję dostępną i przystępną cenowo dla każdego. Obserwowaliśmy, jak ceny telewizji satelitarnej i kablowej rosły rok po roku, podczas gdy wartość oferowana widzom pozostawała bez zmian. Długie umowy, drogie sprzęty i ograniczony wybór kanałów — to nie było wystarczające.
           </p>
           <p className="text-zinc-300 leading-8">
-            We built a service from the ground up with a focus on reliability, picture quality, and value. Starting with a small base of UK viewers, we&apos;ve grown to serve over 25,000 active subscribers across the UK and worldwide.
+            Zbudowaliśmy usługę od podstaw, koncentrując się na niezawodności, jakości obrazu i wartości. Zaczynając od małej grupy polskich użytkowników, rozrosliśmy się do obsługi ponad 25 000 aktywnych subskrybentów w Polsce i na całym świecie.
           </p>
           <p className="text-zinc-300 leading-8">
-            Our infrastructure spans multiple data centres with automatic failover, ensuring you get a smooth, uninterrupted experience. We continuously add new channels, improve our apps support, and expand our VOD library based on customer feedback.
+            Nasza infrastruktura obejmuje wiele centrów danych z automatycznym przełączaniem awaryjnym, zapewniając płynne, nieprzerwane oglądanie. Stale dodajemy nowe kanały, ulepszamy obsługę aplikacji i rozszerzamy bibliotekę VOD na podstawie opinii klientów.
           </p>
         </div>
 
         {/* Mission */}
         <div className="bg-[#111111] border border-white/5 rounded-2xl p-8 space-y-4">
-          <h2 className="text-2xl font-bold text-white">Our Mission</h2>
+          <h2 className="text-2xl font-bold text-white">Nasza misja</h2>
           <p className="text-zinc-300 leading-8">
-            To give every household in the UK access to world-class television at a fair price — with no contracts, no hidden fees, and no compromise on quality. We believe great TV should be for everyone, not just those who can afford a premium satellite package.
+            Zapewnić każdemu gospodarstwu domowemu w Polsce i polskiej diasporze dostęp do telewizji najwyższej klasy w uczciwej cenie — bez umów, bez ukrytych opłat i bez kompromisów w jakości. Wierzymy, że doskonała telewizja powinna być dla każdego.
           </p>
         </div>
 
         {/* Why us */}
         <div className="space-y-5">
-          <h2 className="text-2xl font-bold text-white">Why Customers Choose Us</h2>
+          <h2 className="text-2xl font-bold text-white">Dlaczego klienci nas wybierają</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              ["Reliability First", "Our 99.9% uptime target isn't a marketing claim — it's a commitment backed by redundant server infrastructure."],
-              ["24/7 Real Support", "Every support message is answered by a real person. No bots, no ticket queues. We're available on WhatsApp around the clock."],
-              ["No Long Contracts", "Monthly, quarterly, or annual — your choice. Cancel anytime without penalty."],
-              ["Constant Improvement", "We release updates, add channels, and improve performance every month based on what our customers tell us."],
+              ["Niezawodność na pierwszym miejscu", "Nasz cel 99,9% dostępności to nie hasło marketingowe — to zobowiązanie poparte redundantną infrastrukturą serwerową."],
+              ["Wsparcie 24/7 od prawdziwych ludzi", "Każda wiadomość wsparcia jest odpowiadana przez prawdziwą osobę. Bez botów, bez kolejek. Jesteśmy dostępni na WhatsApp przez całą dobę."],
+              ["Żadnych długich umów", "Miesięcznie, kwartalnie lub rocznie — Twój wybór. Anuluj w dowolnym momencie bez kary."],
+              ["Ciągłe ulepszenia", "Co miesiąc wypuszczamy aktualizacje, dodajemy kanały i poprawiamy wydajność na podstawie tego, co mówią nam nasi klienci."],
             ].map(([title, desc]) => (
               <div key={title} className="bg-[#111111] border border-white/5 rounded-xl p-5">
                 <p className="text-white font-semibold mb-2">{title}</p>
@@ -107,24 +107,24 @@ export default function AboutPage() {
 
         {/* CTA */}
         <div className="bg-gradient-to-br from-amber-950/40 to-zinc-900 border border-amber-900/30 rounded-2xl p-10 text-center">
-          <h3 className="text-white font-bold text-2xl mb-3">Ready to join us?</h3>
+          <h3 className="text-white font-bold text-2xl mb-3">Gotowy, żeby dołączyć?</h3>
           <p className="text-zinc-400 mb-7 max-w-md mx-auto">
-            Try the service free for 3 hours — no credit card required. See exactly why 25,000+ customers chose us.
+            Wypróbuj usługę bezpłatnie przez 3 godziny — karta kredytowa nie jest wymagana. Przekonaj się, dlaczego 25 000+ klientów nas wybrało.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial"
+              href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
             >
-              Start Free Trial
+              Zacznij darmowy test
             </a>
             <Link
               href="/contact"
               className="border border-white/20 hover:border-white/40 text-white font-semibold px-8 py-3.5 rounded-full text-sm transition-colors"
             >
-              Contact Us
+              Kontakt
             </Link>
           </div>
         </div>

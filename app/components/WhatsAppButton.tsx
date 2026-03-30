@@ -18,8 +18,8 @@ export default function WhatsAppButton() {
           >
             <X size={12} />
           </button>
-          <p className="font-bold text-xs text-zinc-500 mb-1">iptv-british.com</p>
-          <p className="font-medium">💬 I want more information</p>
+          <p className="font-bold text-xs text-zinc-500 mb-1">iptvtelewizja.com</p>
+          <p className="font-medium">💬 Chcę więcej informacji</p>
           {/* Tail */}
           <span className="absolute -bottom-2 right-6 w-3 h-3 bg-white rotate-45 shadow-sm" />
         </div>
@@ -27,7 +27,7 @@ export default function WhatsAppButton() {
 
       {/* WhatsApp button */}
       <a
-        href="https://wa.me/212707711512?text=iptv-british.com%20-%20I%20want%20more%20information"
+        href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Chc%C4%99%20wi%C4%99cej%20informacji"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/30 transition-all hover:scale-110"

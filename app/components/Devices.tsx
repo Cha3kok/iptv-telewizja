@@ -114,13 +114,13 @@ export default function Devices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Compatibility
+            Kompatybilność
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Works on every device you own
+            Działa na każdym Twoim urządzeniu
           </h2>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            One subscription, unlimited devices. Set up in minutes on any platform.
+            Jedna subskrypcja, nieograniczona liczba urządzeń. Konfiguracja w kilka minut na każdej platformie.
           </p>
         </div>
 
@@ -142,7 +142,7 @@ export default function Devices() {
         </div>
 
         <p className="text-center text-zinc-500 text-sm mt-10">
-          Compatible with TiviMate, IPTV Smarters Pro, GSE IPTV, Perfect Player, and all standard M3U players.
+          Kompatybilne z TiviMate, IPTV Smarters Pro, GSE IPTV, Perfect Player i wszystkimi standardowymi odtwarzaczami M3U.
         </p>
       </div>
     </section>

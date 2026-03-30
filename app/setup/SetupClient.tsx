@@ -24,26 +24,26 @@ const devices: Device[] = [
     appUrl: "https://www.amazon.co.uk/",
     steps: [
       {
-        title: "Enable Apps from Unknown Sources",
-        body: 'Go to Settings → My Fire TV → Developer Options and turn on "Apps from Unknown Sources" and "ADB Debugging".',
-        tip: "This only needs to be done once.",
+        title: "Włącz aplikacje z nieznanych źródeł",
+        body: 'Przejdź do Ustawienia → Mój Fire TV → Opcje deweloperskie i włącz „Aplikacje z nieznanych źródeł" oraz „Debugowanie ADB".',
+        tip: "Wystarczy zrobić to tylko raz.",
       },
       {
-        title: "Install Downloader",
-        body: 'Search for "Downloader" in the Amazon App Store and install it. This lets you sideload any APK onto your Firestick.',
+        title: "Zainstaluj aplikację Downloader",
+        body: 'Wyszukaj „Downloader" w Amazon App Store i zainstaluj. Pozwala to zainstalować dowolny plik APK na Firestick.',
       },
       {
-        title: "Download IPTV Smarters Pro",
-        body: 'Open Downloader and enter the URL for the IPTV Smarters Pro APK. Alternatively, search for "IPTV Smarters" directly in the App Store if available in your region.',
+        title: "Pobierz IPTV Smarters Pro",
+        body: 'Otwórz Downloader i wpisz adres URL pliku APK IPTV Smarters Pro. Możesz też wyszukać „IPTV Smarters" bezpośrednio w App Store, jeśli jest dostępne w Twoim regionie.',
       },
       {
-        title: "Open IPTV Smarters & Add Playlist",
-        body: 'Launch the app, tap "Add User" → "Load Your Playlist or File/URL". Select "M3U URL" and paste your M3U link, then give your playlist a name.',
-        tip: "Your M3U link is sent to you after purchase via email.",
+        title: "Otwórz IPTV Smarters i dodaj playlistę",
+        body: 'Uruchom aplikację, stuknij „Dodaj użytkownika" → „Załaduj playlistę lub plik/URL". Wybierz „URL M3U", wklej swój link M3U i nadaj playliście nazwę.',
+        tip: "Link M3U zostaje przesłany na Twój adres e-mail po zakupie.",
       },
       {
-        title: "Start Watching",
-        body: "Your channels will load automatically. Browse by category, search for a channel, or go to Live TV. Enjoy!",
+        title: "Zacznij oglądać",
+        body: "Kanały załadują się automatycznie. Przeglądaj według kategorii, wyszukaj kanał lub przejdź do TV na żywo. Miłego oglądania!",
       },
     ],
   },
@@ -55,22 +55,22 @@ const devices: Device[] = [
     appUrl: "https://samsung.com/",
     steps: [
       {
-        title: "Install Smart IPTV from App Store",
-        body: "Open your TV's app store (Samsung Smart Hub / LG Content Store) and search for 'Smart IPTV' or 'SSIPTV'. Install it for free.",
-        tip: "If not found in the store, use a USB stick to sideload the app.",
+        title: "Zainstaluj Smart IPTV ze sklepu z aplikacjami",
+        body: "Otwórz sklep z aplikacjami telewizora (Samsung Smart Hub / LG Content Store) i wyszukaj 'Smart IPTV' lub 'SSIPTV'. Zainstaluj za darmo.",
+        tip: "Jeśli nie znajdziesz w sklepie, użyj pendrive'a do zainstalowania aplikacji.",
       },
       {
-        title: "Note Your TV's MAC Address",
-        body: "Open Smart IPTV — on the welcome screen you'll see a MAC address. Make a note of it, you'll need it to register your playlist.",
+        title: "Zapisz adres MAC swojego telewizora",
+        body: "Otwórz Smart IPTV — na ekranie powitalnym zobaczysz adres MAC. Zanotuj go, będzie potrzebny do zarejestrowania playlisty.",
       },
       {
-        title: "Register Your M3U on the Website",
-        body: "Visit siptv.eu (for Smart IPTV) in a browser, enter your TV MAC address and paste your M3U URL, then click Send.",
+        title: "Zarejestruj M3U na stronie internetowej",
+        body: "Odwiedź siptv.eu (dla Smart IPTV) w przeglądarce, wpisz adres MAC telewizora i wklej URL M3U, a następnie kliknij Wyślij.",
       },
       {
-        title: "Reload the App on Your TV",
-        body: "Go back to your TV and reload the Smart IPTV app. Your channels should now appear. Press the menu button to switch between Live, Movies, and Series.",
-        tip: "If channels don't appear, press and hold the back button to reload the playlist.",
+        title: "Odśwież aplikację na telewizorze",
+        body: "Wróć do telewizora i odśwież aplikację Smart IPTV. Kanały powinny teraz się pojawić. Naciśnij przycisk menu, aby przełączać się między TV na żywo, Filmami i Serialami.",
+        tip: "Jeśli kanały się nie pojawiają, przytrzymaj przycisk cofania, aby przeładować playlistę.",
       },
     ],
   },
@@ -82,21 +82,21 @@ const devices: Device[] = [
     appUrl: "https://play.google.com/",
     steps: [
       {
-        title: "Install TiviMate from Play Store",
-        body: "Open Google Play Store, search for 'TiviMate IPTV Player' and install it. It's free with optional premium upgrade.",
+        title: "Zainstaluj TiviMate z Play Store",
+        body: "Otwórz Google Play Store, wyszukaj 'TiviMate IPTV Player' i zainstaluj. Jest darmowy z opcjonalnym ulepszeniem premium.",
       },
       {
-        title: "Open TiviMate & Add Playlist",
-        body: 'Launch TiviMate, tap "Add Playlist" then "M3U Playlist". Enter your M3U URL and tap "Next".',
-        tip: "For Xtream Codes, choose 'Xtream Codes API' and enter your portal URL, username, and password.",
+        title: "Otwórz TiviMate i dodaj playlistę",
+        body: "Uruchom TiviMate, stuknij 'Dodaj playlistę', następnie 'Playlista M3U'. Wpisz URL M3U i stuknij 'Dalej'.",
+        tip: "W przypadku Xtream Codes wybierz 'Xtream Codes API' i podaj adres portalu, nazwę użytkownika i hasło.",
       },
       {
-        title: "Name Your Playlist",
-        body: "Give your playlist a name (e.g. BritishIPTV) and tap 'Add'. TiviMate will download all your channels — this may take a minute.",
+        title: "Nazwij swoją playlistę",
+        body: "Nadaj playliście nazwę (np. IPTVTelewizja) i stuknij 'Dodaj'. TiviMate pobierze wszystkie kanały — może to chwilę potrwać.",
       },
       {
-        title: "Browse & Watch",
-        body: "Use the sidebar to browse Live TV, Movies, and Series. You can favourite channels, set up a programme guide (EPG), and customise the layout.",
+        title: "Przeglądaj i oglądaj",
+        body: "Użyj paska bocznego, aby przeglądać TV na żywo, Filmy i Seriale. Możesz dodawać kanały do ulubionych, skonfigurować przewodnik programowy (EPG) i dostosować układ.",
       },
     ],
   },
@@ -108,21 +108,21 @@ const devices: Device[] = [
     appUrl: "https://apps.apple.com/",
     steps: [
       {
-        title: "Download GSE Smart IPTV",
-        body: "Open the App Store, search for 'GSE Smart IPTV' and install it. It's free with an optional pro upgrade.",
+        title: "Pobierz GSE Smart IPTV",
+        body: "Otwórz App Store, wyszukaj 'GSE Smart IPTV' i zainstaluj. Jest darmowy z opcjonalnym ulepszeniem pro.",
       },
       {
-        title: "Add Your M3U Playlist",
-        body: "Open the app and tap the menu (≡) → Remote Playlists → the '+' icon → 'Add M3U URL'. Enter a name and paste your M3U link.",
-        tip: "Alternatively use 'Add Xtream Codes API' if you have portal credentials.",
+        title: "Dodaj playlistę M3U",
+        body: "Otwórz aplikację i stuknij menu (≡) → Zdalne playlisty → ikonę '+' → 'Dodaj URL M3U'. Wpisz nazwę i wklej swój link M3U.",
+        tip: "Możesz też użyć 'Dodaj Xtream Codes API', jeśli masz dane dostępu do portalu.",
       },
       {
-        title: "Load the Playlist",
-        body: "Tap 'Add' and the app will fetch your channels. This may take 30–60 seconds depending on your connection.",
+        title: "Załaduj playlistę",
+        body: "Stuknij 'Dodaj', a aplikacja pobierze Twoje kanały. Może to potrwać 30–60 sekund w zależności od połączenia.",
       },
       {
-        title: "Watch Your Channels",
-        body: "Tap on any channel group, then select a channel to start streaming. Use the EPG button to view programme guide.",
+        title: "Oglądaj swoje kanały",
+        body: "Stuknij dowolną grupę kanałów, a następnie wybierz kanał, aby rozpocząć strumieniowanie. Użyj przycisku EPG, aby wyświetlić przewodnik programowy.",
       },
     ],
   },
@@ -134,22 +134,22 @@ const devices: Device[] = [
     appUrl: "",
     steps: [
       {
-        title: "Find Your MAG Box MAC Address",
-        body: "Power on your MAG box. On the home screen or in Settings → System Information you'll find the MAC address (format: AA:BB:CC:DD:EE:FF).",
-        tip: "Send us this MAC address when ordering so we can register your subscription.",
+        title: "Znajdź adres MAC swojego MAG Boxa",
+        body: "Włącz MAG Boxa. Na ekranie głównym lub w Ustawienia → Informacje o systemie znajdziesz adres MAC (format: AA:BB:CC:DD:EE:FF).",
+        tip: "Prześlij nam ten adres MAC podczas zamawiania, abyśmy mogli zarejestrować Twoją subskrypcję.",
       },
       {
-        title: "Enter the Portal URL",
-        body: "Go to Settings → System Settings → Servers → Portals. In 'Portal 1 URL' enter the portal URL we provide you after purchase.",
+        title: "Wpisz adres URL portalu",
+        body: "Przejdź do Ustawienia → Ustawienia systemu → Serwery → Portale. W 'Portal 1 URL' wpisz adres URL portalu, który dostarczymy Ci po zakupie.",
       },
       {
-        title: "Save & Reboot",
-        body: "Save your settings and restart the MAG box. It will connect to our portal automatically on startup.",
+        title: "Zapisz i uruchom ponownie",
+        body: "Zapisz ustawienia i zrestartuj MAG Boxa. Przy uruchomieniu automatycznie połączy się z naszym portalem.",
       },
       {
-        title: "Browse Channels",
-        body: "Use the remote to navigate the channel list. Press OK to watch a channel. Use the EPG button for the programme guide.",
-        tip: "If you see 'Incorrect STB subscription' contact support — your MAC address may need re-registering.",
+        title: "Przeglądaj kanały",
+        body: "Użyj pilota do nawigowania po liście kanałów. Naciśnij OK, aby oglądać kanał. Użyj przycisku EPG dla przewodnika programowego.",
+        tip: "Jeśli widzisz 'Incorrect STB subscription', skontaktuj się z pomocą techniczną — Twój adres MAC może wymagać ponownej rejestracji.",
       },
     ],
   },
@@ -161,21 +161,21 @@ const devices: Device[] = [
     appUrl: "https://www.videolan.org/",
     steps: [
       {
-        title: "Download VLC Media Player",
-        body: "Download and install VLC from videolan.org if you don't already have it. It's free and supports M3U playlists natively.",
+        title: "Pobierz VLC Media Player",
+        body: "Pobierz i zainstaluj VLC z videolan.org, jeśli jeszcze go nie masz. Jest darmowy i natywnie obsługuje playlisty M3U.",
       },
       {
-        title: "Open Network Stream",
-        body: "In VLC, go to Media → Open Network Stream (Ctrl+N). Paste your M3U URL and click 'Play'.",
-        tip: "VLC will load all channels as a playlist. This is the quickest method.",
+        title: "Otwórz strumień sieciowy",
+        body: "W VLC przejdź do Media → Otwórz strumień sieciowy (Ctrl+N). Wklej URL M3U i kliknij 'Odtwórz'.",
+        tip: "VLC załaduje wszystkie kanały jako playlistę. To najszybsza metoda.",
       },
       {
-        title: "Alternatively: Use IPTV Smarters for Windows",
-        body: "Download IPTV Smarters from their official website for a full IPTV experience with EPG, catch-up, and VOD browsing.",
+        title: "Alternatywa: użyj IPTV Smarters dla Windows",
+        body: "Pobierz IPTV Smarters z ich oficjalnej strony, aby uzyskać pełne doświadczenie IPTV z EPG, catch-up i przeglądaniem VOD.",
       },
       {
-        title: "Add Your Credentials",
-        body: "In IPTV Smarters, click 'Add User' and choose M3U URL or Xtream Codes. Enter your subscription details and load your channels.",
+        title: "Dodaj swoje dane logowania",
+        body: "W IPTV Smarters kliknij 'Dodaj użytkownika' i wybierz URL M3U lub Xtream Codes. Wpisz dane subskrypcji i załaduj kanały.",
       },
     ],
   },
@@ -216,16 +216,16 @@ export default function SetupClient() {
             href="/"
             className="inline-flex items-center gap-1 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
           >
-            <ChevronLeft size={14} /> Back to Home
+            <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Setup Guide
+            Instrukcja instalacji
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3">
-            Get started in minutes
+            Zacznij w kilka minut
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl">
-            Choose your device below for a step-by-step guide. No technical knowledge required.
+            Wybierz swoje urządzenie poniżej, aby uzyskać przewodnik krok po kroku. Wiedza techniczna nie jest wymagana.
           </p>
         </div>
       </div>
@@ -235,7 +235,7 @@ export default function SetupClient() {
           {/* Device selector sidebar */}
           <aside className="lg:w-56 flex-shrink-0">
             <p className="text-zinc-500 text-xs uppercase tracking-wider font-medium mb-3">
-              Select Device
+              Wybierz urządzenie
             </p>
             <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
               {devices.map((d) => (
@@ -268,14 +268,14 @@ export default function SetupClient() {
                 </div>
                 <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium px-3 py-1.5 rounded-full flex-shrink-0">
                   <CheckCircle2 size={13} />
-                  Supported
+                  Obsługiwane
                 </div>
               </div>
 
               {/* Recommended app */}
               <div className="bg-[#1a1a1a] border border-white/5 rounded-xl p-4 flex items-center justify-between gap-4 mb-8">
                 <div>
-                  <p className="text-zinc-500 text-xs mb-0.5">Recommended App</p>
+                  <p className="text-zinc-500 text-xs mb-0.5">Zalecana aplikacja</p>
                   <p className="text-white font-semibold">{active.appName}</p>
                 </div>
                 {active.appUrl && (
@@ -285,7 +285,7 @@ export default function SetupClient() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors flex-shrink-0"
                   >
-                    Download <ExternalLink size={13} />
+                    Pobierz <ExternalLink size={13} />
                   </a>
                 )}
               </div>
@@ -307,7 +307,7 @@ export default function SetupClient() {
                   disabled={devices[0].id === activeId}
                   className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                 >
-                  <ChevronLeft size={16} /> Previous
+                  <ChevronLeft size={16} /> Poprzedni
                 </button>
                 <button
                   onClick={() => {
@@ -317,7 +317,7 @@ export default function SetupClient() {
                   disabled={devices[devices.length - 1].id === activeId}
                   className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                 >
-                  Next <ChevronRight size={16} />
+                  Następny <ChevronRight size={16} />
                 </button>
               </div>
             </div>
@@ -325,16 +325,16 @@ export default function SetupClient() {
             {/* Still stuck CTA */}
             <div className="mt-6 bg-[#111111] border border-white/5 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
-                <p className="text-white font-semibold">Still need help?</p>
-                <p className="text-zinc-400 text-sm">Our team will set it up for you — free of charge.</p>
+                <p className="text-white font-semibold">Potrzebujesz pomocy?</p>
+                <p className="text-zinc-400 text-sm">Nasz zespół skonfiguruje wszystko za Ciebie — bezpłatnie.</p>
               </div>
               <a
-                href="https://wa.me/212707711512?text=Hi%2C%20I%20need%20help%20setting%20up%20my%20IPTV"
+                href="https://wa.me/212707711512?text=Cze%C5%9B%C4%87%2C%20potrzebuję%20pomocy%20z%20konfiguracją%20IPTV"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-shrink-0 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
               >
-                WhatsApp Support
+                Pomoc WhatsApp
               </a>
             </div>
           </main>

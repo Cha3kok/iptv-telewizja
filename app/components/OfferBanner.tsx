@@ -60,11 +60,11 @@ export default function OfferBanner() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-center gap-3 flex-wrap text-center">
         {/* Badge */}
         <span className="bg-black text-amber-400 text-[11px] font-black px-2.5 py-1 rounded-full tracking-widest uppercase">
-          Limited Offer
+          Oferta limitowana
         </span>
 
         <p className="text-sm font-bold">
-          🔥 <span className="text-black">-20% OFF</span> all plans — offer ends in:
+          🔥 <span className="text-black">-20% TANIEJ</span> na wszystkie plany — oferta wygasa za:
         </p>
 
         {/* Countdown */}
@@ -88,7 +88,7 @@ export default function OfferBanner() {
           href="#pricing"
           className="bg-black text-amber-400 hover:bg-black/80 text-xs font-bold px-4 py-1.5 rounded-full transition-colors whitespace-nowrap"
         >
-          Claim Now
+          Skorzystaj teraz
         </a>
 
         <button

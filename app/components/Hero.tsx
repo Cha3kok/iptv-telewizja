@@ -1,8 +1,8 @@
 import { Play, Shield, Zap } from "lucide-react";
 
 const badges = [
-  { icon: Zap, label: "50,000+ Channels" },
-  { icon: Shield, label: "99.9% Uptime" },
+  { icon: Zap, label: "50 000+ kanałów" },
+  { icon: Shield, label: "99,9% dostępności" },
   { icon: Play, label: "4K Ultra HD" },
 ];
 
@@ -17,35 +17,35 @@ export default function Hero() {
         {/* Pill badge */}
         <div className="inline-flex items-center gap-2 bg-amber-500/20 border border-amber-500/40 text-amber-400 text-xs font-medium px-4 py-1.5 rounded-full mb-8">
           <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-          Live Streams Available Now
+          Transmisje na żywo dostępne teraz
         </div>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
-          The Best British{" "}
           <span className="text-amber-400">IPTV</span>{" "}
-          Experience
+          Polska — Telewizja{" "}
+          Internetowa
         </h1>
 
         <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Stream 50,000+ live channels, movies, and series in crystal-clear 4K. UK, US, sports,
-          entertainment — all in one place with no buffering.
+          Oglądaj 50 000+ kanałów na żywo, filmy i seriale w krystalicznej jakości 4K.
+          Polska, sport, rozrywka — wszystko w jednym miejscu, bez zacięć.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
-            href="https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial"
+            href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-8 py-4 rounded-full text-base transition-colors w-full sm:w-auto"
           >
-            Start Free Trial
+            Zacznij darmowy test
           </a>
           <a
             href="#features"
             className="flex items-center gap-2 text-zinc-300 hover:text-white border border-white/20 hover:border-white/40 px-8 py-4 rounded-full text-base transition-colors w-full sm:w-auto justify-center"
           >
             <Play size={16} className="fill-current" />
-            See Features
+            Zobacz funkcje
           </a>
         </div>
 

@@ -3,24 +3,24 @@
 import { useEffect, useState } from "react";
 
 const notifications = [
-  { flag: "🇬🇧", name: "James", city: "Manchester", plan: "12 Months" },
-  { flag: "🇬🇧", name: "Sarah", city: "London", plan: "6 Months" },
-  { flag: "🇬🇧", name: "David", city: "Birmingham", plan: "24 Months" },
-  { flag: "🇬🇧", name: "Lisa", city: "Leeds", plan: "3 Months" },
-  { flag: "🇬🇧", name: "Ahmed", city: "Bradford", plan: "12 Months" },
-  { flag: "🇬🇧", name: "Emma", city: "Liverpool", plan: "6 Months" },
-  { flag: "🇬🇧", name: "Mohammed", city: "Sheffield", plan: "24 Months" },
-  { flag: "🇬🇧", name: "Charlotte", city: "Bristol", plan: "12 Months" },
-  { flag: "🇬🇧", name: "Oliver", city: "Glasgow", plan: "3 Months" },
-  { flag: "🇬🇧", name: "Fatima", city: "Leicester", plan: "6 Months" },
-  { flag: "🇬🇧", name: "Ryan", city: "Edinburgh", plan: "12 Months" },
-  { flag: "🇬🇧", name: "Aisha", city: "Cardiff", plan: "24 Months" },
-  { flag: "🇫🇷", name: "Pierre", city: "Paris", plan: "12 Months" },
-  { flag: "🇩🇪", name: "Hans", city: "Berlin", plan: "6 Months" },
-  { flag: "🇦🇪", name: "Khalid", city: "Dubai", plan: "24 Months" },
-  { flag: "🇺🇸", name: "Mike", city: "New York", plan: "12 Months" },
-  { flag: "🇨🇦", name: "Chris", city: "Toronto", plan: "6 Months" },
-  { flag: "🇦🇺", name: "Jake", city: "Sydney", plan: "12 Months" },
+  { flag: "🇵🇱", name: "Marek", city: "Warszawa", plan: "12 Miesięcy" },
+  { flag: "🇵🇱", name: "Anna", city: "Kraków", plan: "6 Miesięcy" },
+  { flag: "🇵🇱", name: "Piotr", city: "Gdańsk", plan: "24 Miesiące" },
+  { flag: "🇵🇱", name: "Katarzyna", city: "Wrocław", plan: "3 Miesiące" },
+  { flag: "🇵🇱", name: "Tomasz", city: "Łódź", plan: "12 Miesięcy" },
+  { flag: "🇵🇱", name: "Monika", city: "Poznań", plan: "6 Miesięcy" },
+  { flag: "🇵🇱", name: "Krzysztof", city: "Szczecin", plan: "24 Miesiące" },
+  { flag: "🇵🇱", name: "Agnieszka", city: "Lublin", plan: "12 Miesięcy" },
+  { flag: "🇵🇱", name: "Michał", city: "Katowice", plan: "3 Miesiące" },
+  { flag: "🇵🇱", name: "Joanna", city: "Białystok", plan: "6 Miesięcy" },
+  { flag: "🇬🇧", name: "Tomek", city: "Londyn", plan: "12 Miesięcy" },
+  { flag: "🇬🇧", name: "Ola", city: "Manchester", plan: "24 Miesiące" },
+  { flag: "🇩🇪", name: "Paweł", city: "Berlin", plan: "6 Miesięcy" },
+  { flag: "🇩🇪", name: "Magda", city: "Hamburg", plan: "12 Miesięcy" },
+  { flag: "🇳🇱", name: "Łukasz", city: "Amsterdam", plan: "12 Miesięcy" },
+  { flag: "🇺🇸", name: "Radek", city: "Chicago", plan: "6 Miesięcy" },
+  { flag: "🇨🇦", name: "Beata", city: "Toronto", plan: "12 Miesięcy" },
+  { flag: "🇦🇺", name: "Bartek", city: "Sydney", plan: "24 Miesiące" },
 ];
 
 function getMinutesAgo() {
@@ -74,12 +74,12 @@ export default function SocialProof() {
 
         <div className="min-w-0">
           <p className="text-white text-xs font-semibold leading-snug">
-            {current.name} from {current.city}
+            {current.name} z {current.city}
           </p>
           <p className="text-amber-400 text-[11px] font-medium">
-            subscribed to {current.plan} plan
+            zasubskrybował plan {current.plan}
           </p>
-          <p className="text-zinc-500 text-[10px] mt-0.5">{minutesAgo} min ago</p>
+          <p className="text-zinc-500 text-[10px] mt-0.5">{minutesAgo} min temu</p>
         </div>
 
         {/* Pulse dot */}

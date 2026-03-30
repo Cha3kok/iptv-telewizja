@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://iptv-british.com/blog/${post.slug}`,
+      url: `https://iptvtelewizja.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
     },
-    alternates: { canonical: `https://iptv-british.com/blog/${post.slug}` },
+    alternates: { canonical: `https://iptvtelewizja.com/blog/${post.slug}` },
   };
 }
 
@@ -43,7 +43,7 @@ const categoryColors: Record<string, string> = {
 };
 
 function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString("en-GB", {
+  return new Date(iso).toLocaleDateString("pl-PL", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -100,11 +100,11 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
-    author: { "@type": "Organization", name: "BritishIPTV" },
+    author: { "@type": "Organization", name: "IPTVTelewizja" },
     publisher: {
       "@type": "Organization",
-      name: "BritishIPTV",
-      url: "https://iptv-british.com",
+      name: "IPTVTelewizja",
+      url: "https://iptvtelewizja.com",
     },
   };
 
@@ -120,7 +120,7 @@ export default async function BlogPostPage({ params }: Props) {
             href="/blog"
             className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
           >
-            <ChevronLeft size={14} /> All Articles
+            <ChevronLeft size={14} /> Wszystkie artykuły
           </Link>
 
           <div className="flex flex-wrap items-center gap-3 mb-5">
@@ -146,26 +146,26 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* CTA box */}
         <div className="mt-14 bg-gradient-to-br from-amber-950/40 to-zinc-900 border border-amber-900/30 rounded-2xl p-8 text-center">
-          <h3 className="text-white font-bold text-xl mb-2">Ready to try it yourself?</h3>
+          <h3 className="text-white font-bold text-xl mb-2">Gotowy, żeby spróbować?</h3>
           <p className="text-zinc-400 text-sm mb-6">
-            Get a free 3-hour trial — no credit card required. Our team sets it up for you.
+            Uzyskaj darmowy test 3-godzinny — karta kredytowa nie jest wymagana. Nasz zespół skonfiguruje wszystko za Ciebie.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href="https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial"
+              href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
             >
-              Start Free Trial
+              Zacznij darmowy test
             </a>
             <a
-              href="https://wa.me/212707711512?text=Hi%2C%20I%27d%20like%20more%20information"
+              href="https://wa.me/212707711512?text=Cze%C5%9B%C4%87%2C%20chcia%C5%82bym%20wi%C4%99cej%20informacji"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
             >
-              WhatsApp Us
+              Napisz na WhatsApp
             </a>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default async function BlogPostPage({ params }: Props) {
         {/* Related posts */}
         {related.length > 0 && (
           <div className="mt-14">
-            <h3 className="text-white font-bold text-lg mb-5">Related Articles</h3>
+            <h3 className="text-white font-bold text-lg mb-5">Powiązane artykuły</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {related.map((p) => (
                 <Link
@@ -186,7 +186,7 @@ export default async function BlogPostPage({ params }: Props) {
                   </p>
                   <p className="text-zinc-500 text-xs line-clamp-2">{p.excerpt}</p>
                   <span className="flex items-center gap-1 text-amber-400 text-xs mt-3 font-medium">
-                    Read More <ArrowRight size={12} />
+                    Czytaj więcej <ArrowRight size={12} />
                   </span>
                 </Link>
               ))}

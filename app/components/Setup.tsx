@@ -4,26 +4,26 @@ const steps = [
   {
     number: "01",
     icon: CreditCard,
-    title: "Choose Your Plan",
+    title: "Wybierz plan",
     description:
-      "Pick a subscription that suits you — monthly, quarterly, or annual. All plans include a free 3-hour trial. No credit card needed for the trial.",
-    detail: "Instant activation after payment",
+      "Wybierz subskrypcję dopasowaną do siebie — miesięczną, kwartalną lub roczną. Wszystkie plany zawierają darmowy test 3-godzinny. Karta kredytowa nie jest wymagana przy teście.",
+    detail: "Natychmiastowa aktywacja po płatności",
   },
   {
     number: "02",
     icon: Download,
-    title: "Install an IPTV App",
+    title: "Zainstaluj aplikację IPTV",
     description:
-      "Download any free IPTV player on your device — TiviMate, IPTV Smarters, or GSE IPTV. We support all major apps across all platforms.",
-    detail: "Step-by-step guides provided for each device",
+      "Pobierz bezpłatny odtwarzacz IPTV na swoje urządzenie — TiviMate, IPTV Smarters lub GSE IPTV. Obsługujemy wszystkie popularne aplikacje na każdej platformie.",
+    detail: "Przewodniki krok po kroku dla każdego urządzenia",
   },
   {
     number: "03",
     icon: Tv2,
-    title: "Start Watching",
+    title: "Zacznij oglądać",
     description:
-      "Enter your M3U URL or Xtream Codes login into the app. Your 50,000+ channels load instantly. Enjoy live TV, catch-up, and VOD.",
-    detail: "Live in under 5 minutes",
+      "Wprowadź swój link M3U lub dane logowania Xtream Codes do aplikacji. Twoje 50 000+ kanałów ładuje się natychmiast. Ciesz się telewizją na żywo, catch-up i VOD.",
+    detail: "Na żywo w mniej niż 5 minut",
   },
 ];
 
@@ -33,13 +33,13 @@ export default function Setup() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Easy Setup
+            Prosta instalacja
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Up and running in 3 simple steps
+            Gotowy w 3 prostych krokach
           </h2>
           <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            No technical knowledge needed. If you can download an app, you can set this up.
+            Bez wiedzy technicznej. Jeśli potrafisz pobrać aplikację, dasz radę to skonfigurować.
           </p>
         </div>
 
@@ -75,16 +75,16 @@ export default function Setup() {
         {/* CTA strip */}
         <div className="mt-16 bg-[#111111] border border-white/5 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-white font-semibold text-lg mb-1">Need help getting started?</p>
-            <p className="text-zinc-400 text-sm">Our support team will set everything up for you — for free.</p>
+            <p className="text-white font-semibold text-lg mb-1">Potrzebujesz pomocy z konfiguracją?</p>
+            <p className="text-zinc-400 text-sm">Nasz zespół wsparcia skonfiguruje wszystko za Ciebie — bezpłatnie.</p>
           </div>
           <a
-            href="https://wa.me/212707711512?text=Hi%2C%20I%20need%20help%20setting%20up%20my%20IPTV"
+            href="https://wa.me/212707711512?text=Cześć%2C%20potrzebuję%20pomocy%20z%20konfiguracją%20IPTV"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
           >
-            Get Free Setup Help
+            Uzyskaj bezpłatną pomoc
           </a>
         </div>
       </div>

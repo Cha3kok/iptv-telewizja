@@ -6,35 +6,35 @@ import Footer from "../components/Footer";
 import JsonLd from "../components/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Kontakt",
   description:
-    "Get in touch with BritishIPTV support. We're available 24/7 via WhatsApp and email to help with setup, billing, and technical issues.",
-  alternates: { canonical: "https://iptv-british.com/contact" },
+    "Skontaktuj się z pomocą techniczną IPTVTelewizja. Dostępni 24/7 przez WhatsApp i email — pomoc przy konfiguracji, płatnościach i problemach technicznych.",
+  alternates: { canonical: "https://iptvtelewizja.com/contact" },
 };
 
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact BritishIPTV",
-  url: "https://iptv-british.com/contact",
-  description: "Contact BritishIPTV support via WhatsApp or email.",
+  name: "Kontakt — IPTVTelewizja",
+  url: "https://iptvtelewizja.com/contact",
+  description: "Skontaktuj się z pomocą techniczną IPTVTelewizja przez WhatsApp lub email.",
 };
 
 const channels = [
   {
     icon: MessageCircle,
     title: "WhatsApp",
-    description: "The fastest way to reach us. Get a response within minutes, day or night.",
-    action: "Chat on WhatsApp",
-    href: "https://wa.me/212707711512?text=Hi%2C%20I%27d%20like%20some%20help%20with%20BritishIPTV",
+    description: "Najszybszy sposób na kontakt. Odpowiedź w ciągu kilku minut, dzień i noc.",
+    action: "Napisz na WhatsApp",
+    href: "https://wa.me/212707711512?text=Cześć%2C%20chciałbym%20uzyskać%20pomoc%20z%20IPTVTelewizja",
     highlight: true,
     detail: "+212 707 711 512",
   },
   {
     icon: Mail,
     title: "Email",
-    description: "For billing questions, refund requests, or detailed technical issues.",
-    action: "Send an Email",
+    description: "W sprawie pytań dotyczących płatności, wniosków o zwrot lub szczegółowych problemów technicznych.",
+    action: "Wyślij email",
     href: "mailto:goldengateiptv@gmail.com",
     highlight: false,
     detail: "goldengateiptv@gmail.com",
@@ -42,10 +42,10 @@ const channels = [
 ];
 
 const faqs = [
-  { q: "How do I get my free trial?", a: "Message us on WhatsApp — we'll activate your trial in minutes." },
-  { q: "I forgot my login details.", a: "Contact us via WhatsApp or email and we'll retrieve your credentials." },
-  { q: "My streams are buffering.", a: "Check our setup guide, then contact support if the issue persists." },
-  { q: "How do I renew my subscription?", a: "Contact us before your subscription expires and we'll sort the renewal." },
+  { q: "Jak uzyskać darmowy test?", a: "Napisz do nas na WhatsApp — aktywujemy Twój test w ciągu kilku minut." },
+  { q: "Zapomniałem danych logowania.", a: "Skontaktuj się przez WhatsApp lub email, a odzyskamy Twoje dane." },
+  { q: "Moje strumienie się zacinają.", a: "Sprawdź nasz przewodnik instalacji, a następnie skontaktuj się z pomocą techniczną, jeśli problem nadal występuje." },
+  { q: "Jak odnowić subskrypcję?", a: "Skontaktuj się z nami przed wygaśnięciem subskrypcji, a zajmiemy się odnowieniem." },
 ];
 
 export default function ContactPage() {
@@ -60,12 +60,12 @@ export default function ContactPage() {
             href="/"
             className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
           >
-            <ChevronLeft size={14} /> Back to Home
+            <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">Contact</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">We&apos;re here to help</h1>
+          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">Kontakt</p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Jesteśmy tu, żeby pomóc</h1>
           <p className="text-zinc-400 text-lg max-w-xl">
-            Real support from real people — available 24 hours a day, 7 days a week.
+            Prawdziwa pomoc od prawdziwych ludzi — dostępna 24 godziny na dobę, 7 dni w tygodniu.
           </p>
         </div>
       </div>
@@ -75,8 +75,8 @@ export default function ContactPage() {
         <div className="flex items-center gap-3 bg-green-500/10 border border-green-500/20 rounded-xl px-5 py-3.5">
           <Clock size={16} className="text-green-400 flex-shrink-0" />
           <p className="text-green-300 text-sm">
-            <span className="font-semibold">Support is currently available.</span>{" "}
-            Average response time: under 5 minutes on WhatsApp.
+            <span className="font-semibold">Pomoc techniczna jest teraz dostępna.</span>{" "}
+            Średni czas odpowiedzi: poniżej 5 minut na WhatsApp.
           </p>
           <span className="ml-auto w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
         </div>
@@ -118,7 +118,7 @@ export default function ContactPage() {
 
         {/* Common questions */}
         <div>
-          <h2 className="text-xl font-bold text-white mb-6">Quick Answers</h2>
+          <h2 className="text-xl font-bold text-white mb-6">Szybkie odpowiedzi</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {faqs.map((faq) => (
               <div key={faq.q} className="bg-[#111111] border border-white/5 rounded-xl p-5">
@@ -128,13 +128,13 @@ export default function ContactPage() {
             ))}
           </div>
           <p className="text-zinc-500 text-sm mt-5">
-            More questions?{" "}
+            Więcej pytań?{" "}
             <Link href="/#faq" className="text-amber-400 hover:text-amber-300 transition-colors">
-              See our full FAQ
+              Zobacz nasze pełne FAQ
             </Link>
-            {" "}or{" "}
+            {" "}lub{" "}
             <Link href="/setup" className="text-amber-400 hover:text-amber-300 transition-colors">
-              visit our setup guide
+              odwiedź nasz przewodnik instalacji
             </Link>.
           </p>
         </div>

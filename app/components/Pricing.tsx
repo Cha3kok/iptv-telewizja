@@ -7,69 +7,69 @@ const deviceOptions = [1, 2, 3, 4];
 
 const plans = [
   {
-    name: "1 Month",
+    name: "1 Miesiąc",
     basePrice: 15,
     devicePrices: { 1: 15, 2: 20, 3: 25, 4: 30 },
-    period: "one-off",
-    description: "Perfect for getting started",
+    period: "jednorazowo",
+    description: "Idealne na start",
     highlight: false,
   },
   {
-    name: "3 Months",
+    name: "3 Miesiące",
     basePrice: 35,
     devicePrices: { 1: 35, 2: 45, 3: 55, 4: 65 },
-    period: "every 3 months",
-    description: "Great value for regular viewers",
+    period: "co 3 miesiące",
+    description: "Świetna wartość dla regularnych widzów",
     highlight: false,
   },
   {
-    name: "6 Months",
+    name: "6 Miesięcy",
     basePrice: 45,
     devicePrices: { 1: 45, 2: 60, 3: 75, 4: 90 },
-    period: "every 6 months",
-    badge: "Popular",
-    description: "Best balance of price and flexibility",
+    period: "co 6 miesięcy",
+    badge: "Popularny",
+    description: "Najlepszy balans ceny i elastyczności",
     highlight: true,
   },
   {
-    name: "12 Months",
+    name: "12 Miesięcy",
     basePrice: 60,
     devicePrices: { 1: 60, 2: 80, 3: 100, 4: 120 },
-    period: "per year",
-    description: "Serious savings for committed viewers",
+    period: "rocznie",
+    description: "Duże oszczędności dla zaangażowanych widzów",
     highlight: false,
   },
   {
-    name: "24 Months",
+    name: "24 Miesiące",
     basePrice: 110,
     devicePrices: { 1: 110, 2: 145, 3: 180, 4: 215 },
-    period: "every 2 years",
-    badge: "Best Value",
-    description: "Maximum savings, set it and forget it",
+    period: "co 2 lata",
+    badge: "Najlepsza cena",
+    description: "Maksymalne oszczędności, ustaw i zapomnij",
     highlight: false,
   },
 ];
 
 const features = [
-  "50,000+ Live Channels",
-  "4K Ultra HD Quality",
-  "7-Day Catch-Up TV",
-  "VOD Library (200,000+ titles)",
-  "24/7 Priority Support",
-  "Free Setup Assistance",
+  "50 000+ kanałów na żywo",
+  "Jakość 4K Ultra HD",
+  "7-dniowy catch-up TV",
+  "Biblioteka VOD (200 000+ tytułów)",
+  "Wsparcie 24/7",
+  "Bezpłatna pomoc przy konfiguracji",
 ];
 
 const highlights = [
-  { icon: "📱", label: "Watch on any device" },
+  { icon: "📱", label: "Oglądaj na każdym urządzeniu" },
   { icon: "❄️", label: "Anti-Freeze™ 9.8 Technology" },
-  { icon: "🎬", label: "+200K Movies & Series (VOD)" },
-  { icon: "📺", label: "+50,000 Live Premium Channels" },
-  { icon: "🎥", label: "4K / HD / FHD / UHD Quality" },
-  { icon: "🔄", label: "Free & Auto Updates" },
-  { icon: "📅", label: "Available EPG" },
-  { icon: "↩️", label: "7-Day Refund" },
-  { icon: "🎧", label: "24/7 Free Support" },
-  { icon: "🔒", label: "Privacy Protection & Built-in VPN" },
+  { icon: "🎬", label: "+200 tys. filmów i seriali (VOD)" },
+  { icon: "📺", label: "+50 000 kanałów premium na żywo" },
+  { icon: "🎥", label: "Jakość 4K / HD / FHD / UHD" },
+  { icon: "🔄", label: "Bezpłatne aktualizacje automatyczne" },
+  { icon: "📅", label: "Dostępny EPG" },
+  { icon: "↩️", label: "Zwrot pieniędzy w 7 dni" },
+  { icon: "🎧", label: "Wsparcie 24/7 bezpłatne" },
+  { icon: "🔒", label: "Ochrona prywatności i wbudowany VPN" },
 ];
 
 export default function Pricing() {
@@ -81,20 +81,20 @@ export default function Pricing() {
         {/* Header */}
         <div className="text-center mb-12">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Pricing
+            Cennik
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Simple, honest pricing
+            Prosta, uczciwa cena
           </h2>
           <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            No hidden fees. No contracts. Cancel anytime. Free 3-hour trial available.
+            Brak ukrytych opłat. Brak umów. Anuluj w dowolnym momencie. Dostępny darmowy test 3h.
           </p>
         </div>
 
         {/* Device selector */}
         <div className="flex flex-col items-center mb-12">
           <p className="text-zinc-400 text-sm mb-4">
-            How many devices do you need?
+            Ile urządzeń potrzebujesz?
           </p>
           <div className="inline-flex bg-[#111111] border border-white/10 rounded-full p-1 gap-1">
             {deviceOptions.map((d) => (
@@ -107,7 +107,7 @@ export default function Pricing() {
                     : "text-zinc-400 hover:text-white"
                 }`}
               >
-                {d} {d === 1 ? "Device" : "Devices"}
+                {d} {d === 1 ? "Urządzenie" : "Urządzenia"}
               </button>
             ))}
           </div>
@@ -141,15 +141,15 @@ export default function Pricing() {
 
                 <div className="mb-1">
                   <span className={`text-3xl font-bold ${plan.highlight ? "text-white" : "text-white"}`}>
-                    £{price}
+                    €{price}
                   </span>
                 </div>
                 <p className={`text-xs mb-5 ${plan.highlight ? "text-amber-100" : "text-zinc-500"}`}>
-                  {plan.period} · {devices} {devices === 1 ? "connection" : "connections"}
+                  {plan.period} · {devices} {devices === 1 ? "połączenie" : "połączenia"}
                 </p>
 
                 <a
-                  href={`https://wa.me/212707711512?text=${encodeURIComponent(`iptv-british.com - ${plan.name} / ${devices} ${devices === 1 ? "Device" : "Devices"} - £${price}`)}`}
+                  href={`https://wa.me/212707711512?text=${encodeURIComponent(`iptvtelewizja.com - ${plan.name} / ${devices} ${devices === 1 ? "Urządzenie" : "Urządzenia"} - €${price}`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`mt-auto block text-center font-semibold py-2.5 rounded-full text-sm transition-colors ${
@@ -158,7 +158,7 @@ export default function Pricing() {
                       : "bg-amber-500 text-white hover:bg-amber-400"
                   }`}
                 >
-                  Subscribe Now
+                  Zamów teraz
                 </a>
               </div>
             );
@@ -168,7 +168,7 @@ export default function Pricing() {
         {/* Features included in all plans */}
         <div className="bg-[#111111] border border-white/5 rounded-2xl p-7">
           <p className="text-zinc-400 text-xs uppercase tracking-wider font-medium mb-5">
-            Everything included in every plan
+            Wszystko zawarte w każdym planie
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
             {features.map((f) => (
@@ -194,7 +194,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center text-zinc-500 text-sm mt-8">
-          All plans include a free 3-hour trial. Contact us on WhatsApp to activate it — no credit card required.
+          Wszystkie plany zawierają darmowy test 3-godzinny. Skontaktuj się z nami na WhatsApp, aby go aktywować — karta kredytowa nie jest wymagana.
         </p>
       </div>
     </section>

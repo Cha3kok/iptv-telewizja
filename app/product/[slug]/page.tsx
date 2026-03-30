@@ -23,39 +23,39 @@ export async function generateMetadata({
   return {
     title: product.metaTitle,
     description: product.metaDescription,
-    alternates: { canonical: `https://iptv-british.com/product/${slug}` },
+    alternates: { canonical: `https://iptvtelewizja.com/product/${slug}` },
     openGraph: {
       title: product.metaTitle,
       description: product.metaDescription,
-      url: `https://iptv-british.com/product/${slug}`,
+      url: `https://iptvtelewizja.com/product/${slug}`,
     },
   };
 }
 
-const TRIAL_LINK = "https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial";
+const TRIAL_LINK = "https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h";
 
 const whatsIncluded = [
-  "50,000+ Live Channels",
-  "200,000+ VODs",
-  "4K / FHD / HD Quality",
-  "7-Day Catch-Up TV",
-  "EPG Programme Guide",
-  "Anti-Freeze™ Technology",
-  "Auto Updates",
-  "Multi-Device (1–4)",
-  "24/7 Support",
-  "Free Setup Help",
-  "VPN Compatible",
-  "7-Day Refund Guarantee",
+  "50 000+ kanałów na żywo",
+  "200 000+ VOD",
+  "Jakość 4K / FHD / HD",
+  "7-dniowy catch-up TV",
+  "Przewodnik EPG",
+  "Technologia Anti-Freeze™",
+  "Automatyczne aktualizacje",
+  "Multi-urządzenia (1–4)",
+  "Wsparcie 24/7",
+  "Bezpłatna pomoc w konfiguracji",
+  "Kompatybilny z VPN",
+  "Gwarancja zwrotu 48h",
 ];
 
 function getMonths(slug: string): string {
   const map: Record<string, string> = {
-    "1-month-british-iptv": "1 Month",
-    "3-month-british-iptv": "3 Months",
-    "6-month-british-iptv": "6 Months",
-    "12-month-british-iptv": "12 Months",
-    "24-month-british-iptv": "24 Months",
+    "1-miesiac-iptv-telewizja": "1 miesiąc",
+    "3-miesiace-iptv-telewizja": "3 miesiące",
+    "6-miesiecy-iptv-telewizja": "6 miesięcy",
+    "12-miesiecy-iptv-telewizja": "12 miesięcy",
+    "24-miesiace-iptv-telewizja": "24 miesiące",
   };
   return map[slug] ?? "—";
 }
@@ -77,14 +77,14 @@ export default async function ProductPage({
     "@type": "Product",
     name: product.name,
     description: product.metaDescription,
-    image: "https://iptv-british.com/og-image.svg",
-    brand: { "@type": "Brand", name: "BritishIPTV" },
+    image: "https://iptvtelewizja.com/og-image.svg",
+    brand: { "@type": "Brand", name: "IPTVTelewizja" },
     offers: {
       "@type": "Offer",
       price: product.price.toString(),
-      priceCurrency: "GBP",
+      priceCurrency: "EUR",
       availability: "https://schema.org/InStock",
-      url: `https://iptv-british.com/product/${product.slug}`,
+      url: `https://iptvtelewizja.com/product/${product.slug}`,
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -98,13 +98,13 @@ export default async function ProductPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://iptv-british.com" },
-      { "@type": "ListItem", position: 2, name: "Product", item: "https://iptv-british.com/product" },
+      { "@type": "ListItem", position: 1, name: "Strona główna", item: "https://iptvtelewizja.com" },
+      { "@type": "ListItem", position: 2, name: "Plany", item: "https://iptvtelewizja.com/product" },
       {
         "@type": "ListItem",
         position: 3,
         name: product.name,
-        item: `https://iptv-british.com/product/${product.slug}`,
+        item: `https://iptvtelewizja.com/product/${product.slug}`,
       },
     ],
   };
@@ -120,9 +120,9 @@ export default async function ProductPage({
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
           <nav className="text-zinc-500 text-sm flex items-center gap-1.5 flex-wrap">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Strona główna</Link>
             <span>/</span>
-            <Link href="/product" className="hover:text-white transition-colors">Product</Link>
+            <Link href="/product" className="hover:text-white transition-colors">Plany</Link>
             <span>/</span>
             <span className="text-zinc-300">{product.name}</span>
           </nav>
@@ -148,7 +148,7 @@ export default async function ProductPage({
 
                 {/* Price badge */}
                 <div className="inline-flex items-baseline gap-2 bg-[#111111] border border-amber-500/30 rounded-2xl px-5 py-3 mb-8">
-                  <span className="text-4xl font-extrabold text-white">£{product.price}</span>
+                  <span className="text-4xl font-extrabold text-white">€{product.price}</span>
                   <span className="text-zinc-400 text-sm">{product.period}</span>
                 </div>
 
@@ -159,8 +159,8 @@ export default async function ProductPage({
                       <Star key={i} size={15} className="fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <span className="text-white font-bold text-sm">4.9</span>
-                  <span className="text-zinc-500 text-sm">/ 2,847 reviews</span>
+                  <span className="text-white font-bold text-sm">4,9</span>
+                  <span className="text-zinc-500 text-sm">/ 2 847 opinii</span>
                 </div>
 
                 {/* CTAs */}
@@ -171,7 +171,7 @@ export default async function ProductPage({
                     rel="noopener noreferrer"
                     className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm text-center"
                   >
-                    Subscribe Now — £{product.price}
+                    Subskrybuj teraz — €{product.price}
                   </a>
                   <a
                     href={TRIAL_LINK}
@@ -179,7 +179,7 @@ export default async function ProductPage({
                     rel="noopener noreferrer"
                     className="border border-white/15 hover:border-amber-500/40 text-zinc-300 hover:text-white font-medium px-6 py-3 rounded-full transition-colors text-sm text-center"
                   >
-                    Free 3-Hour Trial
+                    Darmowy test 3h
                   </a>
                 </div>
               </div>
@@ -195,28 +195,16 @@ export default async function ProductPage({
                   <rect x="10" y="10" width="300" height="180" rx="16" fill="#111111" stroke="#f59e0b" strokeWidth="2" />
                   {/* Screen bezel */}
                   <rect x="24" y="22" width="272" height="148" rx="8" fill="#0a0a0a" />
-                  {/* UK flag - simplified */}
-                  {/* Blue background */}
-                  <rect x="26" y="24" width="268" height="144" rx="6" fill="#012169" />
-                  {/* White diagonal cross */}
-                  <line x1="26" y1="24" x2="294" y2="168" stroke="white" strokeWidth="18" />
-                  <line x1="294" y1="24" x2="26" y2="168" stroke="white" strokeWidth="18" />
-                  {/* Red diagonal cross */}
-                  <line x1="26" y1="24" x2="294" y2="168" stroke="#C8102E" strokeWidth="12" />
-                  <line x1="294" y1="24" x2="26" y2="168" stroke="#C8102E" strokeWidth="12" />
-                  {/* White cross */}
-                  <rect x="147" y="24" width="26" height="144" fill="white" />
-                  <rect x="26" y="83" width="268" height="30" fill="white" />
-                  {/* Red cross */}
-                  <rect x="151" y="24" width="18" height="144" fill="#C8102E" />
-                  <rect x="26" y="87" width="268" height="22" fill="#C8102E" />
+                  {/* Polish flag - red & white */}
+                  <rect x="26" y="24" width="268" height="72" rx="6" fill="white" />
+                  <rect x="26" y="96" width="268" height="72" rx="0" fill="#DC143C" />
                   {/* Amber overlay / channel info */}
                   <rect x="26" y="140" width="268" height="32" rx="0" fill="rgba(0,0,0,0.65)" />
                   <text x="40" y="160" fill="#f59e0b" fontSize="11" fontFamily="monospace" fontWeight="bold">
-                    British IPTV
+                    IPTVTelewizja
                   </text>
                   <text x="190" y="160" fill="white" fontSize="10" fontFamily="monospace">
-                    50,000+ Channels
+                    50 000+ kanałów
                   </text>
                   {/* Stand */}
                   <rect x="140" y="190" width="40" height="14" rx="4" fill="#1a1a1a" />
@@ -234,10 +222,10 @@ export default async function ProductPage({
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Everything Included
+                Wszystko w zestawie
               </p>
               <h2 className="text-3xl font-bold text-white">
-                What&apos;s in your {product.name} subscription
+                Co zawiera subskrypcja {product.name}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -261,10 +249,10 @@ export default async function ProductPage({
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Perfect For
+                Idealne dla
               </p>
               <h2 className="text-3xl font-bold text-white">
-                Who is the {product.name} for?
+                Dla kogo jest {product.name}?
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -289,10 +277,10 @@ export default async function ProductPage({
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {[
-                { label: "Price", value: `£${product.price} one-off` },
-                { label: "Channels", value: "50,000+" },
-                { label: "Quality", value: "4K Ultra HD" },
-                { label: "Access", value: getMonths(product.slug) },
+                { label: "Cena", value: `€${product.price} jednorazowo` },
+                { label: "Kanały", value: "50 000+" },
+                { label: "Jakość", value: "4K Ultra HD" },
+                { label: "Dostęp", value: getMonths(product.slug) },
               ].map((stat) => (
                 <div
                   key={stat.label}
@@ -313,10 +301,10 @@ export default async function ProductPage({
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Customer Reviews
+                Opinie klientów
               </p>
               <h2 className="text-3xl font-bold text-white">
-                What customers say about the {product.name}
+                Co klienci mówią o {product.name}
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -349,7 +337,7 @@ export default async function ProductPage({
                 FAQ
               </p>
               <h2 className="text-3xl font-bold text-white">
-                Frequently asked questions
+                Często zadawane pytania
               </h2>
             </div>
             <div className="flex flex-col gap-4">
@@ -370,13 +358,13 @@ export default async function ProductPage({
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto bg-gradient-to-br from-amber-500/20 to-amber-600/10 border border-amber-500/25 rounded-3xl p-10 sm:p-14 text-center">
             <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              Ready to Watch?
+              Gotowy do oglądania?
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Ready to start watching British IPTV?
+              Gotowy, żeby zacząć oglądać IPTVTelewizja?
             </h2>
             <p className="text-zinc-400 text-lg mb-8 max-w-xl mx-auto">
-              Get the {product.name} for £{product.price} — or try us free for 3 hours with no credit card required.
+              Kup {product.name} za €{product.price} — lub wypróbuj nas za darmo przez 3 godziny bez karty kredytowej.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -385,7 +373,7 @@ export default async function ProductPage({
                 rel="noopener noreferrer"
                 className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-sm w-full sm:w-auto text-center"
               >
-                Subscribe Now — £{product.price}
+                Subskrybuj teraz — €{product.price}
               </a>
               <a
                 href={TRIAL_LINK}
@@ -393,7 +381,7 @@ export default async function ProductPage({
                 rel="noopener noreferrer"
                 className="border border-white/20 hover:border-amber-500/50 text-zinc-300 hover:text-white font-medium px-8 py-3.5 rounded-full transition-colors text-sm w-full sm:w-auto text-center"
               >
-                Free 3-Hour Trial
+                Darmowy test 3h
               </a>
             </div>
           </div>
@@ -404,10 +392,10 @@ export default async function ProductPage({
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-10">
               <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Other Plans
+                Inne plany
               </p>
               <h2 className="text-2xl font-bold text-white">
-                Explore other British IPTV plans
+                Poznaj inne plany IPTVTelewizja
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -438,7 +426,7 @@ export default async function ProductPage({
                     </h3>
                     <div className="flex items-baseline gap-1.5 mb-5">
                       <span className={`text-3xl font-extrabold ${rel.highlight ? "text-white" : "text-white"}`}>
-                        £{rel.price}
+                        €{rel.price}
                       </span>
                       <span className={`text-xs ${rel.highlight ? "text-amber-100" : "text-zinc-400"}`}>
                         {rel.period}
@@ -453,7 +441,7 @@ export default async function ProductPage({
                             : "bg-amber-500 hover:bg-amber-400 text-white"
                         }`}
                       >
-                        View Plan
+                        Zobacz plan
                       </Link>
                       <a
                         href={relWaLink}
@@ -465,7 +453,7 @@ export default async function ProductPage({
                             : "border border-white/10 hover:border-amber-500/40 text-zinc-400 hover:text-white"
                         }`}
                       >
-                        Subscribe Now
+                        Subskrybuj teraz
                       </a>
                     </div>
                   </div>
@@ -477,7 +465,7 @@ export default async function ProductPage({
                 href="/product"
                 className="text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors"
               >
-                View all plans →
+                Zobacz wszystkie plany →
               </Link>
             </div>
           </div>

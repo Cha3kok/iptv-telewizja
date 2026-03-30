@@ -28,26 +28,26 @@ export default function StickyBar() {
           {/* Live dot */}
           <span className="hidden sm:flex items-center gap-1.5 text-green-400 text-xs font-medium flex-shrink-0">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            Live Now
+            Na żywo
           </span>
           <p className="text-zinc-300 text-sm truncate">
-            <span className="text-white font-semibold">50,000+ channels</span> · 4K Ultra HD · Free 3-hour trial
+            <span className="text-white font-semibold">50 000+ kanałów</span> · 4K Ultra HD · Darmowy test 3h
           </p>
         </div>
 
         <div className="flex items-center gap-3 flex-shrink-0">
           <a
-            href="https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial"
+            href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-amber-500 hover:bg-amber-400 text-white text-sm font-semibold px-5 py-2 rounded-full transition-colors whitespace-nowrap"
           >
-            Start Free Trial
+            Zacznij darmowy test
           </a>
           <button
             onClick={() => setDismissed(true)}
             className="text-zinc-500 hover:text-zinc-300 transition-colors p-1"
-            aria-label="Dismiss"
+            aria-label="Zamknij"
           >
             <X size={16} />
           </button>

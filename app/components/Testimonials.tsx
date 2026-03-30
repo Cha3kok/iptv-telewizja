@@ -2,58 +2,58 @@ import { Star } from "lucide-react";
 
 const reviews = [
   {
-    name: "James T.",
-    location: "Manchester, UK",
-    avatar: "JT",
+    name: "Marek W.",
+    location: "Warszawa, Polska",
+    avatar: "MW",
     rating: 5,
-    title: "Finally switched from Sky — best decision ever",
-    body: "Paying £70/month for Sky was painful. I switched to BritishIPTV and I get more channels, better picture quality, and it costs me less than a tenner a month. Zero buffering in 6 months of use.",
-    plan: "12-Month Plan",
+    title: "W końcu porzuciłem kablówkę — najlepsza decyzja",
+    body: "Płaciłem 180 zł miesięcznie za kablówkę. Przeszedłem na IPTV Telewizja i mam więcej kanałów, lepszą jakość obrazu, a kosztuje mnie to ułamek tej ceny. Zero zacięć przez 6 miesięcy użytkowania.",
+    plan: "Plan 12 Miesięcy",
   },
   {
-    name: "Sarah M.",
-    location: "London, UK",
-    avatar: "SM",
+    name: "Anna K.",
+    location: "Kraków, Polska",
+    avatar: "AK",
     rating: 5,
-    title: "Setup was dead easy, works great on my Firestick",
-    body: "I was worried it'd be complicated but the setup guide was clear and I was watching within 10 minutes. The sports channels are incredible — got every Sky Sports and BT Sport channel.",
-    plan: "3-Month Plan",
+    title: "Konfiguracja była prosta, świetnie działa na Firesticku",
+    body: "Bałam się, że będzie skomplikowane, ale instrukcja konfiguracji była jasna i oglądałam już po 10 minutach. Kanały sportowe są niesamowite — mam Polsat Sport, Canal+ i wszystkie ważne kanały.",
+    plan: "Plan 3 Miesiące",
   },
   {
-    name: "David K.",
-    location: "Birmingham, UK",
-    avatar: "DK",
+    name: "Piotr N.",
+    location: "Gdańsk, Polska",
+    avatar: "PN",
     rating: 5,
-    title: "Been with them 2 years, never looked back",
-    body: "I've tried a few IPTV services over the years and this is by far the most reliable. Customer support actually responds quickly. The catch-up TV feature alone is worth the price.",
-    plan: "12-Month Plan",
+    title: "Jestem z nimi 2 lata i nie żałuję ani chwili",
+    body: "Próbowałem kilku usług IPTV przez lata i ta jest zdecydowanie najbardziej niezawodna. Obsługa klienta faktycznie odpowiada szybko. Sama funkcja catch-up TV jest warta każdej złotówki.",
+    plan: "Plan 12 Miesięcy",
   },
   {
-    name: "Lisa R.",
-    location: "Leeds, UK",
-    avatar: "LR",
+    name: "Katarzyna R.",
+    location: "Wrocław, Polska",
+    avatar: "KR",
     rating: 5,
-    title: "Perfect for the whole family",
-    body: "5 connections means everyone in the house can watch something different at the same time. Kids have their channels, husband has sports, I have my soaps. Brilliant service.",
-    plan: "12-Month Plan",
+    title: "Idealne dla całej rodziny",
+    body: "4 połączenia oznaczają, że każdy w domu może oglądać coś innego w tym samym czasie. Dzieci mają swoje bajki, mąż oglądał mecz, ja swoje seriale. Wspaniała usługa.",
+    plan: "Plan 12 Miesięcy",
   },
   {
-    name: "Ahmed H.",
-    location: "Bradford, UK",
-    avatar: "AH",
+    name: "Tomasz B.",
+    location: "Londyn, UK",
+    avatar: "TB",
     rating: 5,
-    title: "International channels are excellent",
-    body: "I watch a lot of Arabic and Asian channels alongside UK ones. The international selection is massive. Picture quality is consistently sharp even on the foreign channels.",
-    plan: "3-Month Plan",
+    title: "Polskie kanały za granicą bez VPN!",
+    body: "Mieszkam w Londynie i w końcu mogę oglądać TVP, Polsat i TVN bez żadnych problemów. Jakość jest doskonała, żadnych buforowania. Polecam wszystkim Polakom za granicą.",
+    plan: "Plan 6 Miesięcy",
   },
   {
-    name: "Caroline W.",
-    location: "Bristol, UK",
-    avatar: "CW",
+    name: "Monika S.",
+    location: "Poznań, Polska",
+    avatar: "MS",
     rating: 4,
-    title: "Great service, WhatsApp support is a huge plus",
-    body: "Contacted them via WhatsApp at 11pm with a setup question and got a reply within minutes. That level of support is rare. The service itself has been rock solid for 4 months.",
-    plan: "1-Month Plan",
+    title: "Świetna usługa, wsparcie WhatsApp to ogromny plus",
+    body: "Skontaktowałam się przez WhatsApp o 23:00 z pytaniem o konfigurację i otrzymałam odpowiedź w kilka minut. Taki poziom wsparcia jest rzadkością. Sama usługa działa solidnie od 4 miesięcy.",
+    plan: "Plan 1 Miesiąc",
   },
 ];
 
@@ -73,12 +73,12 @@ function Stars({ count }: { count: number }) {
 
 function Avatar({ initials }: { initials: string }) {
   const colors: Record<string, string> = {
-    JT: "bg-blue-600",
-    SM: "bg-pink-600",
-    DK: "bg-purple-600",
-    LR: "bg-emerald-600",
-    AH: "bg-orange-600",
-    CW: "bg-teal-600",
+    MW: "bg-blue-600",
+    AK: "bg-pink-600",
+    PN: "bg-purple-600",
+    KR: "bg-emerald-600",
+    TB: "bg-orange-600",
+    MS: "bg-teal-600",
   };
   return (
     <div
@@ -90,7 +90,7 @@ function Avatar({ initials }: { initials: string }) {
 }
 
 export default function Testimonials() {
-  const totalReviews = 2847;
+  const totalReviews = 3124;
   const avgRating = 4.9;
 
   return (
@@ -99,10 +99,10 @@ export default function Testimonials() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Customer Reviews
+            Opinie klientów
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Loved by thousands across the UK
+            Tysiące zadowolonych użytkowników w Polsce i za granicą
           </h2>
 
           {/* Aggregate rating */}
@@ -113,7 +113,7 @@ export default function Testimonials() {
             </div>
             <Stars count={5} />
             <p className="text-zinc-400 text-sm mt-1">
-              Based on <span className="text-white font-medium">{totalReviews.toLocaleString()}</span> verified reviews
+              Na podstawie <span className="text-white font-medium">{totalReviews.toLocaleString("pl-PL")}</span> zweryfikowanych opinii
             </p>
           </div>
         </div>

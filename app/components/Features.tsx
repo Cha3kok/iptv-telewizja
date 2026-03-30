@@ -3,39 +3,39 @@ import { Tv2, Wifi, MonitorPlay, Globe, Clock, HeadphonesIcon } from "lucide-rea
 const features = [
   {
     icon: Tv2,
-    title: "50,000+ Live Channels",
+    title: "50 000+ kanałów na żywo",
     description:
-      "British, American, sports, news, kids — massive channel library covering every genre and region.",
+      "Polskie, zagraniczne, sport, wiadomości, dla dzieci — ogromna biblioteka kanałów pokrywająca każdy gatunek i region.",
   },
   {
     icon: MonitorPlay,
-    title: "4K Ultra HD Streaming",
+    title: "Streaming 4K Ultra HD",
     description:
-      "Crystal-clear picture quality with Dolby Audio support. Watch like you're in the studio.",
+      "Krystaliczna jakość obrazu z obsługą Dolby Audio. Oglądaj jak w studiu telewizyjnym.",
   },
   {
     icon: Wifi,
-    title: "Zero Buffering",
+    title: "Zero zacięć",
     description:
-      "Our optimised CDN network ensures smooth, uninterrupted streaming even during peak hours.",
+      "Nasza zoptymalizowana sieć CDN zapewnia płynne, nieprzerwane oglądanie nawet w godzinach szczytu.",
   },
   {
     icon: Globe,
-    title: "Works Everywhere",
+    title: "Działa wszędzie",
     description:
-      "Compatible with Smart TV, Firestick, Android, iOS, MAG, and any IPTV player. Any device, any time.",
+      "Kompatybilne z Smart TV, Firestick, Android, iOS, MAG i każdym odtwarzaczem IPTV. Każde urządzenie, o każdej porze.",
   },
   {
     icon: Clock,
-    title: "7-Day Catch-Up TV",
+    title: "7-dniowy catch-up TV",
     description:
-      "Missed your favourite show? Replay anything from the last 7 days across supported channels.",
+      "Przegapiłeś ulubiony program? Odtwórz dowolną audycję z ostatnich 7 dni na obsługiwanych kanałach.",
   },
   {
     icon: HeadphonesIcon,
-    title: "24/7 Support",
+    title: "Wsparcie 24/7",
     description:
-      "Round-the-clock customer support via live chat and WhatsApp. We're always here when you need us.",
+      "Całodobowa pomoc techniczna przez czat na żywo i WhatsApp. Zawsze jesteśmy do Twojej dyspozycji.",
   },
 ];
 
@@ -46,13 +46,13 @@ export default function Features() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Why Choose Us
+            Dlaczego my
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Everything you need, nothing you don&apos;t
+            Wszystko czego potrzebujesz
           </h2>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Built for British viewers who demand the best. No contracts, no hidden fees.
+            Stworzone dla polskich widzów, którzy oczekują najwyższej jakości. Bez umów, bez ukrytych opłat.
           </p>
         </div>
 

@@ -5,32 +5,32 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "What devices does British IPTV work on?",
-    a: "Our service works on virtually any device: Smart TVs (Samsung, LG, Sony), Amazon Firestick, Android TV boxes, Android phones, iPhones, iPads, MAG boxes, and any IPTV player like TiviMate, IPTV Smarters, or Perfect Player.",
+    q: "Na jakich urządzeniach działa IPTV Telewizja?",
+    a: "Nasza usługa działa na praktycznie każdym urządzeniu: Smart TV (Samsung, LG, Sony), Amazon Firestick, dekodery Android TV, telefony Android, iPhone, iPad, dekodery MAG oraz każdy odtwarzacz IPTV, jak TiviMate, IPTV Smarters lub Perfect Player.",
   },
   {
-    q: "Do you offer a free trial?",
-    a: "Yes! We offer a free 3-hour trial so you can test our service before subscribing. No credit card required. Contact us via WhatsApp or live chat to get your trial activated.",
+    q: "Czy oferujecie darmowy okres próbny?",
+    a: "Tak! Oferujemy darmowy test 3-godzinny, dzięki któremu możesz przetestować naszą usługę przed subskrypcją. Karta kredytowa nie jest wymagana. Skontaktuj się z nami przez WhatsApp lub czat na żywo, aby aktywować test.",
   },
   {
-    q: "Is there any buffering or freezing?",
-    a: "We invest heavily in our server infrastructure and CDN to ensure a smooth experience. The vast majority of our customers report zero buffering. A stable internet connection of at least 10Mbps is recommended for HD, and 25Mbps for 4K.",
+    q: "Czy występują zacięcia lub zamrażanie obrazu?",
+    a: "Intensywnie inwestujemy w infrastrukturę serwerową i CDN, aby zapewnić płynne działanie. Zdecydowana większość naszych klientów nie zgłasza żadnych zacięć. Zalecamy stabilne połączenie internetowe min. 10 Mbps dla HD i 25 Mbps dla 4K.",
   },
   {
-    q: "How many devices can I use at the same time?",
-    a: "This depends on your plan. The 1-Month plan supports 2 simultaneous connections, 3 Months supports 3, and the 12-Month plan supports up to 5 connections. Each connection can be on a different device.",
+    q: "Ile urządzeń mogę używać jednocześnie?",
+    a: "To zależy od wybranego planu. Plan 1-miesięczny obsługuje 1 połączenie jednoczesne, 3-miesięczny — 2, 6-miesięczny — 3, a plan 12-miesięczny obsługuje do 4 połączeń. Każde połączenie może być na innym urządzeniu.",
   },
   {
-    q: "Can I watch UK channels from abroad?",
-    a: "Yes. Our service works worldwide. You can watch all UK channels no matter where you are in the world — no VPN required.",
+    q: "Czy mogę oglądać polskie kanały za granicą?",
+    a: "Tak. Nasza usługa działa na całym świecie. Możesz oglądać wszystkie polskie kanały bez względu na to, gdzie się znajdujesz — VPN nie jest wymagany.",
   },
   {
-    q: "How do I set up the service?",
-    a: "Setup is simple. Once you subscribe, you receive your M3U link or Xtream Codes login within minutes. Enter these into any compatible IPTV app and you're live. We provide step-by-step guides and can assist you via chat.",
+    q: "Jak skonfigurować usługę?",
+    a: "Konfiguracja jest prosta. Po subskrypcji otrzymujesz link M3U lub dane logowania Xtream Codes w ciągu kilku minut. Wprowadź je do dowolnej kompatybilnej aplikacji IPTV i już oglądasz. Udostępniamy przewodniki krok po kroku i możemy pomóc przez czat.",
   },
   {
-    q: "What payment methods do you accept?",
-    a: "We accept all major credit/debit cards, PayPal, and cryptocurrency. All payments are secure and encrypted.",
+    q: "Jakie metody płatności akceptujecie?",
+    a: "Akceptujemy wszystkie główne karty kredytowe/debetowe, PayPal oraz kryptowaluty. Wszystkie płatności są bezpieczne i szyfrowane.",
   },
 ];
 
@@ -63,10 +63,10 @@ export default function FAQ() {
         <div className="text-center mb-16">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">FAQ</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Common questions
+            Często zadawane pytania
           </h2>
           <p className="text-zinc-400 text-lg">
-            Can&apos;t find the answer? Chat with us 24/7 on WhatsApp.
+            Nie możesz znaleźć odpowiedzi? Czatuj z nami 24/7 na WhatsApp.
           </p>
         </div>
 

@@ -4,12 +4,11 @@ import { useState } from "react";
 import { Menu, X, Tv } from "lucide-react";
 
 const links = [
-  { label: "Home", href: "/" },
-  { label: "Product", href: "/product" },
-  { label: "Channels", href: "#channels" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Strona główna", href: "/" },
+  { label: "Oferta", href: "/product" },
+  { label: "Cennik", href: "#pricing" },
   { label: "Blog", href: "/blog" },
-  { label: "Setup", href: "/setup" },
+  { label: "Instalacja", href: "/setup" },
 ];
 
 export default function Navbar() {
@@ -21,7 +20,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 text-white font-bold text-lg">
           <Tv className="text-amber-400" size={22} />
-          British<span className="text-amber-400">IPTV</span>
+          IPTV<span className="text-amber-400">Telewizja</span>
         </a>
 
         {/* Desktop links */}
@@ -40,13 +39,13 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a href="#pricing" className="text-sm text-zinc-400 hover:text-white transition-colors">
-            Sign In
+            Zaloguj się
           </a>
           <a
             href="#pricing"
             className="bg-amber-500 hover:bg-amber-400 text-white text-sm font-medium px-4 py-2 rounded-full transition-colors"
           >
-            Get Started
+            Zacznij teraz
           </a>
         </div>
 
@@ -54,7 +53,7 @@ export default function Navbar() {
         <button
           className="md:hidden text-white p-1"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
+          aria-label="Przełącz menu"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -78,7 +77,7 @@ export default function Navbar() {
             onClick={() => setOpen(false)}
             className="mt-2 bg-amber-500 hover:bg-amber-400 text-white text-sm font-medium px-4 py-2 rounded-full text-center transition-colors"
           >
-            Get Started
+            Zacznij teraz
           </a>
         </div>
       )}

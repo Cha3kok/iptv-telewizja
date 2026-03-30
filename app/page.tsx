@@ -3,7 +3,6 @@ import Hero from "./components/Hero";
 import Features from "./components/Features";
 import Devices from "./components/Devices";
 import Setup from "./components/Setup";
-import Channels from "./components/Channels";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
@@ -17,35 +16,36 @@ import SocialProof from "./components/SocialProof";
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "BritishIPTV",
-  url: "https://iptv-british.com",
-  logo: "https://iptv-british.com/logo.png",
+  name: "IPTVTelewizja",
+  url: "https://iptvtelewizja.com",
+  logo: "https://iptvtelewizja.com/logo.png",
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "customer support",
     email: "goldengateiptv@gmail.com",
-    availableLanguage: "English",
+    availableLanguage: ["Polish", "English"],
   },
 };
 
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "BritishIPTV Subscription",
+  name: "IPTV Telewizja — Subskrypcja",
   description:
-    "Stream 50,000+ live UK and international channels in 4K Ultra HD. No buffering, 7-day catch-up, works on any device.",
-  brand: { "@type": "Brand", name: "BritishIPTV" },
+    "Oglądaj 50 000+ polskich i zagranicznych kanałów na żywo w jakości 4K Ultra HD. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu.",
+  image: "https://iptvtelewizja.com/og-image.svg",
+  brand: { "@type": "Brand", name: "IPTVTelewizja" },
   offers: [
-    { "@type": "Offer", name: "1 Month Plan", price: "15", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "3 Month Plan", price: "35", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "6 Month Plan", price: "45", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "12 Month Plan", price: "60", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "24 Month Plan", price: "110", priceCurrency: "GBP", availability: "https://schema.org/InStock" },
+    { "@type": "Offer", name: "Plan 1 Miesiąc", price: "15", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+    { "@type": "Offer", name: "Plan 3 Miesiące", price: "35", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+    { "@type": "Offer", name: "Plan 6 Miesięcy", price: "45", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+    { "@type": "Offer", name: "Plan 12 Miesięcy", price: "60", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
+    { "@type": "Offer", name: "Plan 24 Miesiące", price: "110", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
   ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "2847",
+    reviewCount: "3124",
     bestRating: "5",
   },
 };
@@ -56,26 +56,26 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What devices does British IPTV work on?",
+      name: "Na jakich urządzeniach działa IPTV Telewizja?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Our service works on Smart TVs, Amazon Firestick, Android TV boxes, Android phones, iPhones, iPads, MAG boxes, and any IPTV player.",
+        text: "Usługa działa na Smart TV, Amazon Firestick, dekodery Android TV, telefony Android, iPhone, iPad, dekodery MAG oraz każdy odtwarzacz IPTV.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you offer a free trial?",
+      name: "Czy oferujecie darmowy okres próbny?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes, we offer a free 3-hour trial. No credit card required.",
+        text: "Tak, oferujemy darmowy test trwający 3 godziny. Nie wymagamy karty kredytowej.",
       },
     },
     {
       "@type": "Question",
-      name: "Can I watch UK channels from abroad?",
+      name: "Czy mogę oglądać polskie kanały za granicą?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Our service works worldwide. You can watch all UK channels no matter where you are — no VPN required.",
+        text: "Tak. Nasza usługa działa na całym świecie. Możesz oglądać wszystkie polskie kanały bez względu na to, gdzie jesteś — bez VPN.",
       },
     },
   ],
@@ -94,7 +94,6 @@ export default function Home() {
       <Pricing />
       <Devices />
       <Setup />
-      <Channels />
       <Testimonials />
       <FAQ />
       <Footer />

@@ -1,12 +1,12 @@
 const categories = [
-  { emoji: "🇬🇧", name: "UK Channels", count: "800+" },
-  { emoji: "🏆", name: "Sports", count: "300+" },
-  { emoji: "🎬", name: "Movies & Series", count: "200,000+" },
-  { emoji: "📰", name: "News", count: "200+" },
-  { emoji: "👶", name: "Kids", count: "150+" },
-  { emoji: "🌍", name: "International", count: "5,000+" },
-  { emoji: "🎵", name: "Music", count: "100+" },
-  { emoji: "🕹️", name: "Gaming & eSports", count: "80+" },
+  { emoji: "🇵🇱", name: "Polskie kanały", count: "500+" },
+  { emoji: "🏆", name: "Sport", count: "300+" },
+  { emoji: "🎬", name: "Filmy i seriale", count: "200 000+" },
+  { emoji: "📰", name: "Wiadomości", count: "200+" },
+  { emoji: "👶", name: "Dla dzieci", count: "150+" },
+  { emoji: "🌍", name: "Zagraniczne", count: "5 000+" },
+  { emoji: "🎵", name: "Muzyka", count: "100+" },
+  { emoji: "🕹️", name: "Gaming i eSports", count: "80+" },
 ];
 
 export default function Channels() {
@@ -16,13 +16,13 @@ export default function Channels() {
         {/* Header */}
         <div className="text-center mb-16">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Channel Lineup
+            Repertuar kanałów
           </p>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            50,000+ channels at your fingertips
+            50 000+ kanałów w zasięgu ręki
           </h2>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
-            Every major British channel plus thousands of international options.
+            Wszystkie główne polskie kanały oraz tysiące opcji zagranicznych.
           </p>
         </div>
 
@@ -38,6 +38,23 @@ export default function Channels() {
               <div className="text-amber-400 text-xs font-bold">{cat.count}</div>
             </div>
           ))}
+        </div>
+
+        {/* Polish channel highlights */}
+        <div className="mt-10 bg-[#111111] border border-white/5 rounded-2xl p-7">
+          <p className="text-zinc-400 text-xs uppercase tracking-wider font-medium mb-5">
+            Polskie kanały w pakiecie
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {["TVP1", "TVP2", "TVP Info", "TVN", "TVN24", "Polsat", "Polsat Sport", "Canal+ Polska", "TVP Sport", "TV4", "TTV", "Polsat News", "TVP Historia", "TVP Kultura", "TVN7", "TV Puls"].map((ch) => (
+              <span
+                key={ch}
+                className="bg-[#1a1a1a] border border-white/10 text-zinc-300 text-xs font-medium px-3 py-1.5 rounded-full"
+              >
+                {ch}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

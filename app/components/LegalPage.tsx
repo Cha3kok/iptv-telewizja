@@ -25,14 +25,14 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
             href="/"
             className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
           >
-            <ChevronLeft size={14} /> Back to Home
+            <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
             {badge}
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">{title}</h1>
           <p className="text-zinc-400">{subtitle}</p>
-          <p className="text-zinc-600 text-xs mt-3">Last updated: {lastUpdated}</p>
+          <p className="text-zinc-600 text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
         </div>
       </div>
 
@@ -57,7 +57,7 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
 
         <div className="pt-6 border-t border-white/5">
           <p className="text-zinc-500 text-sm">
-            Questions about this policy? Contact us at{" "}
+            Pytania dotyczące tej polityki? Skontaktuj się z nami:{" "}
             <a href="mailto:goldengateiptv@gmail.com" className="text-amber-400 hover:text-amber-300 transition-colors">
               goldengateiptv@gmail.com
             </a>

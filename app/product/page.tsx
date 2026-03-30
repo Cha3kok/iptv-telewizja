@@ -8,33 +8,33 @@ import WhatsAppButton from "../components/WhatsAppButton";
 import { products } from "../lib/products";
 
 export const metadata: Metadata = {
-  title: "British IPTV Plans & Pricing — From £15 | BritishIPTV",
+  title: "Plany i cennik IPTV — od €15 | IPTVTelewizja",
   description:
-    "Compare all British IPTV subscription plans from £15. 50,000+ channels, 4K Ultra HD, 7-day catch-up. Choose 1, 3, 6, 12, or 24 months. No contract. Instant activation.",
-  alternates: { canonical: "https://iptv-british.com/product" },
+    "Porównaj wszystkie plany subskrypcji IPTVTelewizja od €15. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Wybierz 1, 3, 6, 12 lub 24 miesiące. Bez umowy. Natychmiastowa aktywacja.",
+  alternates: { canonical: "https://iptvtelewizja.com/product" },
   openGraph: {
-    title: "British IPTV Plans & Pricing — From £15 | BritishIPTV",
+    title: "Plany i cennik IPTV — od €15 | IPTVTelewizja",
     description:
-      "50,000+ channels, 4K streaming, 7-day catch-up. Plans from £15. Compare 1, 3, 6, 12 and 24-month British IPTV subscriptions.",
-    url: "https://iptv-british.com/product",
+      "50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Plany od €15. Porównaj subskrypcje IPTV na 1, 3, 6, 12 i 24 miesiące.",
+    url: "https://iptvtelewizja.com/product",
   },
 };
 
 const catalogSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "BritishIPTV Subscription",
+  name: "IPTVTelewizja Subskrypcja",
   description:
-    "Premium British IPTV subscription with 50,000+ live channels, 200,000+ VODs, 4K Ultra HD quality, 7-day catch-up TV, and 24/7 support.",
-  image: "https://iptv-british.com/og-image.svg",
-  brand: { "@type": "Brand", name: "BritishIPTV" },
+    "Premium polska subskrypcja IPTV z 50 000+ kanałami na żywo, 200 000+ VOD, jakością 4K Ultra HD, 7-dniowym catch-up TV i wsparciem 24/7.",
+  image: "https://iptvtelewizja.com/og-image.svg",
+  brand: { "@type": "Brand", name: "IPTVTelewizja" },
   offers: products.map((p) => ({
     "@type": "Offer",
     name: p.name,
     price: p.price.toString(),
-    priceCurrency: "GBP",
+    priceCurrency: "EUR",
     availability: "https://schema.org/InStock",
-    url: `https://iptv-british.com/product/${p.slug}`,
+    url: `https://iptvtelewizja.com/product/${p.slug}`,
   })),
   aggregateRating: {
     "@type": "AggregateRating",
@@ -48,61 +48,61 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://iptv-british.com" },
-    { "@type": "ListItem", position: 2, name: "Product", item: "https://iptv-british.com/product" },
+    { "@type": "ListItem", position: 1, name: "Strona główna", item: "https://iptvtelewizja.com" },
+    { "@type": "ListItem", position: 2, name: "Plany", item: "https://iptvtelewizja.com/product" },
   ],
 };
 
-const TRIAL_LINK = "https://wa.me/212707711512?text=iptv-british.com%20-%20Free%203-Hour%20Trial";
+const TRIAL_LINK = "https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h";
 
 const planFeatures = [
-  "50,000+ Live Channels",
-  "4K Ultra HD Streaming",
-  "7-Day Catch-Up TV",
-  "24/7 Support",
+  "50 000+ kanałów na żywo",
+  "Streaming 4K Ultra HD",
+  "7-dniowy catch-up TV",
+  "Wsparcie 24/7",
 ];
 
 const trustPoints = [
   {
     icon: "📡",
-    title: "50,000+ Live Channels",
+    title: "50 000+ kanałów na żywo",
     description:
-      "UK, US, sports, news, kids, and international channels — all in one subscription. BBC, ITV, Sky Sports, TNT Sports and thousands more.",
+      "Polskie, sportowe, informacyjne, dla dzieci i kanały zagraniczne — wszystko w jednej subskrypcji. TVP, Polsat, Canal+, Eleven Sports i tysiące innych.",
   },
   {
     icon: "⚡",
-    title: "Anti-Freeze™ Technology",
+    title: "Technologia Anti-Freeze™",
     description:
-      "Our 9.8-rated CDN infrastructure delivers smooth, buffer-free streaming even during the biggest live events and peak viewing hours.",
+      "Nasza infrastruktura CDN oceniana na 9,8 zapewnia płynne, bezbuforowe strumieniowanie nawet podczas największych wydarzeń na żywo i w godzinach szczytu.",
   },
   {
     icon: "🔒",
-    title: "7-Day Refund Guarantee",
+    title: "Gwarancja zwrotu przez 48h",
     description:
-      "Not happy within the first 7 days? We'll refund you, no questions asked. We're that confident in the quality of our service.",
+      "Nie jesteś zadowolony w ciągu pierwszych 48 godzin? Zwrócimy Ci pieniądze bez zadawania pytań. Jesteśmy pewni jakości naszej usługi.",
   },
   {
     icon: "🌍",
-    title: "Works Everywhere",
+    title: "Działa wszędzie",
     description:
-      "Use your subscription anywhere in the world. Perfect for UK expats abroad or anyone travelling. No VPN required.",
+      "Korzystaj z subskrypcji gdziekolwiek na świecie. Idealny dla Polaków za granicą lub każdego w podróży. Nie wymaga VPN.",
   },
 ];
 
 const monthlyEquivalents: Record<string, string> = {
-  "1-month-british-iptv": "£15.00/mo",
-  "3-month-british-iptv": "£11.67/mo",
-  "6-month-british-iptv": "£7.50/mo",
-  "12-month-british-iptv": "£5.00/mo",
-  "24-month-british-iptv": "£4.58/mo",
+  "1-miesiac-iptv-telewizja": "€15,00/mies.",
+  "3-miesiace-iptv-telewizja": "€11,67/mies.",
+  "6-miesiecy-iptv-telewizja": "€7,50/mies.",
+  "12-miesiecy-iptv-telewizja": "€5,00/mies.",
+  "24-miesiace-iptv-telewizja": "€4,58/mies.",
 };
 
 const devicesBySlug: Record<string, string> = {
-  "1-month-british-iptv": "Up to 4",
-  "3-month-british-iptv": "Up to 4",
-  "6-month-british-iptv": "Up to 4",
-  "12-month-british-iptv": "Up to 4",
-  "24-month-british-iptv": "Up to 4",
+  "1-miesiac-iptv-telewizja": "Do 4",
+  "3-miesiace-iptv-telewizja": "Do 4",
+  "6-miesiecy-iptv-telewizja": "Do 4",
+  "12-miesiecy-iptv-telewizja": "Do 4",
+  "24-miesiace-iptv-telewizja": "Do 4",
 };
 
 export default function ProductCatalogPage() {
@@ -117,29 +117,29 @@ export default function ProductCatalogPage() {
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
           <nav className="text-zinc-500 text-sm flex items-center gap-1.5">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Strona główna</Link>
             <span>/</span>
-            <span className="text-zinc-300">Product</span>
+            <span className="text-zinc-300">Plany</span>
           </nav>
         </div>
 
         {/* Hero */}
         <section className="py-16 text-center px-4">
           <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-4">
-            Pricing Plans
+            Plany cenowe
           </p>
           <h1 className="text-4xl sm:text-6xl font-bold text-white mb-6 leading-tight">
-            Choose Your British IPTV Plan
+            Wybierz swój plan IPTV
           </h1>
           <p className="text-zinc-400 text-lg max-w-2xl mx-auto mb-8">
-            All plans include the same premium features — 50,000+ channels, 4K quality, 7-day catch-up. The only difference is how long you subscribe and how much you save.
+            Wszystkie plany zawierają te same funkcje premium — 50 000+ kanałów, jakość 4K, 7-dniowy catch-up. Jedyną różnicą jest długość subskrypcji i oszczędności.
           </p>
           <div className="flex items-center justify-center gap-6 flex-wrap text-sm text-zinc-400">
-            <span>⭐ 4.9 / 2,847 reviews</span>
+            <span>⭐ 4,9 / 2 847 opinii</span>
             <span className="text-zinc-700">|</span>
-            <span>✅ No contracts</span>
+            <span>✅ Bez umów</span>
             <span className="text-zinc-700">|</span>
-            <span>🔒 7-day refund</span>
+            <span>🔒 Zwrot w 48h</span>
           </div>
         </section>
 
@@ -186,7 +186,7 @@ export default function ProductCatalogPage() {
                             product.highlight ? "text-white" : "text-white"
                           }`}
                         >
-                          £{product.price}
+                          €{product.price}
                         </span>
                         <span
                           className={`text-sm ${
@@ -240,7 +240,7 @@ export default function ProductCatalogPage() {
                             : "bg-amber-500 hover:bg-amber-400 text-white"
                         }`}
                       >
-                        View Plan
+                        Zobacz plan
                       </Link>
                       <a
                         href={waLink}
@@ -252,7 +252,7 @@ export default function ProductCatalogPage() {
                             : "border border-white/10 hover:border-amber-500/40 text-zinc-300 hover:text-white"
                         }`}
                       >
-                        Subscribe Now
+                        Subskrybuj teraz
                       </a>
                     </div>
                   </div>
@@ -267,10 +267,10 @@ export default function ProductCatalogPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Compare Plans
+                Porównaj plany
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                All plans, side by side
+                Wszystkie plany obok siebie
               </h2>
             </div>
             <div className="overflow-x-auto">
@@ -278,7 +278,7 @@ export default function ProductCatalogPage() {
                 <thead>
                   <tr className="border-b border-white/10">
                     <th className="text-left text-zinc-400 text-sm font-medium py-3 pr-6 w-1/3">
-                      Feature
+                      Funkcja
                     </th>
                     {products.map((p) => (
                       <th
@@ -292,14 +292,14 @@ export default function ProductCatalogPage() {
                             {p.badge}
                           </span>
                         )}
-                        {p.name.replace(" British IPTV", "")}
+                        {p.name.replace(" IPTV Telewizja", "")}
                       </th>
                     ))}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
                   <tr>
-                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Price</td>
+                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Cena</td>
                     {products.map((p) => (
                       <td
                         key={p.slug}
@@ -307,12 +307,12 @@ export default function ProductCatalogPage() {
                           p.highlight ? "text-amber-400" : "text-white"
                         }`}
                       >
-                        £{p.price}
+                        €{p.price}
                       </td>
                     ))}
                   </tr>
                   <tr>
-                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Duration</td>
+                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Czas trwania</td>
                     {products.map((p) => (
                       <td
                         key={p.slug}
@@ -323,7 +323,7 @@ export default function ProductCatalogPage() {
                     ))}
                   </tr>
                   <tr>
-                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Monthly equivalent</td>
+                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Ekwiwalent miesięczny</td>
                     {products.map((p) => (
                       <td
                         key={p.slug}
@@ -336,7 +336,7 @@ export default function ProductCatalogPage() {
                     ))}
                   </tr>
                   <tr>
-                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Devices</td>
+                    <td className="py-3.5 pr-6 text-zinc-400 text-sm">Urządzenia</td>
                     {products.map((p) => (
                       <td
                         key={p.slug}
@@ -347,12 +347,12 @@ export default function ProductCatalogPage() {
                     ))}
                   </tr>
                   {[
-                    "50,000+ Channels",
+                    "50 000+ kanałów",
                     "4K Ultra HD",
-                    "7-Day Catch-Up",
-                    "200,000+ VODs",
-                    "EPG Guide",
-                    "24/7 Support",
+                    "7-dniowy catch-up",
+                    "200 000+ VOD",
+                    "Przewodnik EPG",
+                    "Wsparcie 24/7",
                   ].map((feature) => (
                     <tr key={feature}>
                       <td className="py-3.5 pr-6 text-zinc-400 text-sm">{feature}</td>
@@ -371,15 +371,15 @@ export default function ProductCatalogPage() {
           </div>
         </section>
 
-        {/* Why British IPTV */}
+        {/* Why IPTVTelewizja */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
               <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-                Why Us
+                Dlaczego my
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                Why British IPTV?
+                Dlaczego IPTVTelewizja?
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -401,13 +401,13 @@ export default function ProductCatalogPage() {
         <section className="py-20 px-4 bg-gradient-to-b from-[#0d0d0d] to-[#0a0a0a] border-t border-white/5">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-4">
-              Not Sure Yet?
+              Nie jesteś pewien?
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Try British IPTV free for 3 hours
+              Wypróbuj IPTVTelewizja za darmo przez 3 godziny
             </h2>
             <p className="text-zinc-400 text-lg mb-8">
-              No credit card. No commitment. Just message us on WhatsApp and we&apos;ll activate your free trial in minutes.
+              Bez karty kredytowej. Bez zobowiązań. Napisz do nas na WhatsApp, a aktywujemy Twój darmowy test w ciągu kilku minut.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -416,13 +416,13 @@ export default function ProductCatalogPage() {
                 rel="noopener noreferrer"
                 className="bg-amber-500 hover:bg-amber-400 text-white font-semibold px-8 py-3.5 rounded-full transition-colors text-sm w-full sm:w-auto text-center"
               >
-                Start Free 3-Hour Trial
+                Zacznij darmowy test 3h
               </a>
               <Link
-                href="/product/6-month-british-iptv"
+                href="/product/6-miesiecy-iptv-telewizja"
                 className="border border-white/15 hover:border-amber-500/40 text-zinc-300 hover:text-white font-medium px-8 py-3.5 rounded-full transition-colors text-sm w-full sm:w-auto text-center"
               >
-                View Most Popular Plan
+                Zobacz najpopularniejszy plan
               </Link>
             </div>
           </div>

@@ -2,64 +2,64 @@ import type { Metadata } from "next";
 import LegalPage from "../components/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
-  description: "Read the terms and conditions governing use of the BritishIPTV service.",
-  alternates: { canonical: "https://iptv-british.com/terms-of-service" },
+  title: "Regulamin",
+  description: "Przeczytaj warunki i zasady korzystania z usługi IPTVTelewizja.",
+  alternates: { canonical: "https://iptvtelewizja.com/terms-of-service" },
 };
 
 export default function TermsOfService() {
   return (
     <LegalPage
-      badge="Legal"
-      title="Terms of Service"
-      subtitle="Please read these terms carefully before using our service."
-      lastUpdated="1 January 2025"
+      badge="Prawne"
+      title="Regulamin"
+      subtitle="Prosimy o uważne zapoznanie się z niniejszymi warunkami przed skorzystaniem z usługi."
+      lastUpdated="1 stycznia 2025"
       sections={[
         {
-          heading: "1. Acceptance of Terms",
-          body: "By subscribing to or using the BritishIPTV service, you agree to be bound by these Terms of Service. If you do not agree, do not use the service.",
+          heading: "1. Akceptacja warunków",
+          body: "Subskrybując lub korzystając z usługi IPTVTelewizja, wyrażasz zgodę na przestrzeganie niniejszego Regulaminu. Jeśli nie zgadzasz się, nie korzystaj z usługi.",
         },
         {
-          heading: "2. Service Description",
-          body: "BritishIPTV provides an Internet Protocol Television (IPTV) streaming service giving access to live TV channels, video-on-demand content, and catch-up television via the internet. The service is provided on a subscription basis.",
+          heading: "2. Opis usługi",
+          body: "IPTVTelewizja świadczy usługę strumieniowania telewizji internetowej (IPTV) zapewniającą dostęp do kanałów na żywo, treści wideo na żądanie i telewizji z możliwością odtwarzania przez internet. Usługa jest świadczona na zasadzie subskrypcji.",
         },
         {
-          heading: "3. Acceptable Use",
+          heading: "3. Dopuszczalne użytkowanie",
           body: [
-            "The service is for personal, non-commercial use only.",
-            "You may not resell, redistribute, or sublicense access to the service without written permission.",
-            "You may not use the service to record, copy, or distribute copyrighted content.",
-            "You may not share your account credentials with users outside your household.",
-            "You may not attempt to circumvent any technical protection measures.",
+            "Usługa jest przeznaczona wyłącznie do użytku osobistego, niekomercyjnego.",
+            "Nie możesz odsprzedawać, redystrybuować ani sublicencjonować dostępu do usługi bez pisemnej zgody.",
+            "Nie możesz używać usługi do nagrywania, kopiowania ani dystrybucji treści chronionych prawem autorskim.",
+            "Nie możesz udostępniać danych uwierzytelniających konta użytkownikom spoza swojego gospodarstwa domowego.",
+            "Nie możesz próbować obejść żadnych technicznych środków ochrony.",
           ],
         },
         {
-          heading: "4. Subscriptions and Payment",
-          body: "Subscriptions are billed in advance for the chosen period (1, 3, or 12 months). All payments are non-refundable except as described in our Refund Policy. We reserve the right to change pricing with 30 days' notice.",
+          heading: "4. Subskrypcje i płatności",
+          body: "Subskrypcje są rozliczane z góry za wybrany okres (1, 3, 6, 12 lub 24 miesiące). Wszystkie płatności są bezzwrotne, z wyjątkiem przypadków opisanych w naszej Polityce zwrotów. Zastrzegamy sobie prawo do zmiany cen z 30-dniowym wyprzedzeniem.",
         },
         {
-          heading: "5. Service Availability",
-          body: "We aim to maintain 99.9% uptime but do not guarantee uninterrupted service. Scheduled maintenance, force majeure events, or circumstances beyond our control may cause temporary interruptions. We are not liable for service outages beyond our reasonable control.",
+          heading: "5. Dostępność usługi",
+          body: "Dążymy do utrzymania 99,9% czasu sprawności, ale nie gwarantujemy nieprzerwanej usługi. Planowane konserwacje, zdarzenia siły wyższej lub okoliczności poza naszą kontrolą mogą powodować tymczasowe przerwy. Nie ponosimy odpowiedzialności za przerwy w świadczeniu usług wykraczające poza naszą kontrolę.",
         },
         {
-          heading: "6. Account Security",
-          body: "You are responsible for maintaining the confidentiality of your account credentials. Notify us immediately if you suspect unauthorised use of your account. We are not liable for losses resulting from unauthorised account access.",
+          heading: "6. Bezpieczeństwo konta",
+          body: "Jesteś odpowiedzialny za zachowanie poufności danych uwierzytelniających konta. Niezwłocznie powiadom nas, jeśli podejrzewasz nieautoryzowane użycie Twojego konta. Nie ponosimy odpowiedzialności za straty wynikające z nieautoryzowanego dostępu do konta.",
         },
         {
-          heading: "7. Intellectual Property",
-          body: "All content streamed through the service is owned by the respective broadcasters and rights holders. BritishIPTV makes no claim of ownership over third-party content. The BritishIPTV brand, logo, and website content are our intellectual property.",
+          heading: "7. Własność intelektualna",
+          body: "Wszystkie treści strumieniowane przez usługę są własnością odpowiednich nadawców i właścicieli praw. IPTVTelewizja nie rości sobie własności do treści stron trzecich. Marka IPTVTelewizja, logo i treści strony internetowej stanowią naszą własność intelektualną.",
         },
         {
-          heading: "8. Limitation of Liability",
-          body: "To the maximum extent permitted by law, BritishIPTV shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service. Our total liability to you shall not exceed the amount paid in the 30 days preceding any claim.",
+          heading: "8. Ograniczenie odpowiedzialności",
+          body: "W maksymalnym zakresie dozwolonym przez prawo, IPTVTelewizja nie ponosi odpowiedzialności za żadne pośrednie, przypadkowe, szczególne ani wynikowe szkody wynikające z korzystania z usługi. Nasza całkowita odpowiedzialność wobec Ciebie nie przekroczy kwoty zapłaconej w ciągu 30 dni poprzedzających jakiekolwiek roszczenie.",
         },
         {
-          heading: "9. Termination",
-          body: "We reserve the right to suspend or terminate your account without notice if you breach these terms. You may cancel your subscription at any time through our support channels.",
+          heading: "9. Rozwiązanie umowy",
+          body: "Zastrzegamy sobie prawo do zawieszenia lub zamknięcia Twojego konta bez powiadomienia w przypadku naruszenia niniejszych warunków. Możesz anulować subskrypcję w dowolnym momencie za pośrednictwem naszych kanałów wsparcia.",
         },
         {
-          heading: "10. Governing Law",
-          body: "These terms are governed by and construed in accordance with the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.",
+          heading: "10. Prawo właściwe",
+          body: "Niniejszy regulamin podlega prawu polskiemu i jest interpretowany zgodnie z nim. Wszelkie spory podlegają wyłącznej jurysdykcji sądów polskich.",
         },
       ]}
     />
