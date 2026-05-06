@@ -9,6 +9,8 @@ import Footer from "../../components/Footer";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import JsonLd from "../../components/JsonLd";
 
+export const dynamicParams = true;
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -51,6 +53,9 @@ function formatDate(iso: string) {
 }
 
 const mdxComponents = {
+  img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => (
+    <img className="w-full rounded-2xl my-8 object-cover max-h-96" {...props} />
+  ),
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2 className="text-xl font-bold text-white mt-10 mb-3" {...props} />
   ),
@@ -139,6 +144,17 @@ export default async function BlogPostPage({ params }: Props) {
           <p className="text-zinc-400 text-lg leading-relaxed">{post.excerpt}</p>
         </div>
       </div>
+
+      {/* Cover image */}
+      {post.coverImage && (
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+          <img
+            src={post.coverImage}
+            alt={post.coverAlt ?? post.title}
+            className="w-full rounded-2xl object-cover max-h-96"
+          />
+        </div>
+      )}
 
       {/* Article body */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
