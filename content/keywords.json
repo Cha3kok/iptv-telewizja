@@ -1,38 +1,38 @@
-[
-  {
-    "keyword": "najlepsze iptv polska",
-    "slug": "najlepsze-iptv-polska",
-    "category": "Reviews",
-    "status": "published"
-  },
-  {
-    "keyword": "jak ogladac ekstraklase przez iptv",
-    "slug": "jak-ogladac-ekstraklase-przez-iptv",
-    "category": "Sports",
-    "status": "published"
-  },
-  {
-    "keyword": "iptv na iphone polska",
-    "slug": "iptv-na-iphone-polska",
-    "category": "Guides",
-    "status": "published"
-  },
-  {
-    "keyword": "tanie iptv polska",
-    "slug": "tanie-iptv-polska",
-    "category": "Reviews",
-    "status": "pending"
-  },
-  {
-    "keyword": "iptv android box polska",
-    "slug": "iptv-android-box-polska",
-    "category": "Guides",
-    "status": "pending"
-  },
-  {
-    "keyword": "iptv na pc windows polska",
-    "slug": "iptv-na-pc-windows-polska",
-    "category": "Guides",
-    "status": "pending"
-  }
+﻿[
+    {
+        "keyword":  "najlepsze iptv polska",
+        "slug":  "najlepsze-iptv-polska",
+        "category":  "Reviews",
+        "status":  "published"
+    },
+    {
+        "keyword":  "jak ogladac ekstraklase przez iptv",
+        "slug":  "jak-ogladac-ekstraklase-przez-iptv",
+        "category":  "Sports",
+        "status":  "published"
+    },
+    {
+        "keyword":  "iptv na iphone polska",
+        "slug":  "iptv-na-iphone-polska",
+        "category":  "Guides",
+        "status":  "published"
+    },
+    {
+        "keyword":  "tanie iptv polska",
+        "slug":  "tanie-iptv-polska",
+        "category":  "Reviews",
+        "status":  "published"
+    },
+    {
+        "keyword":  "iptv android box polska",
+        "slug":  "iptv-android-box-polska",
+        "category":  "Guides",
+        "status":  "pending"
+    },
+    {
+        "keyword":  "iptv na pc windows polska",
+        "slug":  "iptv-na-pc-windows-polska",
+        "category":  "Guides",
+        "status":  "pending"
+    }
 ]
