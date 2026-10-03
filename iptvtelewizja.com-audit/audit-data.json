@@ -1,0 +1,239 @@
+{
+  "summary": {
+    "health_score": 74,
+    "business_type": "Online subscription service (IPTV), Polish audience",
+    "top_findings": [
+      "Branch with all fixes not deployed; live canonical points to a redirecting URL",
+      "Weak E-E-A-T: no named author, no company identity, off-brand Gmail contact",
+      "Six thin blog posts and two overlapping Smart TV posts",
+      "21 of 28 titles over 60 characters; 13 descriptions over 160",
+      "Mobile lab LCP 3.0 s caused by hero H1 fade-in"
+    ],
+    "quick_wins": [
+      "Deploy branch and set apex redirect to 308",
+      "Remove opacity fade from hero H1",
+      "Shorten titles to 60 characters",
+      "Add width/height and next/image to blog images",
+      "Fix three accessibility failures"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 80,
+      "what_works": [
+        "Static prerendering",
+        "Canonicals on www",
+        "Sitemap with real lastmod",
+        "Security headers",
+        "Real 404s"
+      ],
+      "findings": [
+        {
+          "title": "Fixes not deployed",
+          "severity": "Critical",
+          "description": "Live canonical is https://iptvtelewizja.com (307 to www); /dmca, /llms.txt, /og-image.png 404 live.",
+          "recommendation": "Merge and deploy audit-fixes."
+        },
+        {
+          "title": "Apex redirect is temporary",
+          "severity": "High",
+          "description": "iptvtelewizja.com returns 307 to www.",
+          "recommendation": "Set 308 in Vercel Domains."
+        },
+        {
+          "title": "Unresponsive www IP",
+          "severity": "Medium",
+          "description": "64.29.17.1 did not respond from the audit network (15-30 s delays).",
+          "recommendation": "Verify with PSI from several regions."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 62,
+      "what_works": [
+        "Citable IPTV Polska definition",
+        "Consistent facts site-wide",
+        "No filler language (quality 90-91)"
+      ],
+      "findings": [
+        {
+          "title": "Weak E-E-A-T",
+          "severity": "High",
+          "description": "No named author, company identity or branded email.",
+          "recommendation": "Add company details, branded email, named author bio."
+        },
+        {
+          "title": "Thin posts",
+          "severity": "High",
+          "description": "Six posts with ~200-270 words of real content.",
+          "recommendation": "Expand to 1000+ words or merge."
+        },
+        {
+          "title": "Overlapping Smart TV posts",
+          "severity": "Medium",
+          "description": "iptv-setup-guide-smart-tv-2025 vs iptv-smart-tv-polska.",
+          "recommendation": "Merge with 308 redirect."
+        }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 72,
+      "what_works": [
+        "One H1 per page",
+        "Keyword-led home title/H1",
+        "Keyword internal links from posts"
+      ],
+      "findings": [
+        {
+          "title": "Long titles",
+          "severity": "Medium",
+          "description": "21 of 28 titles exceed 60 characters (up to 89).",
+          "recommendation": "Shorten or drop brand suffix."
+        },
+        {
+          "title": "Long descriptions",
+          "severity": "Medium",
+          "description": "13 descriptions exceed 160 characters.",
+          "recommendation": "Trim to 120-160."
+        },
+        {
+          "title": "Weak internal links",
+          "severity": "Medium",
+          "description": "24-month plan and what-is-iptv have 1 inbound link each.",
+          "recommendation": "Add contextual links."
+        }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 85,
+      "what_works": [
+        "Valid JSON-LD everywhere",
+        "Connected @graph on home",
+        "BlogPosting with dates"
+      ],
+      "findings": [
+        {
+          "title": "No sameAs",
+          "severity": "Medium",
+          "description": "Organization lacks social profile links.",
+          "recommendation": "Add once profiles exist."
+        },
+        {
+          "title": "No CollectionPage on /blog",
+          "severity": "Low",
+          "description": "Blog index has no schema.",
+          "recommendation": "Add CollectionPage/ItemList."
+        }
+      ]
+    },
+    {
+      "name": "Performance (CWV)",
+      "score": 82,
+      "what_works": [
+        "Lab perf 94",
+        "CLS 0",
+        "TBT 0-60 ms"
+      ],
+      "findings": [
+        {
+          "title": "Home LCP 3.0 s",
+          "severity": "Medium",
+          "description": "LCP element is the H1 delayed by opacity fade-in (532 ms render delay).",
+          "recommendation": "Use transform-only animation."
+        },
+        {
+          "title": "Unsized blog images",
+          "severity": "Medium",
+          "description": "Cover and inline images lack width/height; JPEG only.",
+          "recommendation": "Use next/image."
+        }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "score": 75,
+      "what_works": [
+        "Citable passages in raw HTML",
+        "AI search crawlers allowed",
+        "llms.txt present"
+      ],
+      "findings": [
+        {
+          "title": "No brand presence off-site",
+          "severity": "High",
+          "description": "No YouTube, Reddit, Wikipedia or LinkedIn presence.",
+          "recommendation": "Build YouTube tutorials and community presence."
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 75,
+      "what_works": [
+        "All images have alt text",
+        "Logo images replaced",
+        "1200x630 PNG OG image"
+      ],
+      "findings": [
+        {
+          "title": "No modern formats",
+          "severity": "Medium",
+          "description": "JPEG via plain img, no responsive sizes.",
+          "recommendation": "Serve WebP/AVIF via next/image."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Critical Fixes",
+        "timeframe": "Week 1",
+        "items": [
+          "Deploy audit-fixes",
+          "Apex redirect 308",
+          "Verify Search Console and Bing, submit sitemap"
+        ]
+      },
+      {
+        "name": "Phase 2: High-Impact Improvements",
+        "timeframe": "Weeks 2-3",
+        "items": [
+          "Hero LCP fix",
+          "E-E-A-T details",
+          "Expand or merge thin posts",
+          "Merge Smart TV posts"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & Authority",
+        "timeframe": "Month 2",
+        "items": [
+          "Titles and descriptions",
+          "next/image",
+          "Internal links",
+          "Accessibility fixes",
+          "Polish slugs",
+          "YouTube and community presence"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring & Iteration",
+        "timeframe": "Ongoing",
+        "items": [
+          "Refresh facts every 2-3 months",
+          "IndexNow",
+          "Track rankings once Semrush/GSC connected"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}

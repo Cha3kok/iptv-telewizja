@@ -1,69 +1,46 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from '@vercel/analytics/next';
+import { OG_IMAGE, SITE_URL } from "./lib/site";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// latin-ext carries the Polish letters (ą, ę, ł, ś, ż …).
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const BASE_URL = "https://iptvtelewizja.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
+    default: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
     template: "%s — IPTVTelewizja",
   },
   description:
-    "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
-  keywords: [
-    "iptv telewizja",
-    "polska telewizja iptv",
-    "iptv polska",
-    "polskie kanały przez internet",
-    "najlepsza iptv 2025",
-    "iptv firestick polska",
-    "polsat sport iptv",
-    "tvp iptv",
-    "4k iptv polska",
-    "telewizja internetowa",
-  ],
+    "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
   authors: [{ name: "IPTVTelewizja" }],
   creator: "IPTVTelewizja",
   icons: {
     icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
     locale: "pl_PL",
-    url: BASE_URL,
+    url: SITE_URL,
     siteName: "IPTV Telewizja",
-    title: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
+    title: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
     description:
-      "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
-    images: [
-      {
-        url: "/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "IPTV Telewizja — 50 000+ Kanałów w 4K",
-      },
-    ],
+      "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
+    title: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
     description:
-      "Oglądaj 50 000+ polskich i zagranicznych kanałów w 4K Ultra HD od €15. Darmowy test 3h — bez karty kredytowej.",
-    images: ["/og-image.svg"],
+      "Oglądaj 50 000+ polskich i zagranicznych kanałów w 4K Ultra HD od €15. Darmowy test 3h — bez karty kredytowej.",
+    images: ["/og-image.png"],
     creator: "@iptvtelewizja",
   },
   robots: {
@@ -77,14 +54,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: BASE_URL,
-    languages: {
-      "pl": BASE_URL,
-      "pl-PL": BASE_URL,
-      "x-default": BASE_URL,
-    },
-  },
 };
 
 export default function RootLayout({
@@ -95,9 +64,9 @@ export default function RootLayout({
   return (
     <html
       lang="pl"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${jakarta.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col bg-ink text-slate-200">
         {children}
         <Analytics />
       </body>

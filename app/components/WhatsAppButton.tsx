@@ -1,24 +1,24 @@
 "use client";
 
 import { useState } from "react";
-import { X, MessageCircle } from "lucide-react";
+import { X } from "lucide-react";
 
 export default function WhatsAppButton() {
   const [tooltipDismissed, setTooltipDismissed] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
       {/* Tooltip bubble */}
       {!tooltipDismissed && (
-        <div className="relative bg-white text-zinc-800 text-sm px-4 py-3 rounded-2xl shadow-xl max-w-[220px] leading-snug">
+        <div className="relative hidden sm:block animate-fade-up [animation-delay:2s] bg-white text-slate-800 text-sm px-4 py-3 rounded-2xl shadow-xl max-w-[220px] leading-snug">
           <button
             onClick={() => setTooltipDismissed(true)}
-            className="absolute -top-2 -right-2 bg-zinc-200 hover:bg-zinc-300 rounded-full p-0.5 transition-colors"
-            aria-label="Dismiss"
+            className="absolute -top-2 -right-2 bg-slate-200 hover:bg-slate-300 rounded-full p-0.5 transition-colors"
+            aria-label="Zamknij"
           >
             <X size={12} />
           </button>
-          <p className="font-bold text-xs text-zinc-500 mb-1">iptvtelewizja.com</p>
+          <p className="font-bold text-xs text-slate-500 mb-1">iptvtelewizja.com</p>
           <p className="font-medium">💬 Chcę więcej informacji</p>
           {/* Tail */}
           <span className="absolute -bottom-2 right-6 w-3 h-3 bg-white rotate-45 shadow-sm" />
@@ -30,8 +30,8 @@ export default function WhatsAppButton() {
         href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Chc%C4%99%20wi%C4%99cej%20informacji"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] rounded-full flex items-center justify-center shadow-lg hover:shadow-green-500/30 transition-all hover:scale-110"
-        aria-label="Chat on WhatsApp"
+        className="relative isolate w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] rounded-full flex items-center justify-center shadow-lg shadow-emerald-900/40 transition-all hover:scale-110 before:absolute before:inset-0 before:rounded-full before:bg-[#25D366] before:animate-ping before:opacity-30 before:-z-10"
+        aria-label="Napisz do nas na WhatsApp"
       >
         {/* WhatsApp SVG icon */}
         <svg viewBox="0 0 24 24" fill="white" className="w-7 h-7">

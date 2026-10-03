@@ -4,7 +4,7 @@ import LegalPage from "../components/LegalPage";
 export const metadata: Metadata = {
   title: "Regulamin",
   description: "Przeczytaj warunki i zasady korzystania z usługi IPTVTelewizja.",
-  alternates: { canonical: "https://iptvtelewizja.com/terms-of-service" },
+  alternates: { canonical: "https://www.iptvtelewizja.com/terms-of-service" },
 };
 
 export default function TermsOfService() {

@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import ChannelMarquee from "./components/ChannelMarquee";
+import FinalCta from "./components/FinalCta";
 import Features from "./components/Features";
 import Devices from "./components/Devices";
 import Setup from "./components/Setup";
@@ -10,96 +13,125 @@ import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
 import StickyBar from "./components/StickyBar";
 import JsonLd from "./components/JsonLd";
-import OfferBanner from "./components/OfferBanner";
-import SocialProof from "./components/SocialProof";
+import IptvPolskaIntro from "./components/IptvPolskaIntro";
+import { OG_IMAGE, PAGES_UPDATED, SITE_URL } from "./lib/site";
+import { SUPPORT_EMAIL, WHATSAPP_NUMBER } from "./lib/contact";
+import { homeFaqs } from "./lib/faq";
+import { products } from "./lib/products";
 
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "IPTVTelewizja",
-  url: "https://iptvtelewizja.com",
-  logo: "https://iptvtelewizja.com/logo.png",
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer support",
-    email: "goldengateiptv@gmail.com",
-    availableLanguage: ["Polish", "English"],
-  },
+const TITLE = "IPTV Polska — Telewizja Internetowa w 4K od €15 | IPTV Telewizja";
+const DESCRIPTION =
+  "IPTV Polska od €15: 50 000+ kanałów na żywo w 4K, polskie kanały i sport, 7-dniowy catch-up i 200 000+ VOD. Działa w Polsce i za granicą. Darmowy test 3h.";
+
+export const metadata: Metadata = {
+  title: { absolute: TITLE },
+  description: DESCRIPTION,
+  alternates: { canonical: "/" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: "/", images: [OG_IMAGE] },
+  twitter: { title: TITLE, description: DESCRIPTION },
 };
 
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  name: "IPTV Telewizja — Subskrypcja",
-  description:
-    "Oglądaj 50 000+ polskich i zagranicznych kanałów na żywo w jakości 4K Ultra HD. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu.",
-  image: "https://iptvtelewizja.com/og-image.svg",
-  brand: { "@type": "Brand", name: "IPTVTelewizja" },
-  offers: [
-    { "@type": "Offer", name: "Plan 1 Miesiąc", price: "15", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "Plan 3 Miesiące", price: "35", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "Plan 6 Miesięcy", price: "45", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "Plan 12 Miesięcy", price: "60", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
-    { "@type": "Offer", name: "Plan 24 Miesiące", price: "110", priceCurrency: "EUR", availability: "https://schema.org/InStock" },
-  ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "3124",
-    bestRating: "5",
-  },
-};
+const ORG_ID = `${SITE_URL}/#organization`;
+const SITE_ID = `${SITE_URL}/#website`;
 
-const faqSchema = {
+// One connected graph so search engines read the brand, site, page, offer and FAQ as related entities.
+const homeSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
+  "@graph": [
     {
-      "@type": "Question",
-      name: "Na jakich urządzeniach działa IPTV Telewizja?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Usługa działa na Smart TV, Amazon Firestick, dekodery Android TV, telefony Android, iPhone, iPad, dekodery MAG oraz każdy odtwarzacz IPTV.",
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: "IPTV Telewizja",
+      alternateName: ["IPTVTelewizja", "IPTV Telewizja Polska"],
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png`, width: 512, height: 512 },
+      email: SUPPORT_EMAIL,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        email: SUPPORT_EMAIL,
+        telephone: `+${WHATSAPP_NUMBER}`,
+        availableLanguage: ["pl", "en"],
+        hoursAvailable: { "@type": "OpeningHoursSpecification", opens: "00:00", closes: "23:59" },
       },
     },
     {
-      "@type": "Question",
-      name: "Czy oferujecie darmowy okres próbny?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Tak, oferujemy darmowy test trwający 3 godziny. Nie wymagamy karty kredytowej.",
+      "@type": "WebSite",
+      "@id": SITE_ID,
+      url: SITE_URL,
+      name: "IPTV Telewizja",
+      inLanguage: "pl-PL",
+      publisher: { "@id": ORG_ID },
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/#webpage`,
+      url: SITE_URL,
+      name: TITLE,
+      description: DESCRIPTION,
+      inLanguage: "pl-PL",
+      isPartOf: { "@id": SITE_ID },
+      about: { "@id": `${SITE_URL}/#service` },
+      primaryImageOfPage: { "@type": "ImageObject", url: `${SITE_URL}/og-image.png` },
+      dateModified: PAGES_UPDATED,
+    },
+    {
+      "@type": "Product",
+      "@id": `${SITE_URL}/#service`,
+      name: "IPTV Polska — subskrypcja IPTV Telewizja",
+      description:
+        "Subskrypcja IPTV Polska: 50 000+ kanałów na żywo, polskie kanały ogólnopolskie i sportowe, 200 000+ filmów i seriali VOD, jakość do 4K i 7-dniowy catch-up.",
+      image: `${SITE_URL}/og-image.png`,
+      brand: { "@id": ORG_ID },
+      category: "Telewizja internetowa (IPTV)",
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "EUR",
+        lowPrice: Math.min(...products.map((p) => p.price)),
+        highPrice: Math.max(...products.map((p) => p.price)),
+        offerCount: products.length,
+        availability: "https://schema.org/InStock",
+        offers: products.map((p) => ({
+          "@type": "Offer",
+          name: p.name,
+          price: p.price,
+          priceCurrency: "EUR",
+          availability: "https://schema.org/InStock",
+          url: `${SITE_URL}/product/${p.slug}`,
+        })),
       },
     },
     {
-      "@type": "Question",
-      name: "Czy mogę oglądać polskie kanały za granicą?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Tak. Nasza usługa działa na całym świecie. Możesz oglądać wszystkie polskie kanały bez względu na to, gdzie jesteś — bez VPN.",
-      },
+      "@type": "FAQPage",
+      "@id": `${SITE_URL}/#faq`,
+      inLanguage: "pl-PL",
+      mainEntity: homeFaqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
     },
   ],
 };
 
 export default function Home() {
   return (
-    <>
-      <JsonLd data={organizationSchema} />
-      <JsonLd data={productSchema} />
-      <JsonLd data={faqSchema} />
-      <OfferBanner />
+    <main className="overflow-x-clip">
+      <JsonLd data={homeSchema} />
       <Navbar />
       <Hero />
+      <ChannelMarquee />
+      <IptvPolskaIntro />
       <Features />
       <Pricing />
       <Devices />
       <Setup />
       <Testimonials />
       <FAQ />
+      <FinalCta />
       <Footer />
       <WhatsAppButton />
       <StickyBar />
-      <SocialProof />
-    </>
+    </main>
   );
 }

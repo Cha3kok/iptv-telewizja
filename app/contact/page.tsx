@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   title: "Kontakt",
   description:
     "Skontaktuj się z pomocą techniczną IPTVTelewizja. Dostępni 24/7 przez WhatsApp i email — pomoc przy konfiguracji, płatnościach i problemach technicznych.",
-  alternates: { canonical: "https://iptvtelewizja.com/contact" },
+  alternates: { canonical: "https://www.iptvtelewizja.com/contact" },
 };
 
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
   name: "Kontakt — IPTVTelewizja",
-  url: "https://iptvtelewizja.com/contact",
+  url: "https://www.iptvtelewizja.com/contact",
   description: "Skontaktuj się z pomocą techniczną IPTVTelewizja przez WhatsApp lub email.",
 };
 
@@ -50,21 +50,21 @@ const faqs = [
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-ink text-white">
       <JsonLd data={contactSchema} />
       <Navbar />
 
-      <div className="bg-[#0a0a0a] border-b border-white/5 pt-24 pb-14">
+      <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">Kontakt</p>
+          <p className="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3">Kontakt</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Jesteśmy tu, żeby pomóc</h1>
-          <p className="text-zinc-400 text-lg max-w-xl">
+          <p className="text-slate-400 text-lg max-w-xl">
             Prawdziwa pomoc od prawdziwych ludzi — dostępna 24 godziny na dobę, 7 dni w tygodniu.
           </p>
         </div>
@@ -89,16 +89,16 @@ export default function ContactPage() {
               className={`rounded-2xl p-7 border flex flex-col gap-4 ${
                 ch.highlight
                   ? "bg-[#25D366]/10 border-[#25D366]/30"
-                  : "bg-[#111111] border-white/5"
+                  : "bg-card border-white/5"
               }`}
             >
-              <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${ch.highlight ? "bg-[#25D366]/20" : "bg-[#1a1a1a]"}`}>
-                <ch.icon size={20} className={ch.highlight ? "text-[#25D366]" : "text-amber-400"} />
+              <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${ch.highlight ? "bg-[#25D366]/20" : "bg-card-2"}`}>
+                <ch.icon size={20} className={ch.highlight ? "text-[#25D366]" : "text-brand-400"} />
               </div>
               <div>
                 <h2 className="text-white font-bold text-lg mb-1">{ch.title}</h2>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-1">{ch.description}</p>
-                <p className="text-zinc-500 text-xs">{ch.detail}</p>
+                <p className="text-slate-400 text-sm leading-relaxed mb-1">{ch.description}</p>
+                <p className="text-slate-500 text-xs">{ch.detail}</p>
               </div>
               <a
                 href={ch.href}
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 className={`mt-auto self-start font-semibold text-sm px-5 py-2.5 rounded-full transition-colors ${
                   ch.highlight
                     ? "bg-[#25D366] hover:bg-[#20bd5a] text-white"
-                    : "bg-amber-500 hover:bg-amber-400 text-white"
+                    : "btn-primary"
                 }`}
               >
                 {ch.action}
@@ -121,19 +121,19 @@ export default function ContactPage() {
           <h2 className="text-xl font-bold text-white mb-6">Szybkie odpowiedzi</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {faqs.map((faq) => (
-              <div key={faq.q} className="bg-[#111111] border border-white/5 rounded-xl p-5">
+              <div key={faq.q} className="bg-card border border-white/5 rounded-xl p-5">
                 <p className="text-white font-semibold text-sm mb-2">{faq.q}</p>
-                <p className="text-zinc-400 text-sm">{faq.a}</p>
+                <p className="text-slate-400 text-sm">{faq.a}</p>
               </div>
             ))}
           </div>
-          <p className="text-zinc-500 text-sm mt-5">
+          <p className="text-slate-500 text-sm mt-5">
             Więcej pytań?{" "}
-            <Link href="/#faq" className="text-amber-400 hover:text-amber-300 transition-colors">
+            <Link href="/#faq" className="text-brand-400 hover:text-brand-300 transition-colors">
               Zobacz nasze pełne FAQ
             </Link>
             {" "}lub{" "}
-            <Link href="/setup" className="text-amber-400 hover:text-amber-300 transition-colors">
+            <Link href="/setup" className="text-brand-400 hover:text-brand-300 transition-colors">
               odwiedź nasz przewodnik instalacji
             </Link>.
           </p>

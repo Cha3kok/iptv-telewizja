@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { Tv, Mail } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
+import Logo from "./ui/Logo";
+import { SUPPORT_EMAIL, TRIAL_LINK, WHATSAPP_NUMBER } from "../lib/contact";
 
 const links: Record<string, { label: string; href: string }[]> = {
   Produkt: [
@@ -19,49 +21,39 @@ const links: Record<string, { label: string; href: string }[]> = {
     { label: "Polityka prywatności", href: "/privacy-policy" },
     { label: "Regulamin", href: "/terms-of-service" },
     { label: "Polityka zwrotów", href: "/refund-policy" },
+    { label: "DMCA", href: "/dmca" },
   ],
 };
 
-const WHATSAPP = "https://wa.me/212707711512";
-const EMAIL = "goldengateiptv@gmail.com";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+    <footer className="relative border-t border-white/[0.07] bg-surface">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-500/50 to-transparent" aria-hidden="true" />
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <Link href="/" className="flex items-center gap-2 text-white font-bold text-lg mb-4">
-              <Tv className="text-amber-400" size={20} />
-              IPTV<span className="text-amber-400">Telewizja</span>
+            <Link href="/" aria-label="IPTV Telewizja — strona główna" className="inline-block">
+              <Logo />
             </Link>
-            <p className="text-zinc-400 text-sm leading-relaxed mb-4">
-              Najbardziej niezawodna usługa IPTV w Polsce. 50 000+ kanałów, jakość 4K, zero zacięć.
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
+              Polska telewizja internetowa w 4K. 50 000+ kanałów, 7-dniowy catch-up i wsparcie 24/7 — gdziekolwiek jesteś.
             </p>
-            <div className="flex flex-col gap-2">
-              <a
-                href="https://wa.me/212707711512?text=iptvtelewizja.com%20-%20Darmowy%20test%203h"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-fit bg-amber-500 hover:bg-amber-400 text-white text-xs font-semibold px-4 py-2 rounded-full transition-colors"
-              >
-                Darmowy test
+            <div className="mt-6 flex flex-col gap-2.5">
+              <a href={TRIAL_LINK} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex w-fit rounded-full px-5 py-2.5 text-sm font-semibold">
+                Darmowy test 3h
               </a>
               <a
-                href={WHATSAPP}
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white text-xs transition-colors"
+                className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
               >
-                WhatsApp: +212 707 711 512
+                <MessageCircle size={14} /> WhatsApp: +212 707 711 512
               </a>
-              <a
-                href={`mailto:${EMAIL}`}
-                className="flex items-center gap-1.5 text-zinc-400 hover:text-white text-xs transition-colors"
-              >
-                <Mail size={12} />
-                {EMAIL}
+              <a href={`mailto:${SUPPORT_EMAIL}`} className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white">
+                <Mail size={14} /> {SUPPORT_EMAIL}
               </a>
             </div>
           </div>
@@ -69,14 +61,11 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(links).map(([group, items]) => (
             <div key={group}>
-              <h4 className="text-white font-semibold text-sm mb-4">{group}</h4>
+              <h4 className="mb-4 text-sm font-semibold text-white">{group}</h4>
               <ul className="space-y-2.5">
                 {items.map((item) => (
                   <li key={item.label}>
-                    <Link
-                      href={item.href}
-                      className="text-zinc-400 hover:text-white text-sm transition-colors"
-                    >
+                    <Link href={item.href} className="text-sm text-slate-400 transition-colors hover:text-brand-300">
                       {item.label}
                     </Link>
                   </li>
@@ -86,14 +75,9 @@ export default function Footer() {
           ))}
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-zinc-500 text-xs">
-            &copy; {new Date().getFullYear()} IPTVTelewizja. Wszelkie prawa zastrzeżone.
-          </p>
-          <p className="text-zinc-600 text-xs">
-            Wyłącznie do celów rozrywkowych. Prosimy o przestrzeganie lokalnych przepisów prawa.
-          </p>
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.07] pt-8 sm:flex-row">
+          <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} IPTVTelewizja. Wszelkie prawa zastrzeżone.</p>
+          <p className="text-xs text-slate-600">Wyłącznie do celów rozrywkowych. Prosimy o przestrzeganie lokalnych przepisów prawa.</p>
         </div>
       </div>
     </footer>

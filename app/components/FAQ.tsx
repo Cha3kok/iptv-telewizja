@@ -1,78 +1,77 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
+import Reveal from "./ui/Reveal";
+import SectionHeading from "./ui/SectionHeading";
+import { whatsappLink } from "../lib/contact";
+import { homeFaqs as faqs } from "../lib/faq";
 
-const faqs = [
-  {
-    q: "Na jakich urządzeniach działa IPTV Telewizja?",
-    a: "Nasza usługa działa na praktycznie każdym urządzeniu: Smart TV (Samsung, LG, Sony), Amazon Firestick, dekodery Android TV, telefony Android, iPhone, iPad, dekodery MAG oraz każdy odtwarzacz IPTV, jak TiviMate, IPTV Smarters lub Perfect Player.",
-  },
-  {
-    q: "Czy oferujecie darmowy okres próbny?",
-    a: "Tak! Oferujemy darmowy test 3-godzinny, dzięki któremu możesz przetestować naszą usługę przed subskrypcją. Karta kredytowa nie jest wymagana. Skontaktuj się z nami przez WhatsApp lub czat na żywo, aby aktywować test.",
-  },
-  {
-    q: "Czy występują zacięcia lub zamrażanie obrazu?",
-    a: "Intensywnie inwestujemy w infrastrukturę serwerową i CDN, aby zapewnić płynne działanie. Zdecydowana większość naszych klientów nie zgłasza żadnych zacięć. Zalecamy stabilne połączenie internetowe min. 10 Mbps dla HD i 25 Mbps dla 4K.",
-  },
-  {
-    q: "Ile urządzeń mogę używać jednocześnie?",
-    a: "To zależy od wybranego planu. Plan 1-miesięczny obsługuje 1 połączenie jednoczesne, 3-miesięczny — 2, 6-miesięczny — 3, a plan 12-miesięczny obsługuje do 4 połączeń. Każde połączenie może być na innym urządzeniu.",
-  },
-  {
-    q: "Czy mogę oglądać polskie kanały za granicą?",
-    a: "Tak. Nasza usługa działa na całym świecie. Możesz oglądać wszystkie polskie kanały bez względu na to, gdzie się znajdujesz — VPN nie jest wymagany.",
-  },
-  {
-    q: "Jak skonfigurować usługę?",
-    a: "Konfiguracja jest prosta. Po subskrypcji otrzymujesz link M3U lub dane logowania Xtream Codes w ciągu kilku minut. Wprowadź je do dowolnej kompatybilnej aplikacji IPTV i już oglądasz. Udostępniamy przewodniki krok po kroku i możemy pomóc przez czat.",
-  },
-  {
-    q: "Jakie metody płatności akceptujecie?",
-    a: "Akceptujemy wszystkie główne karty kredytowe/debetowe, PayPal oraz kryptowaluty. Wszystkie płatności są bezpieczne i szyfrowane.",
-  },
-];
 
-function FAQItem({ q, a }: { q: string; a: string }) {
-  const [open, setOpen] = useState(false);
+function FAQItem({ q, a, defaultOpen = false }: { q: string; a: string; defaultOpen?: boolean }) {
+  const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="border-b border-white/10 last:border-0">
+    <div
+      className={`rounded-2xl border transition-colors duration-300 ${
+        open ? "border-brand-500/30 bg-card-2/80" : "border-white/[0.07] bg-card/70 hover:border-white/15"
+      }`}
+    >
       <button
         onClick={() => setOpen((v) => !v)}
-        className="w-full flex items-center justify-between py-5 text-left gap-4"
+        aria-expanded={open}
+        className="flex w-full items-center justify-between gap-4 px-5 sm:px-6 py-5 text-left"
       >
-        <span className="text-white font-medium text-sm sm:text-base">{q}</span>
-        <ChevronDown
-          size={18}
-          className={`text-amber-400 flex-shrink-0 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
-        />
+        <span className="text-sm sm:text-base font-semibold text-white">{q}</span>
+        <span
+          className={`grid h-8 w-8 shrink-0 place-items-center rounded-full transition-all duration-300 ${
+            open ? "rotate-45 bg-gradient-to-br from-brand-500 to-accent-600 text-white" : "bg-white/5 text-slate-300"
+          }`}
+        >
+          <Plus size={16} />
+        </span>
       </button>
-      {open && (
-        <p className="text-zinc-400 text-sm leading-relaxed pb-5">{a}</p>
-      )}
+      <div className={`grid transition-[grid-template-rows] duration-300 ease-out ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}>
+        <div className="overflow-hidden">
+          <p className="px-5 sm:px-6 pb-5 text-sm leading-relaxed text-slate-400">{a}</p>
+        </div>
+      </div>
     </div>
   );
 }
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-black py-24">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">FAQ</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Często zadawane pytania
-          </h2>
-          <p className="text-zinc-400 text-lg">
-            Nie możesz znaleźć odpowiedzi? Czatuj z nami 24/7 na WhatsApp.
-          </p>
+    <section id="faq" className="relative bg-ink py-24 sm:py-32">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.4fr] lg:px-8">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <SectionHeading
+            className="lg:text-left lg:mx-0"
+            eyebrow="FAQ"
+            title={
+              <>
+                IPTV Polska — <span className="text-gradient">najczęstsze pytania</span>
+              </>
+            }
+            subtitle="Nie możesz znaleźć odpowiedzi? Napisz do nas — odpowiadamy na WhatsApp przez całą dobę."
+          />
+          <Reveal className="text-center lg:text-left -mt-6">
+            <a
+              href={whatsappLink("Cześć, mam pytanie o IPTV Telewizja")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-white/30 hover:bg-white/10"
+            >
+              Zadaj pytanie na WhatsApp
+            </a>
+          </Reveal>
         </div>
 
-        <div className="bg-[#111111] border border-white/5 rounded-2xl px-6 sm:px-8">
-          {faqs.map((faq) => (
-            <FAQItem key={faq.q} q={faq.q} a={faq.a} />
+        <div className="flex flex-col gap-3">
+          {faqs.map((faq, i) => (
+            <Reveal key={faq.q} delay={i * 60}>
+              <FAQItem q={faq.q} a={faq.a} defaultOpen={i === 0} />
+            </Reveal>
           ))}
         </div>
       </div>

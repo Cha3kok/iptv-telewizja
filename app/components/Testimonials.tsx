@@ -1,4 +1,5 @@
-import { Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
+import SectionHeading from "./ui/SectionHeading";
 
 const reviews = [
   {
@@ -16,7 +17,7 @@ const reviews = [
     avatar: "AK",
     rating: 5,
     title: "Konfiguracja była prosta, świetnie działa na Firesticku",
-    body: "Bałam się, że będzie skomplikowane, ale instrukcja konfiguracji była jasna i oglądałam już po 10 minutach. Kanały sportowe są niesamowite — mam Polsat Sport, Canal+ i wszystkie ważne kanały.",
+    body: "Bałam się, że będzie skomplikowane, ale instrukcja konfiguracji była jasna i oglądałam już po 10 minutach. Kanały sportowe są niesamowite — mam wszystkie ważne transmisje w jednym miejscu.",
     plan: "Plan 3 Miesiące",
   },
   {
@@ -43,7 +44,7 @@ const reviews = [
     avatar: "TB",
     rating: 5,
     title: "Polskie kanały za granicą bez VPN!",
-    body: "Mieszkam w Londynie i w końcu mogę oglądać TVP, Polsat i TVN bez żadnych problemów. Jakość jest doskonała, żadnych buforowania. Polecam wszystkim Polakom za granicą.",
+    body: "Mieszkam w Londynie i w końcu mogę oglądać polskie kanały bez żadnych problemów. Jakość jest doskonała, żadnych buforowania. Polecam wszystkim Polakom za granicą.",
     plan: "Plan 6 Miesięcy",
   },
   {
@@ -59,88 +60,79 @@ const reviews = [
 
 function Stars({ count }: { count: number }) {
   return (
-    <div className="flex gap-0.5">
+    <div className="flex gap-0.5" aria-label={`Ocena ${count} na 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star
-          key={i}
-          size={14}
-          className={i < count ? "fill-yellow-400 text-yellow-400" : "text-zinc-600"}
-        />
+        <Star key={i} size={14} className={i < count ? "fill-yellow-400 text-yellow-400" : "text-slate-600"} />
       ))}
     </div>
   );
 }
 
-function Avatar({ initials }: { initials: string }) {
-  const colors: Record<string, string> = {
-    MW: "bg-blue-600",
-    AK: "bg-pink-600",
-    PN: "bg-purple-600",
-    KR: "bg-emerald-600",
-    TB: "bg-orange-600",
-    MS: "bg-teal-600",
-  };
+const avatarColors = ["from-brand-500 to-accent-600", "from-sky-500 to-indigo-600", "from-emerald-500 to-teal-600", "from-orange-500 to-brand-600"];
+
+function ReviewCard({ r, index }: { r: (typeof reviews)[number]; index: number }) {
   return (
-    <div
-      className={`w-10 h-10 rounded-full ${colors[initials] ?? "bg-amber-500"} flex items-center justify-center text-white text-xs font-bold flex-shrink-0`}
-    >
-      {initials}
+    <figure className="relative flex h-full flex-col w-[20rem] sm:w-[24rem] shrink-0 rounded-3xl border border-white/[0.07] bg-card/80 p-6 transition-colors hover:border-brand-500/30">
+      <Quote className="absolute right-5 top-5 h-8 w-8 text-white/[0.06]" aria-hidden="true" />
+      <Stars count={r.rating} />
+      <blockquote className="mt-4 mb-5">
+        <p className="font-semibold text-white">{r.title}</p>
+        <p className="mt-2 text-sm leading-relaxed text-slate-400">{r.body}</p>
+      </blockquote>
+      <figcaption className="mt-auto pt-5 flex items-center gap-3 border-t border-white/5">
+        <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gradient-to-br ${avatarColors[index % avatarColors.length]} text-xs font-bold text-white`}>
+          {r.avatar}
+        </span>
+        <span className="min-w-0">
+          <span className="block text-sm font-semibold text-white">{r.name}</span>
+          <span className="block text-xs text-slate-500">{r.location}</span>
+        </span>
+        <span className="ml-auto whitespace-nowrap rounded-full bg-brand-500/10 px-2.5 py-1 text-[11px] font-medium text-brand-300">
+          {r.plan}
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
+
+function Row({ items, reverse = false }: { items: typeof reviews; reverse?: boolean }) {
+  // Two copies per half so a row is always wider than the screen; -50% loops seamlessly.
+  const half = [...items, ...items];
+  const loop = [...half, ...half];
+  return (
+    <div className="mask-fade-x overflow-hidden">
+      <div
+        className={`flex w-max gap-5 hover:[animation-play-state:paused] ${reverse ? "animate-marquee-reverse" : "animate-marquee"}`}
+        style={{ "--marquee-duration": "70s" } as React.CSSProperties}
+      >
+        {loop.map((r, i) => (
+          <div key={`${r.name}-${i}`} aria-hidden={i >= items.length}>
+            <ReviewCard r={r} index={i} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
 export default function Testimonials() {
-  const totalReviews = 3124;
-  const avgRating = 4.9;
-
+  const half = Math.ceil(reviews.length / 2);
   return (
-    <section id="reviews" className="bg-[#0a0a0a] py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Opinie klientów
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-            Tysiące zadowolonych użytkowników w Polsce i za granicą
-          </h2>
-
-          {/* Aggregate rating */}
-          <div className="inline-flex flex-col items-center gap-2 bg-[#111111] border border-white/10 rounded-2xl px-8 py-5">
-            <div className="flex items-end gap-2">
-              <span className="text-5xl font-bold text-white">{avgRating}</span>
-              <span className="text-zinc-400 text-sm mb-2">/ 5.0</span>
-            </div>
-            <Stars count={5} />
-            <p className="text-zinc-400 text-sm mt-1">
-              Na podstawie <span className="text-white font-medium">{totalReviews.toLocaleString("pl-PL")}</span> zweryfikowanych opinii
-            </p>
-          </div>
-        </div>
-
-        {/* Reviews grid */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 space-y-5">
-          {reviews.map((r) => (
-            <div
-              key={r.name}
-              className="break-inside-avoid bg-[#111111] border border-white/5 rounded-2xl p-6 hover:border-white/10 transition-colors"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Avatar initials={r.avatar} />
-                <div>
-                  <p className="text-white font-semibold text-sm">{r.name}</p>
-                  <p className="text-zinc-500 text-xs">{r.location}</p>
-                </div>
-                <span className="ml-auto bg-amber-500/15 text-amber-400 text-xs px-2.5 py-1 rounded-full font-medium">
-                  {r.plan}
-                </span>
-              </div>
-              <Stars count={r.rating} />
-              <h4 className="text-white font-semibold text-sm mt-3 mb-2">{r.title}</h4>
-              <p className="text-zinc-400 text-sm leading-relaxed">{r.body}</p>
-            </div>
-          ))}
-        </div>
+    <section id="reviews" className="relative bg-surface py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Opinie klientów"
+          title={
+            <>
+              Co mówią <span className="text-gradient">nasi klienci</span>
+            </>
+          }
+          subtitle="Widzowie w Polsce i Polacy za granicą o swoich wrażeniach z IPTV Telewizja."
+        />
+      </div>
+      <div className="flex flex-col gap-5">
+        <Row items={reviews.slice(0, half)} />
+        <Row items={reviews.slice(half)} reverse />
       </div>
     </section>
   );

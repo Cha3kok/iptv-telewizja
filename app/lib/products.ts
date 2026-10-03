@@ -39,23 +39,23 @@ export const products: Product[] = [
     price: 15,
     period: "jednorazowa płatność",
     highlight: false,
-    metaTitle: "1 Miesiąc IPTV Telewizja — €15 | 50 000+ kanałów, 4K | IPTVTelewizja",
+    metaTitle: "1 Miesiąc IPTV Telewizja — €15 | 50 000+ kanałów, 4K",
     metaDescription:
-      "Uzyskaj 1 miesiąc IPTV Telewizja za zaledwie €15. 50 000+ kanałów na żywo, 4K Ultra HD, 7-dniowy catch-up, zero zacięć. Bez umowy. Natychmiastowa aktywacja. Dostępny darmowy test 3h.",
+      "Uzyskaj 1 miesiąc IPTV Telewizja za zaledwie €15. 50 000+ kanałów na żywo, 4K Ultra HD, 7-dniowy catch-up, zero zacięć. Bez umowy. Natychmiastowa aktywacja. Dostępny darmowy test 3h.",
     h1: "1 Miesiąc IPTV Telewizja — €15 jednorazowa płatność",
     heroSubtitle:
-      "Idealny sposób na wypróbowanie IPTV Telewizja bez ryzyka. Pełny dostęp do 50 000+ kanałów na żywo, streaming 4K i 7-dniowy catch-up TV za zaledwie €15. Bez umów, bez opłat cyklicznych.",
+      "Idealny sposób na wypróbowanie IPTV Telewizja bez ryzyka. Pełny dostęp do 50 000+ kanałów na żywo, streaming 4K i 7-dniowy catch-up TV za zaledwie €15. Bez umów, bez opłat cyklicznych.",
     whatsappMessage: "iptvtelewizja.com - Chciałbym subskrybować plan 1 Miesiąc IPTV Telewizja (€15)",
     whoIsItFor: [
       {
         title: "Nowi użytkownicy IPTV",
         description:
-          "Nie jesteś pewien, czy IPTV jest dla Ciebie? Plan miesięczny daje Ci pełny miesiąc na poznanie 50 000+ kanałów, przetestowanie strumieni 4K i odkrycie, jak IPTV wypada w porównaniu z obecną konfiguracją TV — bez żadnego zobowiązania.",
+          "Nie jesteś pewien, czy IPTV jest dla Ciebie? Plan miesięczny daje Ci pełny miesiąc na poznanie 50 000+ kanałów, przetestowanie strumieni 4K i odkrycie, jak IPTV wypada w porównaniu z obecną konfiguracją TV — bez żadnego zobowiązania.",
       },
       {
         title: "Polacy za granicą na krótki pobyt",
         description:
-          "Przyjechałeś do pracy lub na wakacje i chcesz oglądać polską telewizję? Uzyskaj pełny dostęp do polskich kanałów — TVP, Polsat, TVN i wszystkich głównych kanałów sportowych — przez cały czas pobytu. Bez konieczności rejestracji w drogich pakietach kablowych.",
+          "Przyjechałeś do pracy lub na wakacje i chcesz oglądać polską telewizję? Uzyskaj pełny dostęp do polskich kanałów ogólnopolskich i sportowych przez cały czas pobytu. Bez konieczności rejestracji w drogich pakietach kablowych.",
       },
       {
         title: "Widzowie sezonowi lub eventowi",
@@ -74,7 +74,7 @@ export const products: Product[] = [
       },
       {
         q: "Czy plan miesięczny obejmuje te same kanały co dłuższe plany?",
-        a: "Tak — wszystkie plany obejmują pełną ofertę kanałów. Otrzymujesz 50 000+ kanałów na żywo, 200 000+ filmów VOD, jakość 4K, 7-dniowy catch-up i wszystkie funkcje. Jedyna różnica między planami to czas trwania i cena miesięczna.",
+        a: "Tak — wszystkie plany obejmują pełną ofertę kanałów. Otrzymujesz 50 000+ kanałów na żywo, 200 000+ filmów VOD, jakość 4K, 7-dniowy catch-up i wszystkie funkcje. Jedyna różnica między planami to czas trwania i cena miesięczna.",
       },
       {
         q: "Jak szybko uzyskam dostęp po płatności?",
@@ -82,7 +82,7 @@ export const products: Product[] = [
       },
       {
         q: "Czy jest zwrot, jeśli nie jestem zadowolony?",
-        a: "Tak. Oferujemy 7-dniową gwarancję zwrotu na wszystkich planach. Jeśli z jakiegokolwiek powodu nie jesteś zadowolony w ciągu pierwszych 7 dni, skontaktuj się z nami na WhatsApp, a dokonamy zwrotu bez pytań.",
+        a: "Tak. Oferujemy gwarancję zwrotu przez 48 godzin od zakupu na wszystkich planach. Jeśli usługa nie działa zgodnie z opisem, skontaktuj się z nami na WhatsApp. Szczegóły znajdziesz w naszej Polityce zwrotów.",
       },
     ],
     testimonials: [
@@ -90,7 +90,7 @@ export const products: Product[] = [
         name: "Marek W.",
         city: "Warszawa",
         rating: 5,
-        text: "Chciałem przetestować IPTV przed podjęciem decyzji i plan miesięczny był idealny. Jakość obrazu na Polsat Sport była naprawdę lepsza niż moja stara kablówka. Od tamtej pory przeszedłem na plan 6-miesięczny.",
+        text: "Chciałem przetestować IPTV przed podjęciem decyzji i plan miesięczny był idealny. Jakość obrazu na kanałach sportowych była naprawdę lepsza niż moja stara kablówka. Od tamtej pory przeszedłem na plan 6-miesięczny.",
       },
       {
         name: "Kasia S.",
@@ -112,9 +112,9 @@ export const products: Product[] = [
     price: 35,
     period: "jednorazowa płatność",
     highlight: false,
-    metaTitle: "3 Miesiące IPTV Telewizja — €35 | Oszczędź vs miesięczny | IPTVTelewizja",
+    metaTitle: "3 Miesiące IPTV Telewizja — €35 | Oszczędź vs miesięczny",
     metaDescription:
-      "3 miesiące IPTV Telewizja za €35 — to mniej niż €12/miesiąc. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Bez umowy, natychmiastowa aktywacja. Wypróbuj za darmo przez 3 godziny.",
+      "3 miesiące IPTV Telewizja za €35 — to mniej niż €12/miesiąc. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Bez umowy, natychmiastowa aktywacja. Wypróbuj za darmo przez 3 godziny.",
     h1: "3 Miesiące IPTV Telewizja — €35 jednorazowa płatność",
     heroSubtitle:
       "Trzy miesiące premium IPTV Telewizja za zaledwie €35 — oszczędzasz €10 vs plan miesięczny. Idealny dla okazjonalnych widzów, którzy chcą niezawodnego dostępu bez kosztów długoterminowej subskrypcji.",
@@ -123,7 +123,7 @@ export const products: Product[] = [
       {
         title: "Okazjonalni widzowie telewizji",
         description:
-          "Nie oglądasz telewizji każdego dnia, ale kiedy to robisz, oczekujesz jakości. Plan 3-miesięczny daje Ci pełny dostęp do 50 000+ kanałów i 200 000+ filmów VOD przy koszcie miesięcznym niższym niż plany miesięczne, bez zobowiązania na pół roku lub dłużej.",
+          "Nie oglądasz telewizji każdego dnia, ale kiedy to robisz, oczekujesz jakości. Plan 3-miesięczny daje Ci pełny dostęp do 50 000+ kanałów i 200 000+ filmów VOD przy koszcie miesięcznym niższym niż plany miesięczne, bez zobowiązania na pół roku lub dłużej.",
       },
       {
         title: "Studenci i życie studenckie",
@@ -133,7 +133,7 @@ export const products: Product[] = [
       {
         title: "Polacy pracujący za granicą",
         description:
-          "Wyjechałeś za granicą na kilka miesięcy? Ten plan utrzymuje Cię w kontakcie z polską telewizją — TVP, Polsat, TVN, Canal+ — gdziekolwiek jesteś na świecie. Nasza usługa działa globalnie bez VPN.",
+          "Wyjechałeś za granicą na kilka miesięcy? Ten plan utrzymuje Cię w kontakcie z polską telewizją gdziekolwiek jesteś na świecie. Nasza usługa działa globalnie bez VPN.",
       },
     ],
     faq: [
@@ -143,7 +143,7 @@ export const products: Product[] = [
       },
       {
         q: "Czy kilka osób w moim domu może korzystać z tej samej subskrypcji?",
-        a: "Tak. Nasze plany obsługują od 1 do 4 jednoczesnych połączeń. Możesz oglądać na telewizorze, partner na tablecie, a dzieci na telefonie — wszystko jednocześnie, z tej samej subskrypcji.",
+        a: "Tak. Cena podstawowa obejmuje 1 połączenie, a za dopłatą możesz mieć do 4 jednoczesnych połączeń. Możesz oglądać na telewizorze, partner na tablecie, a dzieci na telefonie — wszystko jednocześnie, z tej samej subskrypcji.",
       },
       {
         q: "Czy po 3 miesiącach stracę dostęp lub zostanę automatycznie obciążony?",
@@ -151,7 +151,7 @@ export const products: Product[] = [
       },
       {
         q: "Co się stanie, jeśli mam problemy techniczne w ciągu 3 miesięcy?",
-        a: "Nasze wsparcie WhatsApp 24/7 jest dostępne przez całą subskrypcję. Większość problemów jest rozwiązywana w ciągu kilku minut. Oferujemy również 7-dniową gwarancję zwrotu, jeśli z jakiegokolwiek powodu nie jesteś zadowolony.",
+        a: "Nasze wsparcie WhatsApp 24/7 jest dostępne przez całą subskrypcję. Większość problemów jest rozwiązywana w ciągu kilku minut. Oferujemy również gwarancję zwrotu przez 48 godzin od zakupu, jeśli usługa nie działa zgodnie z opisem.",
       },
     ],
     testimonials: [
@@ -165,7 +165,7 @@ export const products: Product[] = [
         name: "Tomasz K.",
         city: "Poznań",
         rating: 5,
-        text: "Byłem sceptyczny, ale darmowy test mnie przekonał. Zarejestrowałem się na 3 miesiące i nie miałem żadnych problemów. TVP, Polsat, wszystkie kanały sportowe — wszystko działa doskonale.",
+        text: "Byłem sceptyczny, ale darmowy test mnie przekonał. Zarejestrowałem się na 3 miesiące i nie miałem żadnych problemów. Kanały ogólnopolskie, wszystkie kanały sportowe — wszystko działa doskonale.",
       },
       {
         name: "Monika W.",
@@ -182,9 +182,9 @@ export const products: Product[] = [
     period: "jednorazowa płatność",
     badge: "Najpopularniejszy",
     highlight: true,
-    metaTitle: "6 Miesięcy IPTV Telewizja — €45 | Najpopularniejszy plan | IPTVTelewizja",
+    metaTitle: "6 Miesięcy IPTV Telewizja — €45 | Najpopularniejszy plan",
     metaDescription:
-      "6 miesięcy IPTV Telewizja za zaledwie €45 — tylko €7,50/miesiąc. Najpopularniejszy plan. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Natychmiastowa konfiguracja.",
+      "6 miesięcy IPTV Telewizja za zaledwie €45 — tylko €7,50/miesiąc. Najpopularniejszy plan. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Natychmiastowa konfiguracja.",
     h1: "6 Miesięcy IPTV Telewizja — €45 jednorazowa płatność",
     heroSubtitle:
       "Nasz najpopularniejszy plan z dobrego powodu. Sześć miesięcy premium IPTV Telewizja za zaledwie €45 — to €7,50 miesięcznie. Idealny balans oszczędności i elastyczności dla regularnych widzów.",
@@ -225,7 +225,7 @@ export const products: Product[] = [
       },
       {
         q: "Co zrobić, jeśli chcę dodać drugie połączenie urządzenia?",
-        a: "Wszystkie plany obejmują obsługę wielu urządzeń (1-4 połączenia). Jeśli chcesz podłączyć dodatkowe urządzenia jednocześnie, daj nam znać przy subskrypcji. Skonfigurujemy Twoją subskrypcję dla potrzebnej liczby ekranów.",
+        a: "Cena podstawowa obejmuje 1 połączenie. Za dopłatą możesz mieć do 4 jednoczesnych połączeń — wybierz liczbę urządzeń w cenniku lub daj nam znać przy subskrypcji, a skonfigurujemy ją dla potrzebnej liczby ekranów.",
       },
     ],
     testimonials: [
@@ -233,7 +233,7 @@ export const products: Product[] = [
         name: "Krzysztof B.",
         city: "Katowice",
         rating: 5,
-        text: "Jestem na planie 6-miesięcznym od ponad roku — ciągle go odnawiam. Polsat Sport w 4K bez zacięć. Znajomi nie mogą uwierzyć, ile oszczędzam. Powinienem był zmienić lata temu.",
+        text: "Jestem na planie 6-miesięcznym od ponad roku — ciągle go odnawiam. Sport w 4K bez zacięć. Znajomi nie mogą uwierzyć, ile oszczędzam. Powinienem był zmienić lata temu.",
       },
       {
         name: "Agnieszka F.",
@@ -255,9 +255,9 @@ export const products: Product[] = [
     price: 60,
     period: "jednorazowa płatność",
     highlight: false,
-    metaTitle: "12 Miesięcy IPTV Telewizja — €60 | Tylko €5/miesiąc | IPTVTelewizja",
+    metaTitle: "12 Miesięcy IPTV Telewizja — €60 | Tylko €5/miesiąc",
     metaDescription:
-      "12 miesięcy IPTV Telewizja za zaledwie €60 — to €5 miesięcznie. Pełny rok 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Najlepsza wartość dla zaangażowanych widzów. Natychmiastowa konfiguracja.",
+      "12 miesięcy IPTV Telewizja za zaledwie €60 — to €5 miesięcznie. Pełny rok 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Najlepsza wartość dla zaangażowanych widzów. Natychmiastowa konfiguracja.",
     h1: "12 Miesięcy IPTV Telewizja — €60 jednorazowa płatność",
     heroSubtitle:
       "Pełny rok premium IPTV Telewizja za zaledwie €60. Przy €5 miesięcznie, to plan dla widzów, którzy wiedzą, że pokochali IPTV i chcą gwarantowanego dostępu przez cały rok.",
@@ -294,7 +294,7 @@ export const products: Product[] = [
       },
       {
         q: "Czy mogę udostępnić subskrypcję 12-miesięczną rodzinie?",
-        a: "Tak — nasze plany obsługują do 4 jednoczesnych połączeń. Całe Twoje gospodarstwo domowe może oglądać na różnych urządzeniach jednocześnie. Jedna subskrypcja, wiele ekranów.",
+        a: "Tak — za dopłatą plan obsługuje do 4 jednoczesnych połączeń. Całe Twoje gospodarstwo domowe może oglądać na różnych urządzeniach jednocześnie. Jedna subskrypcja, wiele ekranów.",
       },
       {
         q: "Jaka prędkość internetu jest potrzebna do niezawodnego dostępu przez 12 miesięcy?",
@@ -329,12 +329,12 @@ export const products: Product[] = [
     period: "jednorazowa płatność",
     badge: "Najlepsza cena",
     highlight: false,
-    metaTitle: "24 Miesiące IPTV Telewizja — €110 | Najlepsza cena | Tylko €4,58/miesiąc | IPTVTelewizja",
+    metaTitle: "24 Miesiące IPTV Telewizja — €110 | Tylko €4,58/miesiąc",
     metaDescription:
-      "24 miesiące IPTV Telewizja za €110 — zaledwie €4,58/miesiąc. Plan o najlepszej wartości. 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Dwa pełne lata z jedną płatnością. Natychmiastowa konfiguracja.",
+      "24 miesiące IPTV Telewizja za €110 — zaledwie €4,58/miesiąc. Plan o najlepszej wartości. 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Dwa pełne lata z jedną płatnością. Natychmiastowa konfiguracja.",
     h1: "24 Miesiące IPTV Telewizja — €110 jednorazowa płatność",
     heroSubtitle:
-      "Subskrypcja IPTV o najlepszej wartości dostępna na rynku. Dwa pełne lata premium IPTV Telewizja za €110 — zaledwie €4,58 miesięcznie. Jedna płatność, dwa lata 50 000+ kanałów, streaming 4K i zero kłopotów.",
+      "Subskrypcja IPTV o najlepszej wartości dostępna na rynku. Dwa pełne lata premium IPTV Telewizja za €110 — zaledwie €4,58 miesięcznie. Jedna płatność, dwa lata 50 000+ kanałów, streaming 4K i zero kłopotów.",
     whatsappMessage: "iptvtelewizja.com - Chciałbym subskrybować plan 24 Miesiące IPTV Telewizja (€110)",
     whoIsItFor: [
       {
@@ -356,7 +356,7 @@ export const products: Product[] = [
     faq: [
       {
         q: "Co sprawia, że plan 24-miesięczny ma najlepszą wartość?",
-        a: "Przy €4,58 miesięcznie to nasza najniższa cena miesięczna. Porównując z planem miesięcznym za €15, oszczędzasz €254,80 w tym samym dwuletnim okresie. Masz też wygodę nieodnawiania przez dwa pełne lata — zapłać raz i gotowe.",
+        a: "Przy €4,58 miesięcznie to nasza najniższa cena miesięczna. Porównując z planem miesięcznym za €15, oszczędzasz €250 w tym samym dwuletnim okresie. Masz też wygodę nieodnawiania przez dwa pełne lata — zapłać raz i gotowe.",
       },
       {
         q: "Czy usługa jest gwarantowana przez pełne 24 miesiące?",

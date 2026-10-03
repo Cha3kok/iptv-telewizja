@@ -21,7 +21,7 @@ const devices: Device[] = [
     name: "Amazon Firestick",
     subtitle: "Fire TV Stick / Cube / 4K",
     appName: "IPTV Smarters Pro",
-    appUrl: "https://www.amazon.co.uk/",
+    appUrl: "https://www.iptvsmarters.com/",
     steps: [
       {
         title: "Włącz aplikacje z nieznanych źródeł",
@@ -50,9 +50,9 @@ const devices: Device[] = [
   {
     id: "smarttv",
     name: "Smart TV",
-    subtitle: "Samsung, LG, Sony & others",
+    subtitle: "Samsung, LG, Sony i inne",
     appName: "Smart IPTV / SSIPTV",
-    appUrl: "https://samsung.com/",
+    appUrl: "https://siptv.eu/",
     steps: [
       {
         title: "Zainstaluj Smart IPTV ze sklepu z aplikacjami",
@@ -76,10 +76,10 @@ const devices: Device[] = [
   },
   {
     id: "android",
-    name: "Android Device",
-    subtitle: "Android Phone, Tablet & TV Box",
+    name: "Urządzenie z Androidem",
+    subtitle: "Telefon, tablet i Android TV Box",
     appName: "TiviMate",
-    appUrl: "https://play.google.com/",
+    appUrl: "https://tivimate.net/",
     steps: [
       {
         title: "Zainstaluj TiviMate z Play Store",
@@ -102,8 +102,8 @@ const devices: Device[] = [
   },
   {
     id: "ios",
-    name: "iPhone & iPad",
-    subtitle: "iOS 14 and above",
+    name: "iPhone i iPad",
+    subtitle: "iOS 14 i nowsze",
     appName: "GSE Smart IPTV",
     appUrl: "https://apps.apple.com/",
     steps: [
@@ -129,8 +129,8 @@ const devices: Device[] = [
   {
     id: "mag",
     name: "MAG Box",
-    subtitle: "MAG 250, 254, 322, 410 & others",
-    appName: "Built-in Portal",
+    subtitle: "MAG 250, 254, 322, 410 i inne",
+    appName: "Wbudowany portal",
     appUrl: "",
     steps: [
       {
@@ -156,8 +156,8 @@ const devices: Device[] = [
   {
     id: "windows",
     name: "Windows PC",
-    subtitle: "Windows 10 & 11",
-    appName: "VLC or IPTV Smarters",
+    subtitle: "Windows 10 i 11",
+    appName: "VLC lub IPTV Smarters",
     appUrl: "https://www.videolan.org/",
     steps: [
       {
@@ -185,14 +185,14 @@ function StepItem({ step, index, total }: { step: Step; index: number; total: nu
   return (
     <div className="flex gap-4">
       <div className="flex flex-col items-center">
-        <div className="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+        <div className="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
           {index + 1}
         </div>
         {index < total - 1 && <div className="w-px flex-1 bg-white/10 mt-2" />}
       </div>
       <div className={`pb-8 ${index === total - 1 ? "pb-0" : ""}`}>
         <h3 className="text-white font-semibold mb-1">{step.title}</h3>
-        <p className="text-zinc-400 text-sm leading-relaxed">{step.body}</p>
+        <p className="text-slate-400 text-sm leading-relaxed">{step.body}</p>
         {step.tip && (
           <p className="mt-2 text-xs text-yellow-400/80 bg-yellow-400/10 border border-yellow-400/20 rounded-lg px-3 py-2">
             💡 {step.tip}
@@ -208,23 +208,23 @@ export default function SetupClient() {
   const active = devices.find((d) => d.id === activeId)!;
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-ink text-white">
       {/* Header */}
-      <div className="bg-[#0a0a0a] border-b border-white/5 pt-24 pb-12">
+      <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3">
             Instrukcja instalacji
           </p>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-3">
             Zacznij w kilka minut
           </h1>
-          <p className="text-zinc-400 text-lg max-w-2xl">
+          <p className="text-slate-400 text-lg max-w-2xl">
             Wybierz swoje urządzenie poniżej, aby uzyskać przewodnik krok po kroku. Wiedza techniczna nie jest wymagana.
           </p>
         </div>
@@ -234,7 +234,7 @@ export default function SetupClient() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Device selector sidebar */}
           <aside className="lg:w-56 flex-shrink-0">
-            <p className="text-zinc-500 text-xs uppercase tracking-wider font-medium mb-3">
+            <p className="text-slate-500 text-xs uppercase tracking-wider font-medium mb-3">
               Wybierz urządzenie
             </p>
             <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
@@ -244,12 +244,12 @@ export default function SetupClient() {
                   onClick={() => setActiveId(d.id)}
                   className={`flex-shrink-0 text-left px-4 py-3 rounded-xl text-sm transition-all ${
                     activeId === d.id
-                      ? "bg-amber-500 text-white font-semibold"
-                      : "bg-[#111111] text-zinc-400 hover:text-white hover:bg-[#1a1a1a]"
+                      ? "bg-brand-500 text-white font-semibold"
+                      : "bg-card text-slate-400 hover:text-white hover:bg-card-2"
                   }`}
                 >
                   <span className="block font-medium">{d.name}</span>
-                  <span className={`text-xs ${activeId === d.id ? "text-amber-100" : "text-zinc-600"}`}>
+                  <span className={`text-xs ${activeId === d.id ? "text-brand-100" : "text-slate-600"}`}>
                     {d.subtitle}
                   </span>
                 </button>
@@ -259,12 +259,12 @@ export default function SetupClient() {
 
           {/* Guide content */}
           <main className="flex-1 min-w-0">
-            <div className="bg-[#111111] border border-white/5 rounded-2xl p-6 sm:p-8">
+            <div className="bg-card border border-white/5 rounded-2xl p-6 sm:p-8">
               {/* Device header */}
               <div className="flex items-start justify-between gap-4 mb-8">
                 <div>
                   <h2 className="text-2xl font-bold text-white">{active.name}</h2>
-                  <p className="text-zinc-400 text-sm mt-0.5">{active.subtitle}</p>
+                  <p className="text-slate-400 text-sm mt-0.5">{active.subtitle}</p>
                 </div>
                 <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium px-3 py-1.5 rounded-full flex-shrink-0">
                   <CheckCircle2 size={13} />
@@ -273,9 +273,9 @@ export default function SetupClient() {
               </div>
 
               {/* Recommended app */}
-              <div className="bg-[#1a1a1a] border border-white/5 rounded-xl p-4 flex items-center justify-between gap-4 mb-8">
+              <div className="bg-card-2 border border-white/5 rounded-xl p-4 flex items-center justify-between gap-4 mb-8">
                 <div>
-                  <p className="text-zinc-500 text-xs mb-0.5">Zalecana aplikacja</p>
+                  <p className="text-slate-500 text-xs mb-0.5">Zalecana aplikacja</p>
                   <p className="text-white font-semibold">{active.appName}</p>
                 </div>
                 {active.appUrl && (
@@ -283,7 +283,7 @@ export default function SetupClient() {
                     href={active.appUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-amber-400 hover:text-amber-300 text-sm font-medium transition-colors flex-shrink-0"
+                    className="flex items-center gap-1.5 text-brand-400 hover:text-brand-300 text-sm font-medium transition-colors flex-shrink-0"
                   >
                     Pobierz <ExternalLink size={13} />
                   </a>
@@ -305,7 +305,7 @@ export default function SetupClient() {
                     if (idx > 0) setActiveId(devices[idx - 1].id);
                   }}
                   disabled={devices[0].id === activeId}
-                  className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  className="flex items-center gap-1 text-sm text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                 >
                   <ChevronLeft size={16} /> Poprzedni
                 </button>
@@ -315,7 +315,7 @@ export default function SetupClient() {
                     if (idx < devices.length - 1) setActiveId(devices[idx + 1].id);
                   }}
                   disabled={devices[devices.length - 1].id === activeId}
-                  className="flex items-center gap-1 text-sm text-zinc-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                  className="flex items-center gap-1 text-sm text-slate-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
                 >
                   Następny <ChevronRight size={16} />
                 </button>
@@ -323,10 +323,10 @@ export default function SetupClient() {
             </div>
 
             {/* Still stuck CTA */}
-            <div className="mt-6 bg-[#111111] border border-white/5 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="mt-6 bg-card border border-white/5 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div>
                 <p className="text-white font-semibold">Potrzebujesz pomocy?</p>
-                <p className="text-zinc-400 text-sm">Nasz zespół skonfiguruje wszystko za Ciebie — bezpłatnie.</p>
+                <p className="text-slate-400 text-sm">Nasz zespół skonfiguruje wszystko za Ciebie — bezpłatnie.</p>
               </div>
               <a
                 href="https://wa.me/212707711512?text=Cze%C5%9B%C4%87%2C%20potrzebuję%20pomocy%20z%20konfiguracją%20IPTV"

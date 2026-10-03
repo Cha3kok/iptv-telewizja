@@ -1,200 +1,209 @@
 "use client";
 
 import { useState } from "react";
-import { Check } from "lucide-react";
+import { Check, ShieldCheck, Zap } from "lucide-react";
+import Reveal from "./ui/Reveal";
+import SectionHeading from "./ui/SectionHeading";
+import { whatsappLink } from "../lib/contact";
 
-const deviceOptions = [1, 2, 3, 4];
+type Devices = 1 | 2 | 3 | 4;
 
-const plans = [
-  {
-    name: "1 Miesiąc",
-    basePrice: 15,
-    devicePrices: { 1: 15, 2: 20, 3: 25, 4: 30 },
-    period: "jednorazowo",
-    description: "Idealne na start",
-    highlight: false,
-  },
-  {
-    name: "3 Miesiące",
-    basePrice: 35,
-    devicePrices: { 1: 35, 2: 45, 3: 55, 4: 65 },
-    period: "co 3 miesiące",
-    description: "Świetna wartość dla regularnych widzów",
-    highlight: false,
-  },
+const deviceOptions: Devices[] = [1, 2, 3, 4];
+
+const plans: {
+  name: string;
+  months: number;
+  devicePrices: Record<Devices, number>;
+  description: string;
+  badge?: string;
+  highlight: boolean;
+}[] = [
+  { name: "1 Miesiąc", months: 1, devicePrices: { 1: 15, 2: 20, 3: 25, 4: 30 }, description: "Idealne na start", highlight: false },
+  { name: "3 Miesiące", months: 3, devicePrices: { 1: 35, 2: 45, 3: 55, 4: 65 }, description: "Dla regularnych widzów", highlight: false },
   {
     name: "6 Miesięcy",
-    basePrice: 45,
+    months: 6,
     devicePrices: { 1: 45, 2: 60, 3: 75, 4: 90 },
-    period: "co 6 miesięcy",
-    badge: "Popularny",
+    badge: "Najpopularniejszy",
     description: "Najlepszy balans ceny i elastyczności",
     highlight: true,
   },
-  {
-    name: "12 Miesięcy",
-    basePrice: 60,
-    devicePrices: { 1: 60, 2: 80, 3: 100, 4: 120 },
-    period: "rocznie",
-    description: "Duże oszczędności dla zaangażowanych widzów",
-    highlight: false,
-  },
+  { name: "12 Miesięcy", months: 12, devicePrices: { 1: 60, 2: 80, 3: 100, 4: 120 }, description: "Cały sezon sportowy", highlight: false },
   {
     name: "24 Miesiące",
-    basePrice: 110,
+    months: 24,
     devicePrices: { 1: 110, 2: 145, 3: 180, 4: 215 },
-    period: "co 2 lata",
     badge: "Najlepsza cena",
-    description: "Maksymalne oszczędności, ustaw i zapomnij",
+    description: "Ustaw i zapomnij na 2 lata",
     highlight: false,
   },
 ];
 
 const features = [
-  "50 000+ kanałów na żywo",
-  "Jakość 4K Ultra HD",
+  "50 000+ kanałów na żywo",
+  "Jakość 4K / FHD / HD",
   "7-dniowy catch-up TV",
-  "Biblioteka VOD (200 000+ tytułów)",
+  "200 000+ filmów i seriali",
+  "Przewodnik EPG",
   "Wsparcie 24/7",
-  "Bezpłatna pomoc przy konfiguracji",
 ];
 
-const highlights = [
-  { icon: "📱", label: "Oglądaj na każdym urządzeniu" },
-  { icon: "❄️", label: "Anti-Freeze™ 9.8 Technology" },
-  { icon: "🎬", label: "+200 tys. filmów i seriali (VOD)" },
-  { icon: "📺", label: "+50 000 kanałów premium na żywo" },
-  { icon: "🎥", label: "Jakość 4K / HD / FHD / UHD" },
-  { icon: "🔄", label: "Bezpłatne aktualizacje automatyczne" },
-  { icon: "📅", label: "Dostępny EPG" },
-  { icon: "↩️", label: "Zwrot pieniędzy w 7 dni" },
-  { icon: "🎧", label: "Wsparcie 24/7 bezpłatne" },
-  { icon: "🔒", label: "Ochrona prywatności i wbudowany VPN" },
+const extras = [
+  "Technologia Anti-Freeze™",
+  "Bezpłatne aktualizacje",
+  "Pomoc w konfiguracji",
+  "Kompatybilny z VPN",
+  "Zwrot pieniędzy w 48h",
+  "Działa na każdym urządzeniu",
 ];
+
+const deviceLabel = (d: number) => (d === 1 ? "urządzenie" : "urządzenia");
+const formatEuro = (n: number) => n.toLocaleString("pl-PL", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 export default function Pricing() {
-  const [devices, setDevices] = useState<1 | 2 | 3 | 4>(1);
+  const [devices, setDevices] = useState<Devices>(1);
+  const activeIndex = deviceOptions.indexOf(devices);
 
   return (
-    <section id="pricing" className="bg-[#0a0a0a] py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
-            Cennik
-          </p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Prosta, uczciwa cena
-          </h2>
-          <p className="text-zinc-400 text-lg max-w-xl mx-auto">
-            Brak ukrytych opłat. Brak umów. Anuluj w dowolnym momencie. Dostępny darmowy test 3h.
-          </p>
-        </div>
+    <section id="pricing" className="relative overflow-hidden bg-ink py-24 sm:py-32">
+      <div className="pointer-events-none absolute left-1/2 top-40 h-[36rem] w-[60rem] -translate-x-1/2 rounded-full bg-brand-700/15 blur-[140px]" aria-hidden="true" />
 
-        {/* Device selector */}
-        <div className="flex flex-col items-center mb-12">
-          <p className="text-zinc-400 text-sm mb-4">
-            Ile urządzeń potrzebujesz?
-          </p>
-          <div className="inline-flex bg-[#111111] border border-white/10 rounded-full p-1 gap-1">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          eyebrow="Cennik IPTV Polska"
+          title={
+            <>
+              Prosta, <span className="text-gradient">uczciwa cena</span>
+            </>
+          }
+          subtitle="Płacisz raz, bez automatycznego odnawiania i ukrytych opłat. Przed zakupem wypróbuj za darmo przez 3 godziny."
+        />
+
+        {/* Device selector with sliding indicator */}
+        <Reveal className="mb-14 flex flex-col items-center">
+          <p className="mb-4 text-sm text-slate-400">Ile urządzeń jednocześnie?</p>
+          <div className="relative grid grid-cols-4 rounded-full border border-white/10 bg-card p-1" role="radiogroup" aria-label="Liczba urządzeń">
+            <span
+              className="absolute inset-y-1 left-1 w-[calc((100%-0.5rem)/4)] rounded-full bg-gradient-to-r from-brand-600 to-accent-600 shadow-lg shadow-brand-600/30 transition-transform duration-300 ease-out"
+              style={{ transform: `translateX(${activeIndex * 100}%)` }}
+              aria-hidden="true"
+            />
             {deviceOptions.map((d) => (
               <button
                 key={d}
-                onClick={() => setDevices(d as 1 | 2 | 3 | 4)}
-                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
-                  devices === d
-                    ? "bg-amber-500 text-white shadow"
-                    : "text-zinc-400 hover:text-white"
+                role="radio"
+                aria-checked={devices === d}
+                onClick={() => setDevices(d)}
+                className={`relative z-10 px-4 sm:px-6 py-2 text-sm font-semibold transition-colors ${
+                  devices === d ? "text-white" : "text-slate-400 hover:text-white"
                 }`}
               >
-                {d} {d === 1 ? "Urządzenie" : "Urządzenia"}
+                {d} <span className="hidden sm:inline">{deviceLabel(d)}</span>
               </button>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        {/* Plans grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-start mb-10">
-          {plans.map((plan) => {
-            const price = plan.devicePrices[devices as keyof typeof plan.devicePrices];
+        {/* Plans */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-stretch">
+          {plans.map((plan, i) => {
+            const price = plan.devicePrices[devices];
+            const monthly = price / plan.months;
+            const orderLink = whatsappLink(
+              `iptvtelewizja.com - ${plan.name} / ${devices} ${devices === 1 ? "Urządzenie" : "Urządzenia"} - €${price}`,
+            );
             return (
-              <div
-                key={plan.name}
-                className={`relative rounded-2xl p-6 border flex flex-col transition-all ${
-                  plan.highlight
-                    ? "bg-gradient-to-br from-amber-500 to-amber-600 border-amber-400 shadow-2xl shadow-amber-900/40 scale-105"
-                    : "bg-[#111111] border-white/10 hover:border-white/20"
-                }`}
-              >
-                {plan.badge && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-white text-amber-500 text-[11px] font-bold px-3 py-1 rounded-full whitespace-nowrap">
-                    {plan.badge}
-                  </div>
-                )}
-
-                <p className={`font-bold text-base mb-0.5 ${plan.highlight ? "text-white" : "text-white"}`}>
-                  {plan.name}
-                </p>
-                <p className={`text-xs mb-4 ${plan.highlight ? "text-amber-100" : "text-zinc-500"}`}>
-                  {plan.description}
-                </p>
-
-                <div className="mb-1">
-                  <span className={`text-3xl font-bold ${plan.highlight ? "text-white" : "text-white"}`}>
-                    €{price}
-                  </span>
-                </div>
-                <p className={`text-xs mb-5 ${plan.highlight ? "text-amber-100" : "text-zinc-500"}`}>
-                  {plan.period} · {devices} {devices === 1 ? "połączenie" : "połączenia"}
-                </p>
-
-                <a
-                  href={`https://wa.me/212707711512?text=${encodeURIComponent(`iptvtelewizja.com - ${plan.name} / ${devices} ${devices === 1 ? "Urządzenie" : "Urządzenia"} - €${price}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mt-auto block text-center font-semibold py-2.5 rounded-full text-sm transition-colors ${
+              <Reveal key={plan.name} delay={i * 80} className="h-full">
+                <div
+                  className={`relative flex h-full flex-col rounded-3xl p-6 transition-transform duration-300 hover:-translate-y-1.5 ${
                     plan.highlight
-                      ? "bg-white text-amber-500 hover:bg-amber-50"
-                      : "bg-amber-500 text-white hover:bg-amber-400"
+                      ? "glow-border bg-gradient-to-b from-card-3 to-card shadow-2xl shadow-brand-900/40 lg:scale-[1.04] lg:hover:scale-[1.04]"
+                      : "border border-white/[0.07] bg-card/80 hover:border-white/15"
                   }`}
                 >
-                  Zamów teraz
-                </a>
-              </div>
+                  {plan.badge && (
+                    <span
+                      className={`absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-3 py-1 text-[11px] font-bold ${
+                        plan.highlight
+                          ? "bg-gradient-to-r from-brand-500 to-accent-600 text-white shadow-lg shadow-brand-600/40"
+                          : "border border-white/10 bg-card-2 text-brand-300"
+                      }`}
+                    >
+                      {plan.badge}
+                    </span>
+                  )}
+
+                  <p className="text-base font-bold text-white">{plan.name}</p>
+                  <p className="mt-0.5 text-xs text-slate-500">{plan.description}</p>
+
+                  <div className="mt-6 flex items-baseline gap-1">
+                    <span key={`${plan.name}-${price}`} className="animate-fade-up text-4xl font-extrabold tracking-tight text-white">
+                      €{price}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs text-slate-500">
+                    jednorazowo · {devices} {deviceLabel(devices)}
+                  </p>
+                  <p className={`mt-3 inline-flex w-fit rounded-full px-2.5 py-1 text-xs font-semibold ${plan.highlight ? "bg-brand-500/15 text-brand-300" : "bg-white/5 text-slate-300"}`}>
+                    €{formatEuro(monthly)} / mies.
+                  </p>
+
+                  <a
+                    href={orderLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-auto block shrink-0 rounded-full py-3 text-center text-sm font-semibold transition-colors ${
+                      plan.highlight ? "btn-primary" : "border border-white/15 bg-white/5 text-white hover:border-brand-500/50 hover:bg-brand-500/10"
+                    }`}
+                    style={{ marginTop: "1.75rem" }}
+                  >
+                    Zamów teraz
+                  </a>
+                </div>
+              </Reveal>
             );
           })}
         </div>
 
-        {/* Features included in all plans */}
-        <div className="bg-[#111111] border border-white/5 rounded-2xl p-7">
-          <p className="text-zinc-400 text-xs uppercase tracking-wider font-medium mb-5">
-            Wszystko zawarte w każdym planie
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            {features.map((f) => (
-              <div key={f} className="flex items-start gap-2 text-sm text-zinc-300">
-                <Check size={14} className="text-amber-400 flex-shrink-0 mt-0.5" />
-                {f}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Highlights grid */}
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-          {highlights.map((h) => (
-            <div
-              key={h.label}
-              className="flex items-center gap-3 bg-[#111111] border border-white/5 rounded-xl px-4 py-3"
-            >
-              <span className="text-xl flex-shrink-0">{h.icon}</span>
-              <span className="text-zinc-300 text-xs font-medium leading-snug">{h.label}</span>
+        {/* Included in every plan */}
+        <Reveal className="mt-12">
+          <div className="grid gap-8 rounded-3xl border border-white/[0.07] bg-card/60 p-7 sm:p-9 lg:grid-cols-[1fr_auto_1fr]">
+            <div>
+              <p className="mb-5 flex items-center gap-2 text-sm font-semibold text-white">
+                <Zap size={16} className="text-brand-400" /> W każdym planie
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {features.map((f) => (
+                  <li key={f} className="flex items-center gap-2.5 text-sm text-slate-300">
+                    <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-brand-500/15">
+                      <Check size={12} className="text-brand-300" />
+                    </span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
             </div>
-          ))}
-        </div>
+            <div className="hidden lg:block w-px bg-white/10" />
+            <div>
+              <p className="mb-5 flex items-center gap-2 text-sm font-semibold text-white">
+                <ShieldCheck size={16} className="text-emerald-400" /> Bez ryzyka
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {extras.map((f) => (
+                  <li key={f} className="flex items-center gap-2.5 text-sm text-slate-300">
+                    <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-emerald-500/15">
+                      <Check size={12} className="text-emerald-400" />
+                    </span>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </Reveal>
 
-        <p className="text-center text-zinc-500 text-sm mt-8">
-          Wszystkie plany zawierają darmowy test 3-godzinny. Skontaktuj się z nami na WhatsApp, aby go aktywować — karta kredytowa nie jest wymagana.
+        <p className="mt-8 text-center text-sm text-slate-500">
+          Nie jesteś pewien? Napisz na WhatsApp, aktywujemy darmowy test 3h — bez karty kredytowej.
         </p>
       </div>
     </section>

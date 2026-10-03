@@ -16,23 +16,23 @@ type Props = {
 
 export default function LegalPage({ badge, title, subtitle, lastUpdated, sections }: Props) {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-ink text-white">
       <Navbar />
 
-      <div className="bg-[#0a0a0a] border-b border-white/5 pt-24 pb-12">
+      <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-zinc-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
-          <p className="text-amber-400 text-sm font-semibold uppercase tracking-widest mb-3">
+          <p className="text-brand-400 text-sm font-semibold uppercase tracking-widest mb-3">
             {badge}
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">{title}</h1>
-          <p className="text-zinc-400">{subtitle}</p>
-          <p className="text-zinc-600 text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
+          <p className="text-slate-400">{subtitle}</p>
+          <p className="text-slate-600 text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
         </div>
       </div>
 
@@ -43,22 +43,22 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
             {Array.isArray(s.body) ? (
               <ul className="space-y-2">
                 {s.body.map((item, i) => (
-                  <li key={i} className="flex gap-2 text-zinc-300 text-sm leading-7">
-                    <span className="text-amber-400 mt-1.5 flex-shrink-0">•</span>
+                  <li key={i} className="flex gap-2 text-slate-300 text-sm leading-7">
+                    <span className="text-brand-400 mt-1.5 flex-shrink-0">•</span>
                     {item}
                   </li>
                 ))}
               </ul>
             ) : (
-              <p className="text-zinc-300 text-sm leading-7">{s.body}</p>
+              <p className="text-slate-300 text-sm leading-7">{s.body}</p>
             )}
           </div>
         ))}
 
         <div className="pt-6 border-t border-white/5">
-          <p className="text-zinc-500 text-sm">
+          <p className="text-slate-500 text-sm">
             Pytania dotyczące tej polityki? Skontaktuj się z nami:{" "}
-            <a href="mailto:goldengateiptv@gmail.com" className="text-amber-400 hover:text-amber-300 transition-colors">
+            <a href="mailto:goldengateiptv@gmail.com" className="text-brand-400 hover:text-brand-300 transition-colors">
               goldengateiptv@gmail.com
             </a>
           </p>

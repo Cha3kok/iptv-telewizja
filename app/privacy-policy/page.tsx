@@ -4,7 +4,7 @@ import LegalPage from "../components/LegalPage";
 export const metadata: Metadata = {
   title: "Polityka prywatności",
   description: "Dowiedz się, jak IPTVTelewizja zbiera, wykorzystuje i chroni Twoje dane osobowe.",
-  alternates: { canonical: "https://iptvtelewizja.com/privacy-policy" },
+  alternates: { canonical: "https://www.iptvtelewizja.com/privacy-policy" },
 };
 
 export default function PrivacyPolicy() {
