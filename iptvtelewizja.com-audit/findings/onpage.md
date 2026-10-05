@@ -1,10 +1,7 @@
-## 4. On-page SEO — 72
-**Works:** one H1 on every page; homepage title, description and H1 lead with "IPTV Polska"; question-based H2/H3s;
-every post links to the homepage with the anchor "IPTV Polska"; no missing descriptions or canonicals.
-
+## 3. On-page SEO — 76 (was 72)
+**Works:** one H1 per page; keyword-led homepage; Polish slugs; 0 broken internal links; inbound links improved
+(every blog post now has 3+ inbound links).
 **Findings**
-- Medium: 21 titles over 60 characters — every blog post (65–89) and product page (67–72); home is 64.
-- Medium: 13 descriptions over 160 characters (products 166–202, several posts 163–188); /terms-of-service is 63.
-- Medium: weak internal links — `/product/24-miesiace-iptv-telewizja` has 1 inbound link, `what-is-iptv-complete-guide` 1,
-  `jak-ogladac-sport-bez-telewizji-satelitarnej` 2, `iptv-vs-satellite-tv-comparison` 2.
-- Low: /blog has no intro copy targeting "blog IPTV Polska" and no CollectionPage schema.
+- Medium: 18/27 titles over 60 characters; 11 descriptions outside 70–160.
+- Medium: /setup exposes 1 of 6 guides in HTML.
+- Medium: `/product/24-miesiace-iptv-telewizja` has 1 inbound internal link.

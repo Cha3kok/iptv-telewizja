@@ -134,14 +134,14 @@ export default function Devices() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">{device.name}</p>
-                  <p className="mt-0.5 text-xs text-slate-500">{device.desc}</p>
+                  <p className="mt-0.5 text-xs text-slate-400">{device.desc}</p>
                 </div>
               </div>
             </Reveal>
           ))}
         </div>
 
-        <p className="mt-10 text-center text-sm text-slate-500">
+        <p className="mt-10 text-center text-sm text-slate-400">
           Kompatybilne z TiviMate, IPTV Smarters Pro, GSE IPTV, Perfect Player i wszystkimi standardowymi odtwarzaczami M3U.
         </p>
       </div>

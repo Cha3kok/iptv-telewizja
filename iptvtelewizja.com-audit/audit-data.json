@@ -1,109 +1,104 @@
 {
   "summary": {
-    "health_score": 74,
+    "health_score": 80,
     "business_type": "Online subscription service (IPTV), Polish audience",
     "top_findings": [
-      "Branch with all fixes not deployed; live canonical points to a redirecting URL",
-      "Weak E-E-A-T: no named author, no company identity, off-brand Gmail contact",
-      "Six thin blog posts and two overlapping Smart TV posts",
-      "21 of 28 titles over 60 characters; 13 descriptions over 160",
-      "Mobile lab LCP 3.0 s caused by hero H1 fade-in"
+      "Content fixes not deployed (live score 76)",
+      "No business identity or named author",
+      "Domain not in Common Crawl: almost no backlinks",
+      "Apex redirect still 307",
+      "18 of 27 titles over 60 characters"
     ],
     "quick_wins": [
-      "Deploy branch and set apex redirect to 308",
-      "Remove opacity fade from hero H1",
-      "Shorten titles to 60 characters",
-      "Add width/height and next/image to blog images",
-      "Fix three accessibility failures"
+      "Deploy; apex 308; Search Console + sitemap",
+      "Shorten 18 titles",
+      "Render all /setup guides in HTML",
+      "Link the 24-month plan",
+      "Expand tanie-iptv-polska"
     ]
   },
   "categories": [
     {
       "name": "Technical SEO",
-      "score": 80,
+      "score": 84,
       "what_works": [
-        "Static prerendering",
-        "Canonicals on www",
-        "Sitemap with real lastmod",
+        "28/28 URLs 200 with self canonicals",
+        "AI crawlers allowed and not challenged",
+        "Server-rendered (2,668 words without JS)",
         "Security headers",
-        "Real 404s"
+        "Real 404 and 308 slug redirect"
       ],
       "findings": [
         {
-          "title": "Fixes not deployed",
-          "severity": "Critical",
-          "description": "Live canonical is https://iptvtelewizja.com (307 to www); /dmca, /llms.txt, /og-image.png 404 live.",
-          "recommendation": "Merge and deploy audit-fixes."
-        },
-        {
-          "title": "Apex redirect is temporary",
+          "title": "Apex redirect temporary",
           "severity": "High",
-          "description": "iptvtelewizja.com returns 307 to www.",
+          "description": "https://iptvtelewizja.com/ returns 307 to www.",
           "recommendation": "Set 308 in Vercel Domains."
         },
         {
-          "title": "Unresponsive www IP",
+          "title": "Second www IP unreachable from audit network",
           "severity": "Medium",
-          "description": "64.29.17.1 did not respond from the audit network (15-30 s delays).",
-          "recommendation": "Verify with PSI from several regions."
+          "description": "64.29.17.1 refused connections; ~20 s fallback.",
+          "recommendation": "Verify from several regions."
+        },
+        {
+          "title": "No Search Console/Bing/IndexNow",
+          "severity": "Medium",
+          "description": "No verification detected.",
+          "recommendation": "Verify and submit the sitemap."
         }
       ]
     },
     {
       "name": "Content Quality",
-      "score": 62,
+      "score": 74,
       "what_works": [
-        "Citable IPTV Polska definition",
-        "Consistent facts site-wide",
-        "No filler language (quality 90-91)"
+        "All posts 534-1,060 body words",
+        "Direct-answer blocks, tables, FAQs",
+        "No unverifiable claims",
+        "Quality scorer 90-91"
       ],
       "findings": [
         {
-          "title": "Weak E-E-A-T",
+          "title": "No business identity",
           "severity": "High",
-          "description": "No named author, company identity or branded email.",
-          "recommendation": "Add company details, branded email, named author bio."
+          "description": "No company name, address, NIP, branded email or named author.",
+          "recommendation": "Add real details."
         },
         {
-          "title": "Thin posts",
-          "severity": "High",
-          "description": "Six posts with ~200-270 words of real content.",
-          "recommendation": "Expand to 1000+ words or merge."
-        },
-        {
-          "title": "Overlapping Smart TV posts",
+          "title": "tanie-iptv-polska shortest post",
           "severity": "Medium",
-          "description": "iptv-setup-guide-smart-tv-2025 vs iptv-smart-tv-polska.",
-          "recommendation": "Merge with 308 redirect."
+          "description": "534 body words on a competitive query.",
+          "recommendation": "Expand to 1,000+ words."
         }
       ]
     },
     {
       "name": "On-Page SEO",
-      "score": 72,
+      "score": 76,
       "what_works": [
         "One H1 per page",
-        "Keyword-led home title/H1",
-        "Keyword internal links from posts"
+        "Keyword-led homepage",
+        "Keyword anchor links from posts"
       ],
       "findings": [
         {
           "title": "Long titles",
           "severity": "Medium",
-          "description": "21 of 28 titles exceed 60 characters (up to 89).",
-          "recommendation": "Shorten or drop brand suffix."
+          "description": "18 of 27 titles over 60 characters.",
+          "recommendation": "Shorten."
         },
         {
-          "title": "Long descriptions",
+          "title": "Descriptions out of range",
           "severity": "Medium",
-          "description": "13 descriptions exceed 160 characters.",
-          "recommendation": "Trim to 120-160."
+          "description": "11 outside 70-160 characters.",
+          "recommendation": "Rewrite."
         },
         {
-          "title": "Weak internal links",
+          "title": "/setup guides hidden",
           "severity": "Medium",
-          "description": "24-month plan and what-is-iptv have 1 inbound link each.",
-          "recommendation": "Add contextual links."
+          "description": "1 of 6 guides in HTML.",
+          "recommendation": "Render all guides."
         }
       ]
     },
@@ -111,7 +106,7 @@
       "name": "Schema / Structured Data",
       "score": 85,
       "what_works": [
-        "Valid JSON-LD everywhere",
+        "0 JSON-LD errors",
         "Connected @graph on home",
         "BlogPosting with dates"
       ],
@@ -119,36 +114,31 @@
         {
           "title": "No sameAs",
           "severity": "Medium",
-          "description": "Organization lacks social profile links.",
-          "recommendation": "Add once profiles exist."
-        },
-        {
-          "title": "No CollectionPage on /blog",
-          "severity": "Low",
-          "description": "Blog index has no schema.",
-          "recommendation": "Add CollectionPage/ItemList."
+          "description": "Organization lacks profile links.",
+          "recommendation": "Add when profiles exist."
         }
       ]
     },
     {
       "name": "Performance (CWV)",
-      "score": 82,
+      "score": 95,
       "what_works": [
-        "Lab perf 94",
+        "Mobile perf 97-99, desktop 100",
+        "LCP 1.8-2.1 s mobile",
         "CLS 0",
-        "TBT 0-60 ms"
+        "TTFB ~50 ms"
       ],
       "findings": [
         {
-          "title": "Home LCP 3.0 s",
-          "severity": "Medium",
-          "description": "LCP element is the H1 delayed by opacity fade-in (532 ms render delay).",
-          "recommendation": "Use transform-only animation."
+          "title": "No field data",
+          "severity": "Info",
+          "description": "CrUX unavailable.",
+          "recommendation": "Add PSI API key; revisit with traffic."
         },
         {
           "title": "Unsized blog images",
-          "severity": "Medium",
-          "description": "Cover and inline images lack width/height; JPEG only.",
+          "severity": "Low",
+          "description": "20 images without width/height.",
           "recommendation": "Use next/image."
         }
       ]
@@ -157,16 +147,16 @@
       "name": "AI Search Readiness",
       "score": 75,
       "what_works": [
-        "Citable passages in raw HTML",
-        "AI search crawlers allowed",
-        "llms.txt present"
+        "All agentic checks pass",
+        "llms.txt passes Lighthouse",
+        "Citable passages in HTML"
       ],
       "findings": [
         {
-          "title": "No brand presence off-site",
+          "title": "No off-site presence",
           "severity": "High",
-          "description": "No YouTube, Reddit, Wikipedia or LinkedIn presence.",
-          "recommendation": "Build YouTube tutorials and community presence."
+          "description": "No YouTube/Reddit/Wikipedia/LinkedIn; not in Common Crawl.",
+          "recommendation": "Build brand presence."
         }
       ]
     },
@@ -174,16 +164,15 @@
       "name": "Images",
       "score": 75,
       "what_works": [
-        "All images have alt text",
-        "Logo images replaced",
-        "1200x630 PNG OG image"
+        "0 missing alt",
+        "1200x630 OG PNG"
       ],
       "findings": [
         {
           "title": "No modern formats",
           "severity": "Medium",
-          "description": "JPEG via plain img, no responsive sizes.",
-          "recommendation": "Serve WebP/AVIF via next/image."
+          "description": "JPEG via plain img.",
+          "recommendation": "WebP/AVIF via next/image."
         }
       ]
     }
@@ -194,40 +183,38 @@
         "name": "Phase 1: Critical Fixes",
         "timeframe": "Week 1",
         "items": [
-          "Deploy audit-fixes",
-          "Apex redirect 308",
-          "Verify Search Console and Bing, submit sitemap"
+          "Deploy content fixes",
+          "Apex 308",
+          "Search Console + Bing + reindex"
         ]
       },
       {
         "name": "Phase 2: High-Impact Improvements",
         "timeframe": "Weeks 2-3",
         "items": [
-          "Hero LCP fix",
           "E-E-A-T details",
-          "Expand or merge thin posts",
-          "Merge Smart TV posts"
+          "/setup guides in HTML",
+          "Titles and descriptions",
+          "Accessibility fixes"
         ]
       },
       {
         "name": "Phase 3: Content & Authority",
         "timeframe": "Month 2",
         "items": [
-          "Titles and descriptions",
-          "next/image",
+          "Expand/merge thin posts",
           "Internal links",
-          "Accessibility fixes",
-          "Polish slugs",
-          "YouTube and community presence"
+          "Backlinks from Polish expat sites",
+          "YouTube tutorials"
         ]
       },
       {
         "name": "Phase 4: Monitoring & Iteration",
         "timeframe": "Ongoing",
         "items": [
+          "Re-audit with GSC data",
           "Refresh facts every 2-3 months",
-          "IndexNow",
-          "Track rankings once Semrush/GSC connected"
+          "Connect Semrush/PSI key"
         ]
       }
     ]

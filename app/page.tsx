@@ -19,7 +19,7 @@ import { SUPPORT_EMAIL, WHATSAPP_NUMBER } from "./lib/contact";
 import { homeFaqs } from "./lib/faq";
 import { products } from "./lib/products";
 
-const TITLE = "IPTV Polska — Telewizja Internetowa w 4K od €15 | IPTV Telewizja";
+const TITLE = "IPTV Polska — Telewizja Internetowa w 4K | IPTV Telewizja";
 const DESCRIPTION =
   "IPTV Polska od €15: 50 000+ kanałów na żywo w 4K, polskie kanały i sport, 7-dniowy catch-up i 200 000+ VOD. Działa w Polsce i za granicą. Darmowy test 3h.";
 

@@ -11,11 +11,17 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   async redirects() {
     return [
-      {
-        source: "/blog/watch-sky-sports-without-sky-subscription",
-        destination: "/blog/jak-ogladac-sport-bez-telewizji-satelitarnej",
-        permanent: true,
-      },
+      // Renamed or merged blog posts keep their old URLs working.
+      ...(
+        [
+          ["watch-sky-sports-without-sky-subscription", "jak-ogladac-sport-bez-telewizji-satelitarnej"],
+          ["what-is-iptv-complete-guide", "co-to-jest-iptv"],
+          ["iptv-buffering-fix-guide", "iptv-zacina-sie"],
+          ["iptv-vs-satellite-tv-comparison", "iptv-czy-telewizja-satelitarna"],
+          ["best-iptv-app-firestick-2025", "najlepsze-aplikacje-iptv-firestick"],
+          ["iptv-setup-guide-smart-tv-2025", "iptv-smart-tv-polska"],
+        ] as const
+      ).map(([from, to]) => ({ source: `/blog/${from}`, destination: `/blog/${to}`, permanent: true })),
     ];
   },
   async headers() {

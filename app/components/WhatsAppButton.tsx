@@ -1,10 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { X } from "lucide-react";
 
 export default function WhatsAppButton() {
   const [tooltipDismissed, setTooltipDismissed] = useState(false);
+
+  useEffect(() => {
+    const id = setTimeout(() => setTooltipDismissed(true), 12000);
+    return () => clearTimeout(id);
+  }, []);
 
   return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
@@ -18,7 +23,7 @@ export default function WhatsAppButton() {
           >
             <X size={12} />
           </button>
-          <p className="font-bold text-xs text-slate-500 mb-1">iptvtelewizja.com</p>
+          <p className="font-bold text-xs text-slate-400 mb-1">iptvtelewizja.com</p>
           <p className="font-medium">💬 Chcę więcej informacji</p>
           {/* Tail */}
           <span className="absolute -bottom-2 right-6 w-3 h-3 bg-white rotate-45 shadow-sm" />

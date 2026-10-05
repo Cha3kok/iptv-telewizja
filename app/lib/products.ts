@@ -39,9 +39,9 @@ export const products: Product[] = [
     price: 15,
     period: "jednorazowa płatność",
     highlight: false,
-    metaTitle: "1 Miesiąc IPTV Telewizja — €15 | 50 000+ kanałów, 4K",
+    metaTitle: "1 Miesiąc IPTV Polska — €15 | 50 000+ kanałów w 4K",
     metaDescription:
-      "Uzyskaj 1 miesiąc IPTV Telewizja za zaledwie €15. 50 000+ kanałów na żywo, 4K Ultra HD, 7-dniowy catch-up, zero zacięć. Bez umowy. Natychmiastowa aktywacja. Dostępny darmowy test 3h.",
+      "1 miesiąc IPTV Polska za €15: 50 000+ kanałów na żywo, 4K, 7-dniowy catch-up. Jednorazowa płatność, bez umowy. Darmowy test 3h przed zakupem.",
     h1: "1 Miesiąc IPTV Telewizja — €15 jednorazowa płatność",
     heroSubtitle:
       "Idealny sposób na wypróbowanie IPTV Telewizja bez ryzyka. Pełny dostęp do 50 000+ kanałów na żywo, streaming 4K i 7-dniowy catch-up TV za zaledwie €15. Bez umów, bez opłat cyklicznych.",
@@ -112,9 +112,9 @@ export const products: Product[] = [
     price: 35,
     period: "jednorazowa płatność",
     highlight: false,
-    metaTitle: "3 Miesiące IPTV Telewizja — €35 | Oszczędź vs miesięczny",
+    metaTitle: "3 Miesiące IPTV Polska — €35 | €11,67 miesięcznie",
     metaDescription:
-      "3 miesiące IPTV Telewizja za €35 — to mniej niż €12/miesiąc. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Bez umowy, natychmiastowa aktywacja. Wypróbuj za darmo przez 3 godziny.",
+      "3 miesiące IPTV Polska za €35 (€11,67 miesięcznie): 50 000+ kanałów, 4K, 7-dniowy catch-up. Bez umowy i automatycznego odnawiania. Test 3h gratis.",
     h1: "3 Miesiące IPTV Telewizja — €35 jednorazowa płatność",
     heroSubtitle:
       "Trzy miesiące premium IPTV Telewizja za zaledwie €35 — oszczędzasz €10 vs plan miesięczny. Idealny dla okazjonalnych widzów, którzy chcą niezawodnego dostępu bez kosztów długoterminowej subskrypcji.",
@@ -182,9 +182,9 @@ export const products: Product[] = [
     period: "jednorazowa płatność",
     badge: "Najpopularniejszy",
     highlight: true,
-    metaTitle: "6 Miesięcy IPTV Telewizja — €45 | Najpopularniejszy plan",
+    metaTitle: "6 Miesięcy IPTV Polska — €45 | Najpopularniejszy plan",
     metaDescription:
-      "6 miesięcy IPTV Telewizja za zaledwie €45 — tylko €7,50/miesiąc. Najpopularniejszy plan. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Natychmiastowa konfiguracja.",
+      "6 miesięcy IPTV Polska za €45 — tylko €7,50 miesięcznie. Najpopularniejszy plan: 50 000+ kanałów, 4K, 7-dniowy catch-up, bez umowy. Test 3h gratis.",
     h1: "6 Miesięcy IPTV Telewizja — €45 jednorazowa płatność",
     heroSubtitle:
       "Nasz najpopularniejszy plan z dobrego powodu. Sześć miesięcy premium IPTV Telewizja za zaledwie €45 — to €7,50 miesięcznie. Idealny balans oszczędności i elastyczności dla regularnych widzów.",
@@ -255,9 +255,9 @@ export const products: Product[] = [
     price: 60,
     period: "jednorazowa płatność",
     highlight: false,
-    metaTitle: "12 Miesięcy IPTV Telewizja — €60 | Tylko €5/miesiąc",
+    metaTitle: "12 Miesięcy IPTV Polska — €60 | Tylko €5 miesięcznie",
     metaDescription:
-      "12 miesięcy IPTV Telewizja za zaledwie €60 — to €5 miesięcznie. Pełny rok 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Najlepsza wartość dla zaangażowanych widzów. Natychmiastowa konfiguracja.",
+      "12 miesięcy IPTV Polska za €60 — €5 miesięcznie. Cały rok 50 000+ kanałów, streaming 4K i 7-dniowy catch-up. Bez umowy, darmowy test 3h.",
     h1: "12 Miesięcy IPTV Telewizja — €60 jednorazowa płatność",
     heroSubtitle:
       "Pełny rok premium IPTV Telewizja za zaledwie €60. Przy €5 miesięcznie, to plan dla widzów, którzy wiedzą, że pokochali IPTV i chcą gwarantowanego dostępu przez cały rok.",
@@ -329,9 +329,9 @@ export const products: Product[] = [
     period: "jednorazowa płatność",
     badge: "Najlepsza cena",
     highlight: false,
-    metaTitle: "24 Miesiące IPTV Telewizja — €110 | Tylko €4,58/miesiąc",
+    metaTitle: "24 Miesiące IPTV Polska — €110 | €4,58 miesięcznie",
     metaDescription:
-      "24 miesiące IPTV Telewizja za €110 — zaledwie €4,58/miesiąc. Plan o najlepszej wartości. 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Dwa pełne lata z jedną płatnością. Natychmiastowa konfiguracja.",
+      "24 miesiące IPTV Polska za €110 — najniższa cena: €4,58 miesięcznie. 50 000+ kanałów, 4K i 7-dniowy catch-up przez dwa lata, bez umowy.",
     h1: "24 Miesiące IPTV Telewizja — €110 jednorazowa płatność",
     heroSubtitle:
       "Subskrypcja IPTV o najlepszej wartości dostępna na rynku. Dwa pełne lata premium IPTV Telewizja za €110 — zaledwie €4,58 miesięcznie. Jedna płatność, dwa lata 50 000+ kanałów, streaming 4K i zero kłopotów.",
@@ -360,7 +360,7 @@ export const products: Product[] = [
       },
       {
         q: "Czy usługa jest gwarantowana przez pełne 24 miesiące?",
-        a: "Tak. Działamy od lat z 99,9% dostępnością. Twoja subskrypcja jest w pełni obsługiwana przez cały okres 24 miesięcy. Jeśli pojawi się jakikolwiek problem techniczny, nasz zespół wsparcia 24/7 go rozwiąże — mamy wszelkie powody, by utrzymać Cię zadowolonym przez długi czas.",
+        a: "Tak. Twoja subskrypcja jest w pełni obsługiwana przez cały okres 24 miesięcy. Jeśli pojawi się jakikolwiek problem techniczny, nasz zespół wsparcia 24/7 go rozwiąże — mamy wszelkie powody, by utrzymać Cię zadowolonym przez długi czas.",
       },
       {
         q: "Czy uzyskam dostęp do nowych kanałów dodanych w ciągu 24 miesięcy?",
@@ -402,6 +402,6 @@ export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);
 }
 
-export function getRelatedProducts(slug: string, count = 3): Product[] {
+export function getRelatedProducts(slug: string, count = products.length - 1): Product[] {
   return products.filter((p) => p.slug !== slug).slice(0, count);
 }

@@ -1,34 +1,29 @@
-# Action Plan — iptvtelewizja.com
+# Action Plan — www.iptvtelewizja.com (2026-10-03, third run)
 
-Ordered by priority. "Code" items can be done in the repo; "Owner" items need your accounts or business details.
-
-## Critical (now)
-1. **Deploy the `audit-fixes` branch** — fixes canonicals, share image, `/dmca`, `/llms.txt`, Next.js security. *(Code — merge + deploy)*
-2. **Set apex → www redirect to permanent (308)** in Vercel → Project → Settings → Domains. *(Owner)*
-3. **Verify Google Search Console and Bing Webmaster Tools**, submit `https://www.iptvtelewizja.com/sitemap.xml`. *(Owner)*
+"Code" items can be done in the repo. "Owner" items need your accounts or details.
+Done since the last plan: thin posts expanded, Smart TV posts merged, Polish slugs with redirects, unverifiable
+claims removed, brand name unified, editorial standards on /about.
 
 ## High (this week)
-4. **Hero LCP:** remove the opacity fade on the hero H1 and intro paragraph; keep a transform-only entrance. Expected −0.5 s mobile LCP. *(Code)*
-5. **Trust / E-E-A-T:** add company name, address and NIP to the legal pages and footer; use a branded email (e.g. kontakt@iptvtelewizja.com); name a real author with a short bio on /about. *(Owner provides details, then code)*
-6. **Thin posts:** expand to 1 000+ words or merge: `what-is-iptv-complete-guide`, `iptv-buffering-fix-guide`, `jak-ogladac-sport-bez-telewizji-satelitarnej`, `iptv-vs-satellite-tv-comparison`, `best-iptv-app-firestick-2025`. *(Code/content)*
-7. **Merge duplicate Smart TV posts:** fold `iptv-setup-guide-smart-tv-2025` into `iptv-smart-tv-polska`, 308 redirect. *(Code)*
+1. **Deploy** the content fixes (commit + push to `main`). *(Code)*
+2. **Apex redirect 307 → 308** in Vercel → Domains. *(Owner)*
+3. **Search Console + Bing:** verify, submit the sitemap, request reindexing of the homepage and the 5 rewritten posts. *(Owner)*
+4. **Business identity:** company name, address, NIP, branded email, named author with a short bio. *(Owner → code)*
+5. **Backlinks and brand mentions:** Polish expat portals and forums (UK, DE, IE), YouTube setup tutorials, community participation. *(Owner, ongoing)*
 
 ## Medium (this month)
-8. **Titles ≤ 60 characters** on all blog and product pages (use `title.absolute` or shorter frontmatter titles). *(Code)*
-9. **Descriptions 120–160 characters** on 13 pages; lengthen /terms-of-service. *(Code)*
-10. **Blog images:** move to `next/image` (WebP/AVIF, width/height, responsive sizes); preload the post cover. *(Code)*
-11. **Internal links:** link the 24-month plan from the pricing section and product pages; link the weak posts from related posts and the homepage intro. *(Code)*
-12. **Accessibility:** move `aria-label` off the star `<div>` (use `role="img"`), match logo link label to visible text, footer `<h4>` → `<h3>`, raise small-text contrast (`slate-500` → `slate-400`). *(Code)*
-13. **Polish slugs** for the four English-slug posts, with 308 redirects. *(Code)*
-14. **Check the `www` DNS IP** (64.29.17.1 didn't respond from the audit network); run PageSpeed Insights from several regions. *(Owner)*
+6. **Titles ≤ 60 characters** (18 pages) and **descriptions 70–160 characters** (11 pages). *(Code)*
+7. **/setup:** render all six device guides in the HTML. *(Code)*
+8. **Expand `tanie-iptv-polska`** to 1,000+ words. *(Code/content)*
+9. **Internal links** to `/product/24-miesiace-iptv-telewizja`. *(Code)*
+10. **Accessibility** to 100: star-rating `aria-label`, logo link label, footer heading order, small-text contrast. *(Code)*
+11. **Blog images** via `next/image` (WebP/AVIF, width/height). *(Code)*
+12. **Check the second `www` IP** from several regions. *(Owner)*
 
 ## Low (backlog)
-15. `sameAs` links once official social profiles exist. *(Owner → code)*
-16. CollectionPage/ItemList schema on /blog; link /about and /contact schema to `#organization`. *(Code)*
-17. Auto-hide the WhatsApp tooltip on desktop after a few seconds. *(Code)*
-18. IndexNow key + ping after each deploy. *(Code)*
+13. `sameAs` once social profiles exist; CollectionPage on /blog. *(Code)*
+14. Remove the hero H1 fade-in; auto-hide the WhatsApp tooltip; CSP header; IndexNow. *(Code)*
 
-## Off-site (ongoing — biggest lever for "IPTV Polska" and AI answers)
-- YouTube setup tutorials in Polish; genuine participation in Polish expat communities (UK, DE, IE).
-- Links from Polish expat portals and forums.
-- Refresh homepage facts and top posts every 2–3 months.
+## Monitoring
+- Re-audit after 4 weeks of Search Console data; connect Semrush or a PageSpeed API key for rankings and field CWV.
+- Refresh the homepage facts and top posts every 2–3 months.

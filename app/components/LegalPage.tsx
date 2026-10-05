@@ -18,12 +18,13 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
   return (
     <div className="min-h-screen bg-ink text-white">
       <Navbar />
+      <main>
 
       <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
@@ -32,7 +33,7 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold text-white mb-3">{title}</h1>
           <p className="text-slate-400">{subtitle}</p>
-          <p className="text-slate-600 text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
+          <p className="text-slate-400 text-xs mt-3">Ostatnia aktualizacja: {lastUpdated}</p>
         </div>
       </div>
 
@@ -56,7 +57,7 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
         ))}
 
         <div className="pt-6 border-t border-white/5">
-          <p className="text-slate-500 text-sm">
+          <p className="text-slate-400 text-sm">
             Pytania dotyczące tej polityki? Skontaktuj się z nami:{" "}
             <a href="mailto:goldengateiptv@gmail.com" className="text-brand-400 hover:text-brand-300 transition-colors">
               goldengateiptv@gmail.com
@@ -64,6 +65,8 @@ export default function LegalPage({ badge, title, subtitle, lastUpdated, section
           </p>
         </div>
       </article>
+
+      </main>
 
       <Footer />
       <WhatsAppButton />

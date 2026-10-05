@@ -80,7 +80,7 @@ export default function Setup() {
               href={SETUP_HELP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="shrink-0 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-900/30 transition-all hover:-translate-y-0.5 hover:bg-[#20bd5a]"
+              className="shrink-0 rounded-full bg-[#25D366] px-6 py-3 text-sm font-semibold text-ink shadow-lg shadow-emerald-900/30 transition-all hover:-translate-y-0.5 hover:bg-[#20bd5a]"
             >
               Uzyskaj bezpłatną pomoc
             </a>

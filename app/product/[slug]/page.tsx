@@ -7,7 +7,7 @@ import Footer from "../../components/Footer";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import JsonLd from "../../components/JsonLd";
 import { products, getProduct, getRelatedProducts } from "../../lib/products";
-import { OG_IMAGE } from "../../lib/site";
+import { OG_IMAGE, pageTitle } from "../../lib/site";
 
 export async function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -22,7 +22,7 @@ export async function generateMetadata({
   const product = getProduct(slug);
   if (!product) return {};
   return {
-    title: product.metaTitle,
+    title: pageTitle(product.metaTitle),
     description: product.metaDescription,
     alternates: { canonical: `https://www.iptvtelewizja.com/product/${slug}` },
     openGraph: {
@@ -71,7 +71,7 @@ export default async function ProductPage({
   const product = getProduct(slug);
   if (!product) notFound();
 
-  const relatedProducts = getRelatedProducts(slug, 3);
+  const relatedProducts = getRelatedProducts(slug);
   const waSubscribeLink = `https://wa.me/212707711512?text=${encodeURIComponent(product.whatsappMessage)}`;
 
   const productSchema = {
@@ -80,7 +80,7 @@ export default async function ProductPage({
     name: product.name,
     description: product.metaDescription,
     image: "https://www.iptvtelewizja.com/og-image.png",
-    brand: { "@type": "Brand", name: "IPTVTelewizja" },
+    brand: { "@type": "Brand", name: "IPTV Telewizja" },
     offers: {
       "@type": "Offer",
       price: product.price.toString(),
@@ -115,7 +115,7 @@ export default async function ProductPage({
 
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
-          <nav className="text-slate-500 text-sm flex items-center gap-1.5 flex-wrap">
+          <nav className="text-slate-400 text-sm flex items-center gap-1.5 flex-wrap">
             <Link href="/" className="hover:text-white transition-colors">Strona główna</Link>
             <span>/</span>
             <Link href="/product" className="hover:text-white transition-colors">Plany</Link>
@@ -186,7 +186,7 @@ export default async function ProductPage({
                   {/* Amber overlay / channel info */}
                   <rect x="26" y="140" width="268" height="32" rx="0" fill="rgba(0,0,0,0.65)" />
                   <text x="40" y="160" fill="#f8335c" fontSize="11" fontFamily="monospace" fontWeight="bold">
-                    IPTVTelewizja
+                    IPTV Telewizja
                   </text>
                   <text x="190" y="160" fill="white" fontSize="10" fontFamily="monospace">
                     50 000+ kanałów
@@ -306,7 +306,7 @@ export default async function ProductPage({
                   <p className="text-slate-300 text-sm leading-relaxed flex-1">&ldquo;{t.text}&rdquo;</p>
                   <div>
                     <p className="text-white font-semibold text-sm">{t.name}</p>
-                    <p className="text-slate-500 text-xs">{t.city}</p>
+                    <p className="text-slate-400 text-xs">{t.city}</p>
                   </div>
                 </div>
               ))}
@@ -346,7 +346,7 @@ export default async function ProductPage({
               Gotowy do oglądania?
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Gotowy, żeby zacząć oglądać IPTVTelewizja?
+              Gotowy, żeby zacząć oglądać IPTV Telewizja?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
               Kup {product.name} za €{product.price} — lub wypróbuj nas za darmo przez 3 godziny bez karty kredytowej.
@@ -380,10 +380,10 @@ export default async function ProductPage({
                 Inne plany
               </p>
               <h2 className="text-2xl font-bold text-white">
-                Poznaj inne plany IPTVTelewizja
+                Poznaj inne plany IPTV Telewizja
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {relatedProducts.map((rel) => {
                 const relWaLink = `https://wa.me/212707711512?text=${encodeURIComponent(rel.whatsappMessage)}`;
                 return (

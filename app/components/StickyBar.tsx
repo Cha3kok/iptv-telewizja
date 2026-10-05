@@ -40,7 +40,7 @@ export default function StickyBar() {
         </a>
         <button
           onClick={() => setDismissed(true)}
-          className="rounded-full p-1.5 text-slate-500 transition-colors hover:bg-white/5 hover:text-slate-300"
+          className="rounded-full p-1.5 text-slate-400 transition-colors hover:bg-white/5 hover:text-slate-300"
           aria-label="Zamknij"
         >
           <X size={16} />

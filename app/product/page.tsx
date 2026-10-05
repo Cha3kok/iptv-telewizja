@@ -11,11 +11,11 @@ import { OG_IMAGE } from "../lib/site";
 export const metadata: Metadata = {
   title: "Plany i cennik IPTV — od €15",
   description:
-    "Porównaj wszystkie plany subskrypcji IPTVTelewizja od €15. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Wybierz 1, 3, 6, 12 lub 24 miesiące. Bez umowy. Natychmiastowa aktywacja.",
+    "Cennik IPTV Polska: plany na 1, 3, 6, 12 i 24 miesiące od €15. 50 000+ kanałów, 4K, 7-dniowy catch-up. Bez umowy, aktywacja w kilka minut.",
   alternates: { canonical: "https://www.iptvtelewizja.com/product" },
   openGraph: {
     images: [OG_IMAGE],
-    title: "Plany i cennik IPTV — od €15 | IPTVTelewizja",
+    title: "Plany i cennik IPTV — od €15 | IPTV Telewizja",
     description:
       "50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Plany od €15. Porównaj subskrypcje IPTV na 1, 3, 6, 12 i 24 miesiące.",
     url: "https://www.iptvtelewizja.com/product",
@@ -25,11 +25,11 @@ export const metadata: Metadata = {
 const catalogSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "IPTVTelewizja Subskrypcja",
+  name: "IPTV Telewizja Subskrypcja",
   description:
     "Premium polska subskrypcja IPTV z 50 000+ kanałami na żywo, 200 000+ VOD, jakością 4K Ultra HD, 7-dniowym catch-up TV i wsparciem 24/7.",
   image: "https://www.iptvtelewizja.com/og-image.png",
-  brand: { "@type": "Brand", name: "IPTVTelewizja" },
+  brand: { "@type": "Brand", name: "IPTV Telewizja" },
   offers: products.map((p) => ({
     "@type": "Offer",
     name: p.name,
@@ -112,7 +112,7 @@ export default function ProductCatalogPage() {
 
         {/* Breadcrumb */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-2">
-          <nav className="text-slate-500 text-sm flex items-center gap-1.5">
+          <nav className="text-slate-400 text-sm flex items-center gap-1.5">
             <Link href="/" className="hover:text-white transition-colors">Strona główna</Link>
             <span>/</span>
             <span className="text-slate-300">Plany</span>
@@ -365,7 +365,7 @@ export default function ProductCatalogPage() {
           </div>
         </section>
 
-        {/* Why IPTVTelewizja */}
+        {/* Why IPTV Telewizja */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-14">
@@ -373,7 +373,7 @@ export default function ProductCatalogPage() {
                 Dlaczego my
               </p>
               <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                Dlaczego IPTVTelewizja?
+                Dlaczego IPTV Telewizja?
               </h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -398,7 +398,7 @@ export default function ProductCatalogPage() {
               Nie jesteś pewien?
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Wypróbuj IPTVTelewizja za darmo przez 3 godziny
+              Wypróbuj IPTV Telewizja za darmo przez 3 godziny
             </h2>
             <p className="text-slate-400 text-lg mb-8">
               Bez karty kredytowej. Bez zobowiązań. Napisz do nas na WhatsApp, a aktywujemy Twój darmowy test w ciągu kilku minut.

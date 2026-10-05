@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Check, ShieldCheck, Zap } from "lucide-react";
 import Reveal from "./ui/Reveal";
 import SectionHeading from "./ui/SectionHeading";
@@ -13,25 +14,28 @@ const deviceOptions: Devices[] = [1, 2, 3, 4];
 const plans: {
   name: string;
   months: number;
+  slug: string;
   devicePrices: Record<Devices, number>;
   description: string;
   badge?: string;
   highlight: boolean;
 }[] = [
-  { name: "1 Miesiąc", months: 1, devicePrices: { 1: 15, 2: 20, 3: 25, 4: 30 }, description: "Idealne na start", highlight: false },
-  { name: "3 Miesiące", months: 3, devicePrices: { 1: 35, 2: 45, 3: 55, 4: 65 }, description: "Dla regularnych widzów", highlight: false },
+  { name: "1 Miesiąc", months: 1, slug: "1-miesiac-iptv-telewizja", devicePrices: { 1: 15, 2: 20, 3: 25, 4: 30 }, description: "Idealne na start", highlight: false },
+  { name: "3 Miesiące", months: 3, slug: "3-miesiace-iptv-telewizja", devicePrices: { 1: 35, 2: 45, 3: 55, 4: 65 }, description: "Dla regularnych widzów", highlight: false },
   {
     name: "6 Miesięcy",
     months: 6,
+    slug: "6-miesiecy-iptv-telewizja",
     devicePrices: { 1: 45, 2: 60, 3: 75, 4: 90 },
     badge: "Najpopularniejszy",
     description: "Najlepszy balans ceny i elastyczności",
     highlight: true,
   },
-  { name: "12 Miesięcy", months: 12, devicePrices: { 1: 60, 2: 80, 3: 100, 4: 120 }, description: "Cały sezon sportowy", highlight: false },
+  { name: "12 Miesięcy", months: 12, slug: "12-miesiecy-iptv-telewizja", devicePrices: { 1: 60, 2: 80, 3: 100, 4: 120 }, description: "Cały sezon sportowy", highlight: false },
   {
     name: "24 Miesiące",
     months: 24,
+    slug: "24-miesiace-iptv-telewizja",
     devicePrices: { 1: 110, 2: 145, 3: 180, 4: 215 },
     badge: "Najlepsza cena",
     description: "Ustaw i zapomnij na 2 lata",
@@ -134,14 +138,14 @@ export default function Pricing() {
                   )}
 
                   <p className="text-base font-bold text-white">{plan.name}</p>
-                  <p className="mt-0.5 text-xs text-slate-500">{plan.description}</p>
+                  <p className="mt-0.5 text-xs text-slate-400">{plan.description}</p>
 
                   <div className="mt-6 flex items-baseline gap-1">
                     <span key={`${plan.name}-${price}`} className="animate-fade-up text-4xl font-extrabold tracking-tight text-white">
                       €{price}
                     </span>
                   </div>
-                  <p className="mt-1 text-xs text-slate-500">
+                  <p className="mt-1 text-xs text-slate-400">
                     jednorazowo · {devices} {deviceLabel(devices)}
                   </p>
                   <p className={`mt-3 inline-flex w-fit rounded-full px-2.5 py-1 text-xs font-semibold ${plan.highlight ? "bg-brand-500/15 text-brand-300" : "bg-white/5 text-slate-300"}`}>
@@ -159,6 +163,12 @@ export default function Pricing() {
                   >
                     Zamów teraz
                   </a>
+                  <Link
+                    href={`/product/${plan.slug}`}
+                    className="mt-3 block text-center text-xs font-medium text-slate-400 underline-offset-2 hover:text-white hover:underline"
+                  >
+                    Szczegóły planu {plan.name}
+                  </Link>
                 </div>
               </Reveal>
             );
@@ -202,7 +212,7 @@ export default function Pricing() {
           </div>
         </Reveal>
 
-        <p className="mt-8 text-center text-sm text-slate-500">
+        <p className="mt-8 text-center text-sm text-slate-400">
           Nie jesteś pewien? Napisz na WhatsApp, aktywujemy darmowy test 3h — bez karty kredytowej.
         </p>
       </div>

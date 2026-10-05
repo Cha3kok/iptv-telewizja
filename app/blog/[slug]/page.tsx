@@ -10,7 +10,8 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import WhatsAppButton from "../../components/WhatsAppButton";
 import JsonLd from "../../components/JsonLd";
-import { OG_IMAGE, SITE_URL } from "../../lib/site";
+import PostImage from "../../components/PostImage";
+import { OG_IMAGE, SITE_URL, pageTitle } from "../../lib/site";
 
 export const dynamicParams = false;
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: post.title,
+    title: pageTitle(post.title),
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -41,10 +42,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const mdxComponents = {
-  img: ({ alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    // eslint-disable-next-line @next/next/no-img-element -- MDX images have no known dimensions
-    <img alt={alt ?? ""} loading="lazy" className="w-full rounded-2xl my-8 object-cover max-h-96" {...props} />
-  ),
+  img: ({ src, alt }: React.ImgHTMLAttributes<HTMLImageElement>) =>
+    typeof src === "string" && src.startsWith("/") ? (
+      <PostImage src={src} alt={alt ?? ""} className="my-8" />
+    ) : null,
   h2: (props: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2 className="text-xl font-bold text-white mt-10 mb-3" {...props} />
   ),
@@ -161,13 +162,14 @@ export default async function BlogPostPage({ params }: Props) {
     <div className="min-h-screen bg-ink text-white">
       <JsonLd data={articleSchema} />
       <Navbar />
+      <main>
 
       {/* Hero */}
       <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Wszystkie artykuły
           </Link>
@@ -176,10 +178,10 @@ export default async function BlogPostPage({ params }: Props) {
             <span className={`inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full border ${categoryColor(post.category)}`}>
               <Tag size={11} /> {categoryLabel(post.category)}
             </span>
-            <span className="flex items-center gap-1 text-slate-500 text-xs">
+            <span className="flex items-center gap-1 text-slate-400 text-xs">
               <Clock size={11} /> {post.readTime}
             </span>
-            <span className="text-slate-500 text-xs">
+            <span className="text-slate-400 text-xs">
               Zaktualizowano: <time dateTime={modified}>{formatDate(modified)}</time>
             </span>
           </div>
@@ -188,7 +190,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.title}
           </h1>
           <p className="text-slate-400 text-lg leading-relaxed">{post.excerpt}</p>
-          <p className="mt-6 text-sm text-slate-500">
+          <p className="mt-6 text-sm text-slate-400">
             Autor:{" "}
             <Link href="/about" className="text-slate-300 hover:text-white underline underline-offset-2">
               Redakcja IPTV Telewizja
@@ -201,12 +203,7 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Cover image */}
       {post.coverImage && (
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
-          {/* eslint-disable-next-line @next/next/no-img-element -- static cover, already sized for the web */}
-          <img
-            src={post.coverImage}
-            alt={post.coverAlt ?? post.title}
-            className="w-full rounded-2xl object-cover max-h-96"
-          />
+          <PostImage src={post.coverImage} alt={post.coverAlt ?? post.title} priority />
         </div>
       )}
 
@@ -237,7 +234,7 @@ export default async function BlogPostPage({ params }: Props) {
               href="https://wa.me/212707711512?text=Cze%C5%9B%C4%87%2C%20chcia%C5%82bym%20wi%C4%99cej%20informacji"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
+              className="bg-[#25D366] hover:bg-[#20bd5a] text-ink font-semibold px-6 py-3 rounded-full text-sm transition-colors"
             >
               Napisz na WhatsApp
             </a>
@@ -258,7 +255,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <p className="text-white font-semibold text-sm mb-2 group-hover:text-brand-400 transition-colors leading-snug">
                     {p.title}
                   </p>
-                  <p className="text-slate-500 text-xs line-clamp-2">{p.excerpt}</p>
+                  <p className="text-slate-400 text-xs line-clamp-2">{p.excerpt}</p>
                   <span className="flex items-center gap-1 text-brand-400 text-xs mt-3 font-medium">
                     Czytaj więcej <ArrowRight size={12} />
                   </span>
@@ -268,6 +265,8 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
       </article>
+
+      </main>
 
       <Footer />
       <WhatsAppButton />

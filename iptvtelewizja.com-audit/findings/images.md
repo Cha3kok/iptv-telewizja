@@ -1,3 +1,3 @@
-## 8. Images — 75
-**Works:** every `<img>` has alt text (0 missing); the 7 logo-bearing photos were replaced; OG image is a 1200×630 PNG.
-**Findings:** Medium — blog images have no width/height and are served as JPEG (no WebP/AVIF, no responsive sizes).
+## 7. Images — 75
+0 images without alt text across 27 pages; 5 new logo-free cover images. Still served as JPEG through a plain `<img>`
+without width/height.

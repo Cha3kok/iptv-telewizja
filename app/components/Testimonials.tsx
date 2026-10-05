@@ -26,7 +26,7 @@ const reviews = [
     avatar: "PN",
     rating: 5,
     title: "Jestem z nimi 2 lata i nie żałuję ani chwili",
-    body: "Próbowałem kilku usług IPTV przez lata i ta jest zdecydowanie najbardziej niezawodna. Obsługa klienta faktycznie odpowiada szybko. Sama funkcja catch-up TV jest warta każdej złotówki.",
+    body: "Próbowałem kilku usług IPTV przez lata i ta działa u mnie najstabilniej. Obsługa klienta faktycznie odpowiada szybko. Sama funkcja catch-up TV jest warta każdej złotówki.",
     plan: "Plan 12 Miesięcy",
   },
   {
@@ -60,9 +60,9 @@ const reviews = [
 
 function Stars({ count }: { count: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`Ocena ${count} na 5`}>
+    <div className="flex gap-0.5" role="img" aria-label={`Ocena ${count} na 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} size={14} className={i < count ? "fill-yellow-400 text-yellow-400" : "text-slate-600"} />
+        <Star key={i} size={14} className={i < count ? "fill-yellow-400 text-yellow-400" : "text-slate-400"} />
       ))}
     </div>
   );
@@ -85,7 +85,7 @@ function ReviewCard({ r, index }: { r: (typeof reviews)[number]; index: number }
         </span>
         <span className="min-w-0">
           <span className="block text-sm font-semibold text-white">{r.name}</span>
-          <span className="block text-xs text-slate-500">{r.location}</span>
+          <span className="block text-xs text-slate-400">{r.location}</span>
         </span>
         <span className="ml-auto whitespace-nowrap rounded-full bg-brand-500/10 px-2.5 py-1 text-[11px] font-medium text-brand-300">
           {r.plan}

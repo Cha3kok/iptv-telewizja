@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Raw Lighthouse output from SEO audits (large, regenerable)
+/iptvtelewizja.com-audit/raw/lh-*.json

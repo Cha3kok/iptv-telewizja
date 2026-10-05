@@ -90,7 +90,7 @@ export default function IptvPolskaIntro() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 px-1 text-xs text-slate-500">Dane aktualne na październik 2026.</p>
+          <p className="mt-4 px-1 text-xs text-slate-400">Dane aktualne na 5 października 2026.</p>
         </Reveal>
       </div>
     </section>

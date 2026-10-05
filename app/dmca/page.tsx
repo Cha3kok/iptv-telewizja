@@ -5,7 +5,7 @@ import { SUPPORT_EMAIL } from "../lib/contact";
 export const metadata: Metadata = {
   title: "DMCA — zgłaszanie naruszeń praw autorskich",
   description:
-    "Polityka DMCA IPTVTelewizja. Dowiedz się, jak zgłosić naruszenie praw autorskich lub złożyć kontrzgłoszenie.",
+    "Polityka DMCA IPTV Telewizja. Dowiedz się, jak zgłosić naruszenie praw autorskich lub złożyć kontrzgłoszenie.",
   alternates: { canonical: "/dmca" },
 };
 
@@ -19,7 +19,7 @@ export default function DmcaPage() {
       sections={[
         {
           heading: "1. Nasze stanowisko",
-          body: "IPTVTelewizja szanuje własność intelektualną innych i oczekuje tego samego od swoich użytkowników. Rozpatrujemy zgłoszenia naruszeń zgodnie z amerykańską ustawą Digital Millennium Copyright Act (DMCA, 17 U.S.C. § 512), unijnym aktem o usługach cyfrowych (DSA) oraz polską ustawą o prawie autorskim i prawach pokrewnych. Po otrzymaniu prawidłowego zgłoszenia niezwłocznie usuwamy lub blokujemy dostęp do wskazanych materiałów.",
+          body: "IPTV Telewizja szanuje własność intelektualną innych i oczekuje tego samego od swoich użytkowników. Rozpatrujemy zgłoszenia naruszeń zgodnie z amerykańską ustawą Digital Millennium Copyright Act (DMCA, 17 U.S.C. § 512), unijnym aktem o usługach cyfrowych (DSA) oraz polską ustawą o prawie autorskim i prawach pokrewnych. Po otrzymaniu prawidłowego zgłoszenia niezwłocznie usuwamy lub blokujemy dostęp do wskazanych materiałów.",
         },
         {
           heading: "2. Jak złożyć zgłoszenie naruszenia",

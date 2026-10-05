@@ -35,12 +35,12 @@ export default function Hero() {
             Transmisje na żywo dostępne teraz
           </div>
 
-          <h1 className="animate-fade-up [animation-delay:120ms] mt-6 text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white text-balance">
+          <h1 className="animate-rise mt-6 text-[2.6rem] leading-[1.05] sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white text-balance">
             IPTV Polska&nbsp;—{" "}
             <span className="text-gradient">telewizja internetowa</span> w 4K
           </h1>
 
-          <p className="animate-fade-up [animation-delay:240ms] mx-auto lg:mx-0 mt-6 max-w-xl text-lg sm:text-xl leading-relaxed text-slate-400 text-pretty">
+          <p className="animate-rise [animation-delay:80ms] mx-auto lg:mx-0 mt-6 max-w-xl text-lg sm:text-xl leading-relaxed text-slate-400 text-pretty">
             Oglądaj 50 000+ kanałów na żywo, polskie kanały, sport, filmy i seriale w jakości 4K — w Polsce i za
             granicą. Bez umowy, bez dekodera, z darmowym testem 3h.
           </p>

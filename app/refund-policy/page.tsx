@@ -3,7 +3,7 @@ import LegalPage from "../components/LegalPage";
 
 export const metadata: Metadata = {
   title: "Polityka zwrotów",
-  description: "Polityka zwrotów IPTVTelewizja — poznaj swoje prawa i dowiedz się, jak złożyć wniosek o zwrot.",
+  description: "Polityka zwrotów IPTV Telewizja — poznaj swoje prawa i dowiedz się, jak złożyć wniosek o zwrot.",
   alternates: { canonical: "https://www.iptvtelewizja.com/refund-policy" },
 };
 
@@ -13,7 +13,7 @@ export default function RefundPolicy() {
       badge="Prawne"
       title="Polityka zwrotów"
       subtitle="Chcemy, abyś był w pełni zadowolony. Oto jak działa nasz proces zwrotów."
-      lastUpdated="1 stycznia 2025"
+      lastUpdated="5 października 2026"
       sections={[
         {
           heading: "Najpierw darmowy test",

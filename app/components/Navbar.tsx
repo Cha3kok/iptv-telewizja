@@ -39,7 +39,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-14 sm:h-16 items-center justify-between px-4 sm:px-5">
-          <Link href="/" aria-label="IPTV Telewizja — strona główna" onClick={() => setOpen(false)}>
+          <Link href="/" onClick={() => setOpen(false)}>
             <Logo />
           </Link>
 

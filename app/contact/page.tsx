@@ -8,16 +8,16 @@ import JsonLd from "../components/JsonLd";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Skontaktuj się z pomocą techniczną IPTVTelewizja. Dostępni 24/7 przez WhatsApp i email — pomoc przy konfiguracji, płatnościach i problemach technicznych.",
+    "Skontaktuj się z pomocą techniczną IPTV Telewizja. Dostępni 24/7 przez WhatsApp i email — pomoc przy konfiguracji, płatnościach i problemach technicznych.",
   alternates: { canonical: "https://www.iptvtelewizja.com/contact" },
 };
 
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Kontakt — IPTVTelewizja",
+  name: "Kontakt — IPTV Telewizja",
   url: "https://www.iptvtelewizja.com/contact",
-  description: "Skontaktuj się z pomocą techniczną IPTVTelewizja przez WhatsApp lub email.",
+  description: "Skontaktuj się z pomocą techniczną IPTV Telewizja przez WhatsApp lub email.",
 };
 
 const channels = [
@@ -26,7 +26,7 @@ const channels = [
     title: "WhatsApp",
     description: "Najszybszy sposób na kontakt. Odpowiedź w ciągu kilku minut, dzień i noc.",
     action: "Napisz na WhatsApp",
-    href: "https://wa.me/212707711512?text=Cześć%2C%20chciałbym%20uzyskać%20pomoc%20z%20IPTVTelewizja",
+    href: "https://wa.me/212707711512?text=Cześć%2C%20chciałbym%20uzyskać%20pomoc%20z%20IPTV Telewizja",
     highlight: true,
     detail: "+212 707 711 512",
   },
@@ -53,12 +53,13 @@ export default function ContactPage() {
     <div className="min-h-screen bg-ink text-white">
       <JsonLd data={contactSchema} />
       <Navbar />
+      <main>
 
       <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-14">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1.5 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-slate-400 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
@@ -98,7 +99,7 @@ export default function ContactPage() {
               <div>
                 <h2 className="text-white font-bold text-lg mb-1">{ch.title}</h2>
                 <p className="text-slate-400 text-sm leading-relaxed mb-1">{ch.description}</p>
-                <p className="text-slate-500 text-xs">{ch.detail}</p>
+                <p className="text-slate-400 text-xs">{ch.detail}</p>
               </div>
               <a
                 href={ch.href}
@@ -106,7 +107,7 @@ export default function ContactPage() {
                 rel={ch.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 className={`mt-auto self-start font-semibold text-sm px-5 py-2.5 rounded-full transition-colors ${
                   ch.highlight
-                    ? "bg-[#25D366] hover:bg-[#20bd5a] text-white"
+                    ? "bg-[#25D366] hover:bg-[#20bd5a] text-ink"
                     : "btn-primary"
                 }`}
               >
@@ -127,7 +128,7 @@ export default function ContactPage() {
               </div>
             ))}
           </div>
-          <p className="text-slate-500 text-sm mt-5">
+          <p className="text-slate-400 text-sm mt-5">
             Więcej pytań?{" "}
             <Link href="/#faq" className="text-brand-400 hover:text-brand-300 transition-colors">
               Zobacz nasze pełne FAQ
@@ -139,6 +140,8 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
+
+      </main>
 
       <Footer />
     </div>

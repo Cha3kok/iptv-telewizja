@@ -3,7 +3,7 @@ import LegalPage from "../components/LegalPage";
 
 export const metadata: Metadata = {
   title: "Regulamin",
-  description: "Przeczytaj warunki i zasady korzystania z usługi IPTVTelewizja.",
+  description: "Regulamin IPTV Telewizja: zasady korzystania z usługi, subskrypcje i płatności, dostępność usługi, odpowiedzialność oraz rozwiązanie umowy.",
   alternates: { canonical: "https://www.iptvtelewizja.com/terms-of-service" },
 };
 
@@ -13,15 +13,15 @@ export default function TermsOfService() {
       badge="Prawne"
       title="Regulamin"
       subtitle="Prosimy o uważne zapoznanie się z niniejszymi warunkami przed skorzystaniem z usługi."
-      lastUpdated="1 stycznia 2025"
+      lastUpdated="5 października 2026"
       sections={[
         {
           heading: "1. Akceptacja warunków",
-          body: "Subskrybując lub korzystając z usługi IPTVTelewizja, wyrażasz zgodę na przestrzeganie niniejszego Regulaminu. Jeśli nie zgadzasz się, nie korzystaj z usługi.",
+          body: "Subskrybując lub korzystając z usługi IPTV Telewizja, wyrażasz zgodę na przestrzeganie niniejszego Regulaminu. Jeśli nie zgadzasz się, nie korzystaj z usługi.",
         },
         {
           heading: "2. Opis usługi",
-          body: "IPTVTelewizja świadczy usługę strumieniowania telewizji internetowej (IPTV) zapewniającą dostęp do kanałów na żywo, treści wideo na żądanie i telewizji z możliwością odtwarzania przez internet. Usługa jest świadczona na zasadzie subskrypcji.",
+          body: "IPTV Telewizja świadczy usługę strumieniowania telewizji internetowej (IPTV) zapewniającą dostęp do kanałów na żywo, treści wideo na żądanie i telewizji z możliwością odtwarzania przez internet. Usługa jest świadczona na zasadzie subskrypcji.",
         },
         {
           heading: "3. Dopuszczalne użytkowanie",
@@ -47,11 +47,11 @@ export default function TermsOfService() {
         },
         {
           heading: "7. Własność intelektualna",
-          body: "Wszystkie treści strumieniowane przez usługę są własnością odpowiednich nadawców i właścicieli praw. IPTVTelewizja nie rości sobie własności do treści stron trzecich. Marka IPTVTelewizja, logo i treści strony internetowej stanowią naszą własność intelektualną.",
+          body: "Wszystkie treści strumieniowane przez usługę są własnością odpowiednich nadawców i właścicieli praw. IPTV Telewizja nie rości sobie własności do treści stron trzecich. Marka IPTV Telewizja, logo i treści strony internetowej stanowią naszą własność intelektualną.",
         },
         {
           heading: "8. Ograniczenie odpowiedzialności",
-          body: "W maksymalnym zakresie dozwolonym przez prawo, IPTVTelewizja nie ponosi odpowiedzialności za żadne pośrednie, przypadkowe, szczególne ani wynikowe szkody wynikające z korzystania z usługi. Nasza całkowita odpowiedzialność wobec Ciebie nie przekroczy kwoty zapłaconej w ciągu 30 dni poprzedzających jakiekolwiek roszczenie.",
+          body: "W maksymalnym zakresie dozwolonym przez prawo, IPTV Telewizja nie ponosi odpowiedzialności za żadne pośrednie, przypadkowe, szczególne ani wynikowe szkody wynikające z korzystania z usługi. Nasza całkowita odpowiedzialność wobec Ciebie nie przekroczy kwoty zapłaconej w ciągu 30 dni poprzedzających jakiekolwiek roszczenie.",
         },
         {
           heading: "9. Rozwiązanie umowy",

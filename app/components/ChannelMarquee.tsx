@@ -34,7 +34,7 @@ function Row({ items, reverse = false }: { items: string[]; reverse?: boolean })
 export default function ChannelMarquee() {
   return (
     <section id="channels" className="relative bg-ink py-14 sm:py-20" aria-labelledby="channels-heading">
-      <h2 id="channels-heading" className="mb-8 px-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">
+      <h2 id="channels-heading" className="mb-8 px-4 text-center text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
         Wszystkie kategorie w jednej subskrypcji
       </h2>
       <div className="flex flex-col gap-3">

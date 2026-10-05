@@ -6,7 +6,8 @@ import { getAllPosts } from "../lib/mdx";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
-import { OG_IMAGE } from "../lib/site";
+import { OG_IMAGE, SITE_URL } from "../lib/site";
+import JsonLd from "../components/JsonLd";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -24,10 +25,30 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const posts = getAllPosts();
   const [featured, ...rest] = posts;
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Blog IPTV Polska — poradniki i porównania",
+    url: `${SITE_URL}/blog`,
+    inLanguage: "pl-PL",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: posts.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/blog/${p.slug}`,
+        name: p.title,
+      })),
+    },
+  };
 
   return (
     <div className="min-h-screen bg-ink text-white">
+      <JsonLd data={blogSchema} />
       <Navbar />
+      <main>
 
       {/* Header */}
       <div className="page-hero bg-surface border-b border-white/5 pt-32 pb-14">
@@ -54,14 +75,14 @@ export default function BlogPage() {
             <span className={`inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full border ${categoryColor(featured.category)}`}>
               <Tag size={11} /> {categoryLabel(featured.category)}
             </span>
-            <span className="text-slate-500 text-xs">Wyróżniony</span>
+            <span className="text-slate-400 text-xs">Wyróżniony</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors">
             {featured.title}
           </h2>
           <p className="text-slate-400 leading-relaxed mb-6 max-w-3xl">{featured.excerpt}</p>
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4 text-slate-500 text-xs">
+            <div className="flex items-center gap-4 text-slate-400 text-xs">
               <span>{formatDate(featured.date)}</span>
               <span className="flex items-center gap-1">
                 <Clock size={11} /> {featured.readTime}
@@ -91,7 +112,7 @@ export default function BlogPage() {
                 {post.excerpt}
               </p>
               <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
-                <div className="flex items-center gap-3 text-slate-500 text-xs">
+                <div className="flex items-center gap-3 text-slate-400 text-xs">
                   <span>{formatDate(post.date)}</span>
                   <span className="flex items-center gap-1">
                     <Clock size={11} /> {post.readTime}
@@ -103,6 +124,8 @@ export default function BlogPage() {
           ))}
         </div>
       </div>
+
+      </main>
 
       <Footer />
       <WhatsAppButton />

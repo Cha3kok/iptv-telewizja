@@ -39,7 +39,7 @@ const devices: Device[] = [
       {
         title: "Otwórz IPTV Smarters i dodaj playlistę",
         body: 'Uruchom aplikację, stuknij „Dodaj użytkownika" → „Załaduj playlistę lub plik/URL". Wybierz „URL M3U", wklej swój link M3U i nadaj playliście nazwę.',
-        tip: "Link M3U zostaje przesłany na Twój adres e-mail po zakupie.",
+        tip: "Link M3U lub dane Xtream Codes wysyłamy na WhatsApp zaraz po zakupie.",
       },
       {
         title: "Zacznij oglądać",
@@ -92,7 +92,7 @@ const devices: Device[] = [
       },
       {
         title: "Nazwij swoją playlistę",
-        body: "Nadaj playliście nazwę (np. IPTVTelewizja) i stuknij 'Dodaj'. TiviMate pobierze wszystkie kanały — może to chwilę potrwać.",
+        body: "Nadaj playliście nazwę (np. IPTV Telewizja) i stuknij 'Dodaj'. TiviMate pobierze wszystkie kanały — może to chwilę potrwać.",
       },
       {
         title: "Przeglądaj i oglądaj",
@@ -185,7 +185,7 @@ function StepItem({ step, index, total }: { step: Step; index: number; total: nu
   return (
     <div className="flex gap-4">
       <div className="flex flex-col items-center">
-        <div className="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+        <div className="w-8 h-8 rounded-full bg-brand-700 flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
           {index + 1}
         </div>
         {index < total - 1 && <div className="w-px flex-1 bg-white/10 mt-2" />}
@@ -205,7 +205,6 @@ function StepItem({ step, index, total }: { step: Step; index: number; total: nu
 
 export default function SetupClient() {
   const [activeId, setActiveId] = useState(devices[0].id);
-  const active = devices.find((d) => d.id === activeId)!;
 
   return (
     <div className="min-h-screen bg-ink text-white">
@@ -214,7 +213,7 @@ export default function SetupClient() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="inline-flex items-center gap-1 text-slate-500 hover:text-white text-sm mb-6 transition-colors"
+            className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-sm mb-6 transition-colors"
           >
             <ChevronLeft size={14} /> Powrót do strony głównej
           </Link>
@@ -234,7 +233,7 @@ export default function SetupClient() {
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Device selector sidebar */}
           <aside className="lg:w-56 flex-shrink-0">
-            <p className="text-slate-500 text-xs uppercase tracking-wider font-medium mb-3">
+            <p className="text-slate-400 text-xs uppercase tracking-wider font-medium mb-3">
               Wybierz urządzenie
             </p>
             <nav className="flex flex-row lg:flex-col gap-2 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
@@ -244,12 +243,12 @@ export default function SetupClient() {
                   onClick={() => setActiveId(d.id)}
                   className={`flex-shrink-0 text-left px-4 py-3 rounded-xl text-sm transition-all ${
                     activeId === d.id
-                      ? "bg-brand-500 text-white font-semibold"
+                      ? "bg-brand-700 text-white font-semibold"
                       : "bg-card text-slate-400 hover:text-white hover:bg-card-2"
                   }`}
                 >
                   <span className="block font-medium">{d.name}</span>
-                  <span className={`text-xs ${activeId === d.id ? "text-brand-100" : "text-slate-600"}`}>
+                  <span className={`text-xs ${activeId === d.id ? "text-brand-100" : "text-slate-400"}`}>
                     {d.subtitle}
                   </span>
                 </button>
@@ -260,42 +259,47 @@ export default function SetupClient() {
           {/* Guide content */}
           <main className="flex-1 min-w-0">
             <div className="bg-card border border-white/5 rounded-2xl p-6 sm:p-8">
-              {/* Device header */}
-              <div className="flex items-start justify-between gap-4 mb-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-white">{active.name}</h2>
-                  <p className="text-slate-400 text-sm mt-0.5">{active.subtitle}</p>
+              {/* Every guide is rendered so crawlers see all of them; only the active one is visible. */}
+              {devices.map((d) => (
+                <section key={d.id} id={`poradnik-${d.id}`} hidden={d.id !== activeId} aria-label={`Instalacja IPTV: ${d.name}`}>
+                {/* Device header */}
+                <div className="flex items-start justify-between gap-4 mb-8">
+                  <div>
+                    <h2 className="text-2xl font-bold text-white">IPTV na {d.name}</h2>
+                    <p className="text-slate-400 text-sm mt-0.5">{d.subtitle}</p>
+                  </div>
+                  <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium px-3 py-1.5 rounded-full flex-shrink-0">
+                    <CheckCircle2 size={13} />
+                    Obsługiwane
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-medium px-3 py-1.5 rounded-full flex-shrink-0">
-                  <CheckCircle2 size={13} />
-                  Obsługiwane
-                </div>
-              </div>
 
-              {/* Recommended app */}
-              <div className="bg-card-2 border border-white/5 rounded-xl p-4 flex items-center justify-between gap-4 mb-8">
-                <div>
-                  <p className="text-slate-500 text-xs mb-0.5">Zalecana aplikacja</p>
-                  <p className="text-white font-semibold">{active.appName}</p>
+                {/* Recommended app */}
+                <div className="bg-card-2 border border-white/5 rounded-xl p-4 flex items-center justify-between gap-4 mb-8">
+                  <div>
+                    <p className="text-slate-400 text-xs mb-0.5">Zalecana aplikacja</p>
+                    <p className="text-white font-semibold">{d.appName}</p>
+                  </div>
+                  {d.appUrl && (
+                    <a
+                      href={d.appUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1.5 text-brand-400 hover:text-brand-300 text-sm font-medium transition-colors flex-shrink-0"
+                    >
+                      Pobierz <ExternalLink size={13} />
+                    </a>
+                  )}
                 </div>
-                {active.appUrl && (
-                  <a
-                    href={active.appUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 text-brand-400 hover:text-brand-300 text-sm font-medium transition-colors flex-shrink-0"
-                  >
-                    Pobierz <ExternalLink size={13} />
-                  </a>
-                )}
-              </div>
 
-              {/* Steps */}
-              <div>
-                {active.steps.map((step, i) => (
-                  <StepItem key={i} step={step} index={i} total={active.steps.length} />
-                ))}
-              </div>
+                {/* Steps */}
+                <div>
+                  {d.steps.map((step, i) => (
+                    <StepItem key={i} step={step} index={i} total={d.steps.length} />
+                  ))}
+                </div>
+                </section>
+              ))}
 
               {/* Nav buttons */}
               <div className="flex justify-between mt-10 pt-6 border-t border-white/5">
@@ -332,7 +336,7 @@ export default function SetupClient() {
                 href="https://wa.me/212707711512?text=Cze%C5%9B%C4%87%2C%20potrzebuję%20pomocy%20z%20konfiguracją%20IPTV"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-shrink-0 bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold px-6 py-3 rounded-full text-sm transition-colors"
+                className="flex-shrink-0 bg-[#25D366] hover:bg-[#20bd5a] text-ink font-semibold px-6 py-3 rounded-full text-sm transition-colors"
               >
                 Pomoc WhatsApp
               </a>

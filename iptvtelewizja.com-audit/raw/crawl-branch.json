@@ -1,0 +1,422 @@
+{
+ "pages": [
+  {
+   "url": "/",
+   "status": 200,
+   "title": "IPTV Polska — Telewizja Internetowa w 4K od €15 | IPTV Telewizja",
+   "desc": "IPTV Polska od €15: 50 000+ kanałów na żywo w 4K, polskie kanały i sport, 7-dniowy catch-up i 200 000+ VOD. Działa w Polsce i za granicą. Darmowy test 3h.",
+   "canonical": "https://www.iptvtelewizja.com",
+   "h1": 1,
+   "words": 2585,
+   "img_no_alt": 0,
+   "schema": [
+    "Organization",
+    "WebSite",
+    "WebPage",
+    "Product",
+    "FAQPage"
+   ],
+   "claims": [
+    "IPTVTelewizja"
+   ],
+   "inbound": 27
+  },
+  {
+   "url": "/product",
+   "status": 200,
+   "title": "Plany i cennik IPTV — od €15 — IPTV Telewizja",
+   "desc": "Porównaj wszystkie plany subskrypcji IPTV Telewizja od €15. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Wybierz 1, 3, 6, 12 lub 24 miesiące. Bez umowy. Natychmiastowa aktywacja.",
+   "canonical": "https://www.iptvtelewizja.com/product",
+   "h1": 1,
+   "words": 415,
+   "img_no_alt": 0,
+   "schema": [
+    "Product",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/blog",
+   "status": 200,
+   "title": "Blog — IPTV Telewizja",
+   "desc": "Przewodniki IPTV, porady, rozwiązywanie problemów i porównania. Dowiedz się, jak w pełni wykorzystać swoją subskrypcję IPTV Telewizja.",
+   "canonical": "https://www.iptvtelewizja.com/blog",
+   "h1": 1,
+   "words": 510,
+   "img_no_alt": 0,
+   "schema": [],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/setup",
+   "status": 200,
+   "title": "Instrukcja instalacji IPTV — IPTV Telewizja",
+   "desc": "Przewodniki krok po kroku dotyczące instalacji IPTV na Amazon Firestick, Smart TV, Android, iPhone, dekoderze MAG i Windows. Zacznij w mniej niż 5 minut.",
+   "canonical": "https://www.iptvtelewizja.com/setup",
+   "h1": 1,
+   "words": 209,
+   "img_no_alt": 0,
+   "schema": [],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/about",
+   "status": 200,
+   "title": "O nas — IPTV Telewizja",
+   "desc": "Poznaj IPTV Telewizja — kim jesteśmy, co oferujemy, jak działa nasze wsparcie i jak przygotowujemy poradniki o IPTV Polska.",
+   "canonical": "https://www.iptvtelewizja.com/about",
+   "h1": 1,
+   "words": 403,
+   "img_no_alt": 0,
+   "schema": [
+    "AboutPage"
+   ],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/contact",
+   "status": 200,
+   "title": "Kontakt — IPTV Telewizja",
+   "desc": "Skontaktuj się z pomocą techniczną IPTV Telewizja. Dostępni 24/7 przez WhatsApp i email — pomoc przy konfiguracji, płatnościach i problemach technicznych.",
+   "canonical": "https://www.iptvtelewizja.com/contact",
+   "h1": 1,
+   "words": 155,
+   "img_no_alt": 0,
+   "schema": [
+    "ContactPage"
+   ],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/privacy-policy",
+   "status": 200,
+   "title": "Polityka prywatności — IPTV Telewizja",
+   "desc": "Dowiedz się, jak IPTV Telewizja zbiera, wykorzystuje i chroni Twoje dane osobowe.",
+   "canonical": "https://www.iptvtelewizja.com/privacy-policy",
+   "h1": 1,
+   "words": 330,
+   "img_no_alt": 0,
+   "schema": [],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/terms-of-service",
+   "status": 200,
+   "title": "Regulamin — IPTV Telewizja",
+   "desc": "Przeczytaj warunki i zasady korzystania z usługi IPTV Telewizja.",
+   "canonical": "https://www.iptvtelewizja.com/terms-of-service",
+   "h1": 1,
+   "words": 369,
+   "img_no_alt": 0,
+   "schema": [],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/refund-policy",
+   "status": 200,
+   "title": "Polityka zwrotów — IPTV Telewizja",
+   "desc": "Polityka zwrotów IPTV Telewizja — poznaj swoje prawa i dowiedz się, jak złożyć wniosek o zwrot.",
+   "canonical": "https://www.iptvtelewizja.com/refund-policy",
+   "h1": 1,
+   "words": 272,
+   "img_no_alt": 0,
+   "schema": [],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/dmca",
+   "status": 200,
+   "title": "DMCA — zgłaszanie naruszeń praw autorskich — IPTV Telewizja",
+   "desc": "Polityka DMCA IPTV Telewizja. Dowiedz się, jak zgłosić naruszenie praw autorskich lub złożyć kontrzgłoszenie.",
+   "canonical": "https://www.iptvtelewizja.com/dmca",
+   "h1": 1,
+   "words": 452,
+   "img_no_alt": 0,
+   "schema": [],
+   "claims": [],
+   "inbound": 27
+  },
+  {
+   "url": "/product/1-miesiac-iptv-telewizja",
+   "status": 200,
+   "title": "1 Miesiąc IPTV Telewizja — €15 | 50 000+ kanałów, 4K — IPTV Telewizja",
+   "desc": "Uzyskaj 1 miesiąc IPTV Telewizja za zaledwie €15. 50 000+ kanałów na żywo, 4K Ultra HD, 7-dniowy catch-up, zero zacięć. Bez umowy. Natychmiastowa aktywacja. Dostępny darmowy test 3h.",
+   "canonical": "https://www.iptvtelewizja.com/product/1-miesiac-iptv-telewizja",
+   "h1": 1,
+   "words": 645,
+   "img_no_alt": 0,
+   "schema": [
+    "Product",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 5
+  },
+  {
+   "url": "/product/3-miesiace-iptv-telewizja",
+   "status": 200,
+   "title": "3 Miesiące IPTV Telewizja — €35 | Oszczędź vs miesięczny — IPTV Telewizja",
+   "desc": "3 miesiące IPTV Telewizja za €35 — to mniej niż €12/miesiąc. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Bez umowy, natychmiastowa aktywacja. Wypróbuj za darmo przez 3 godziny.",
+   "canonical": "https://www.iptvtelewizja.com/product/3-miesiace-iptv-telewizja",
+   "h1": 1,
+   "words": 616,
+   "img_no_alt": 0,
+   "schema": [
+    "Product",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 5
+  },
+  {
+   "url": "/product/6-miesiecy-iptv-telewizja",
+   "status": 200,
+   "title": "6 Miesięcy IPTV Telewizja — €45 | Najpopularniejszy plan — IPTV Telewizja",
+   "desc": "6 miesięcy IPTV Telewizja za zaledwie €45 — tylko €7,50/miesiąc. Najpopularniejszy plan. 50 000+ kanałów, 4K Ultra HD, 7-dniowy catch-up. Natychmiastowa konfiguracja.",
+   "canonical": "https://www.iptvtelewizja.com/product/6-miesiecy-iptv-telewizja",
+   "h1": 1,
+   "words": 650,
+   "img_no_alt": 0,
+   "schema": [
+    "Product",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 5
+  },
+  {
+   "url": "/product/12-miesiecy-iptv-telewizja",
+   "status": 200,
+   "title": "12 Miesięcy IPTV Telewizja — €60 | Tylko €5/miesiąc — IPTV Telewizja",
+   "desc": "12 miesięcy IPTV Telewizja za zaledwie €60 — to €5 miesięcznie. Pełny rok 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Najlepsza wartość dla zaangażowanych widzów. Natychmiastowa konfiguracja.",
+   "canonical": "https://www.iptvtelewizja.com/product/12-miesiecy-iptv-telewizja",
+   "h1": 1,
+   "words": 669,
+   "img_no_alt": 0,
+   "schema": [
+    "Product",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 4
+  },
+  {
+   "url": "/product/24-miesiace-iptv-telewizja",
+   "status": 200,
+   "title": "24 Miesiące IPTV Telewizja — €110 | Tylko €4,58/miesiąc — IPTV Telewizja",
+   "desc": "24 miesiące IPTV Telewizja za €110 — zaledwie €4,58/miesiąc. Plan o najlepszej wartości. 50 000+ kanałów, streaming 4K, 7-dniowy catch-up. Dwa pełne lata z jedną płatnością. Natychmiastowa konfiguracja.",
+   "canonical": "https://www.iptvtelewizja.com/product/24-miesiace-iptv-telewizja",
+   "h1": 1,
+   "words": 721,
+   "img_no_alt": 0,
+   "schema": [
+    "Product",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 1
+  },
+  {
+   "url": "/blog/najlepsze-iptv-polska",
+   "status": 200,
+   "title": "Najlepsze IPTV Polska 2026: Porównanie Dostawców, Ceny i Opinie — IPTV Telewizja",
+   "desc": "Który dostawca IPTV w Polsce jest najlepszy w 2026? Porównujemy stabilność, liczbę kanałów, jakość i ceny. IPTV Telewizja od €5/miesiąc z bezpłatnym testem.",
+   "canonical": "https://www.iptvtelewizja.com/blog/najlepsze-iptv-polska",
+   "h1": 1,
+   "words": 977,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 10
+  },
+  {
+   "url": "/blog/iptv-na-pc-windows-polska",
+   "status": 200,
+   "title": "IPTV na PC Windows Polska 2026: Jak Oglądać 50 000+ Kanałów na Komputerze — IPTV Telewizja",
+   "desc": "Chcesz oglądać IPTV na komputerze z Windows? Kompletny przewodnik po najlepszych aplikacjach, konfiguracji i darmowym teście 3-godzinnym — bez umowy i karty kredytowej.",
+   "canonical": "https://www.iptvtelewizja.com/blog/iptv-na-pc-windows-polska",
+   "h1": 1,
+   "words": 1060,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 6
+  },
+  {
+   "url": "/blog/iptv-smart-tv-polska",
+   "status": 200,
+   "title": "IPTV na Smart TV: poradnik dla Samsung, LG i Sony — IPTV Telewizja",
+   "desc": "Jak skonfigurować IPTV na Smart TV? Krok po kroku dla Samsung (Tizen), LG (webOS) i Android TV — Smart IPTV, SSIPTV, TiviMate i IPTV Smarters.",
+   "canonical": "https://www.iptvtelewizja.com/blog/iptv-smart-tv-polska",
+   "h1": 1,
+   "words": 1037,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 9
+  },
+  {
+   "url": "/blog/iptv-android-box-polska",
+   "status": 200,
+   "title": "IPTV Android Box Polska 2026: Kompletny Przewodnik po Konfiguracji — IPTV Telewizja",
+   "desc": "Dowiedz się, jak skonfigurować Android box do IPTV w Polsce. Przewodnik krok po kroku: wybór urządzenia, instalacja aplikacji, podłączenie kanałów polskich i sportowych.",
+   "canonical": "https://www.iptvtelewizja.com/blog/iptv-android-box-polska",
+   "h1": 1,
+   "words": 754,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 5
+  },
+  {
+   "url": "/blog/tanie-iptv-polska",
+   "status": 200,
+   "title": "Tanie IPTV Polska 2026: Ranking Najtańszych i Najlepszych Usług — IPTV Telewizja",
+   "desc": "Szukasz taniego IPTV w Polsce? Porównujemy najtańsze usługi IPTV na polskim rynku — kanały, jakość, cena i niezawodność. Dowiedz się, gdzie zapłacisz mniej, a dostaniesz więcej.",
+   "canonical": "https://www.iptvtelewizja.com/blog/tanie-iptv-polska",
+   "h1": 1,
+   "words": 534,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 3
+  },
+  {
+   "url": "/blog/iptv-na-iphone-polska",
+   "status": 200,
+   "title": "IPTV na iPhone Polska 2026 – Kompletny Przewodnik Konfiguracji — IPTV Telewizja",
+   "desc": "Chcesz oglądać polskie kanały i sport na iPhone'ie przez IPTV? Ten przewodnik pokazuje krok po kroku jak skonfigurować IPTV na iPhone w 5 minut i oglądać 50 000+ kanałów za €5 miesięcznie.",
+   "canonical": "https://www.iptvtelewizja.com/blog/iptv-na-iphone-polska",
+   "h1": 1,
+   "words": 1010,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 6
+  },
+  {
+   "url": "/blog/jak-ogladac-ekstraklase-przez-iptv",
+   "status": 200,
+   "title": "Jak oglądać Ekstraklasę przez IPTV 2026 – Kompletny Przewodnik — IPTV Telewizja",
+   "desc": "Chcesz oglądać Ekstraklasę przez IPTV bez drogiej telewizji kablowej? Sprawdź jak ustawić IPTV w 5 minut i oglądać każdy mecz w jakości 4K za €5 miesięcznie.",
+   "canonical": "https://www.iptvtelewizja.com/blog/jak-ogladac-ekstraklase-przez-iptv",
+   "h1": 1,
+   "words": 943,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 6
+  },
+  {
+   "url": "/blog/najlepsze-aplikacje-iptv-firestick",
+   "status": 200,
+   "title": "Najlepsze aplikacje IPTV na Firestick (2026) — IPTV Telewizja",
+   "desc": "TiviMate, IPTV Smarters Pro, OTT Navigator, Kodi i inne — porównanie aplikacji IPTV na Amazon Firestick oraz instrukcja instalacji krok po kroku.",
+   "canonical": "https://www.iptvtelewizja.com/blog/najlepsze-aplikacje-iptv-firestick",
+   "h1": 1,
+   "words": 840,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 6
+  },
+  {
+   "url": "/blog/co-to-jest-iptv",
+   "status": 200,
+   "title": "Co to jest IPTV? Przewodnik dla początkujących — IPTV Telewizja",
+   "desc": "Czym jest IPTV, jak działa, czego potrzebujesz i ile to kosztuje. Prosty przewodnik po telewizji internetowej w Polsce i za granicą.",
+   "canonical": "https://www.iptvtelewizja.com/blog/co-to-jest-iptv",
+   "h1": 1,
+   "words": 1046,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 4
+  },
+  {
+   "url": "/blog/iptv-zacina-sie",
+   "status": 200,
+   "title": "IPTV się zacina? 9 przyczyn i sprawdzone rozwiązania — IPTV Telewizja",
+   "desc": "Zacinający się obraz, buforowanie i zamrażanie w IPTV — prawdziwe przyczyny i jak je naprawić krok po kroku: internet, Wi-Fi, router, aplikacja i ustawienia.",
+   "canonical": "https://www.iptvtelewizja.com/blog/iptv-zacina-sie",
+   "h1": 1,
+   "words": 905,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 9
+  },
+  {
+   "url": "/blog/jak-ogladac-sport-bez-telewizji-satelitarnej",
+   "status": 200,
+   "title": "Jak oglądać sport bez telewizji satelitarnej? (2026) — IPTV Telewizja",
+   "desc": "Mecze, wyścigi i gale bez drogiego pakietu satelitarnego. Porównujemy platformy streamingowe, pakiety online, IPTV i darmowe opcje dla kibiców.",
+   "canonical": "https://www.iptvtelewizja.com/blog/jak-ogladac-sport-bez-telewizji-satelitarnej",
+   "h1": 1,
+   "words": 766,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 3
+  },
+  {
+   "url": "/blog/iptv-czy-telewizja-satelitarna",
+   "status": 200,
+   "title": "IPTV czy telewizja satelitarna? Porównanie 2026 — IPTV Telewizja",
+   "desc": "IPTV czy satelita — porównujemy koszt, sprzęt, umowy, jakość obrazu, niezawodność i oglądanie za granicą. Sprawdź, co lepiej pasuje do Twojego domu.",
+   "canonical": "https://www.iptvtelewizja.com/blog/iptv-czy-telewizja-satelitarna",
+   "h1": 1,
+   "words": 738,
+   "img_no_alt": 0,
+   "schema": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "claims": [],
+   "inbound": 4
+  }
+ ],
+ "broken": []
+}

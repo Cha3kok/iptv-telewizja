@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="mb-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           {/* Brand */}
           <div>
-            <Link href="/" aria-label="IPTV Telewizja — strona główna" className="inline-block">
+            <Link href="/" className="inline-block">
               <Logo />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-400">
@@ -61,7 +61,7 @@ export default function Footer() {
           {/* Link columns */}
           {Object.entries(links).map(([group, items]) => (
             <div key={group}>
-              <h4 className="mb-4 text-sm font-semibold text-white">{group}</h4>
+              <h3 className="mb-4 text-sm font-semibold text-white">{group}</h3>
               <ul className="space-y-2.5">
                 {items.map((item) => (
                   <li key={item.label}>
@@ -76,8 +76,8 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/[0.07] pt-8 sm:flex-row">
-          <p className="text-xs text-slate-500">&copy; {new Date().getFullYear()} IPTVTelewizja. Wszelkie prawa zastrzeżone.</p>
-          <p className="text-xs text-slate-600">Wyłącznie do celów rozrywkowych. Prosimy o przestrzeganie lokalnych przepisów prawa.</p>
+          <p className="text-xs text-slate-400">&copy; {new Date().getFullYear()} IPTV Telewizja. Wszelkie prawa zastrzeżone.</p>
+          <p className="text-xs text-slate-400">Wyłącznie do celów rozrywkowych. Prosimy o przestrzeganie lokalnych przepisów prawa.</p>
         </div>
       </div>
     </footer>

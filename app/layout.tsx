@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "IPTV Telewizja — Polska TV Online od €15 | 50 000+ Kanałów 4K",
-    template: "%s — IPTVTelewizja",
+    template: "%s — IPTV Telewizja",
   },
   description:
     "Oglądaj 50 000+ polskich i zagranicznych kanałów w jakości 4K Ultra HD od €15. Bez zacięć, 7-dniowy catch-up, działa na każdym urządzeniu. Darmowy test 3h — bez karty.",
-  authors: [{ name: "IPTVTelewizja" }],
-  creator: "IPTVTelewizja",
+  authors: [{ name: "IPTV Telewizja" }],
+  creator: "IPTV Telewizja",
   icons: {
     icon: "/favicon.svg",
     apple: "/apple-touch-icon.png",
